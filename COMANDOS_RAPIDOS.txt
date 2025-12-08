@@ -1,0 +1,84 @@
+========================================
+  COMANDOS PRINCIPALES - COPY/PASTE
+========================================
+
+1. ACTIVAR ENTORNO VIRTUAL
+---------------------------
+cd financial_ai
+.\venv\Scripts\activate
+
+
+2. DIAGNOSTICO COMPLETO
+-----------------------
+.\venv\Scripts\python.exe scripts/diagnostico_completo.py
+
+
+3. VER CONFIGURACION
+--------------------
+.\venv\Scripts\python.exe scripts/gestionar_config.py show
+
+
+4. EJECUTAR DASHBOARD
+---------------------
+.\venv\Scripts\python.exe -m streamlit run dashboard.py
+# Abre: http://localhost:8501
+
+
+5. EJECUTAR BOT (PAPER TRADING)
+--------------------------------
+.\venv\Scripts\python.exe run_bot.py --paper --continuous
+
+
+6. EJECUTAR BOT (LIVE)
+----------------------
+.\venv\Scripts\python.exe run_bot.py --live --continuous
+
+
+7. EJECUTAR API REST
+--------------------
+.\venv\Scripts\python.exe run_api.py
+# Abre: http://localhost:8000/docs
+
+
+8. VERIFICAR ESTADO DEL BOT
+----------------------------
+.\venv\Scripts\python.exe diagnosticar_bot.py
+
+
+9. DETENER BOT
+--------------
+.\venv\Scripts\python.exe detener_todas_instancias.py
+
+
+========================================
+  ORDEN RECOMENDADO (PRIMERA VEZ)
+========================================
+
+1. cd financial_ai
+2. .\venv\Scripts\activate
+3. .\venv\Scripts\python.exe scripts/diagnostico_completo.py
+4. .\venv\Scripts\python.exe -m streamlit run dashboard.py
+
+
+========================================
+  ORDEN RECOMENDADO (USO NORMAL)
+========================================
+
+TERMINAL 1 (Dashboard):
+.\venv\Scripts\python.exe -m streamlit run dashboard.py
+
+TERMINAL 2 (Bot):
+.\venv\Scripts\python.exe run_bot.py --paper --continuous
+
+
+========================================
+  SCRIPTS .BAT (DOBLE CLIC)
+========================================
+
+ejecutar_dashboard.bat  - Solo Dashboard
+ejecutar_bot.bat        - Solo Bot
+ejecutar_todo.bat       - Todo (Dashboard + Bot)
+
+
+========================================
+

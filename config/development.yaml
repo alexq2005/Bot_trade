@@ -1,0 +1,18 @@
+# Configuración para Desarrollo
+# Sobrescribe valores de base.yaml
+
+trading:
+  symbols:
+    - GGAL
+    - YPFD
+  initial_capital: 50000.0  # Capital menor para desarrollo
+  risk_per_trade: 1.0  # Menor riesgo en desarrollo
+
+iol:
+  environment: "demo"  # Siempre demo en desarrollo
+
+model:
+  prediction_threshold: 1.5  # Umbral más bajo para más señales en desarrollo
+
+logging_level: "DEBUG"  # Más verboso en desarrollo
+

@@ -1,0 +1,1036 @@
+============================================================
+🚀 IOL QUANTUM AI TRADING BOT
+============================================================
+Modo: PAPER TRADING
+Ejecución: Continua
+Intervalo: 60 minutos
+============================================================
+
+📂 El bot usará automáticamente los símbolos de tu portafolio guardado (my_portfolio.json)
+   💡 Si quieres especificar símbolos manualmente, usa: --symbols SYMBOL1,SYMBOL2,...
+
+✅ Telegram configurado (usando método directo vía requests)
+⚠️  Error preparando mensaje de inicio: get_config() takes 0 positional arguments but 2 were given
+✅ Telegram configurado (usando método directo vía requests)
+✅ Telegram configurado (usando método directo vía requests)
+2025-12-01 23:37:27 | [32m[1mINFO[0m | trading_bot.config_manager | Configuración cargada para entorno: development
+✅ Telegram configurado (usando método directo vía requests)
+
+📂 ✅ Cargados 26 símbolos del portafolio guardado:
+   PAMP, BYMA, AMZN, CEPU, BA37D, NU, EDN, TGNO4, BPOC7, LOMA...
+
+🚀 IOL Quantum AI Trading Bot Initialized
+📊 Monitoring 26 symbols: PAMP, CEPU, T15D5, GD35, NU...
+💰 Capital: $100.00 ARS
+🎯 Mode: 🧪 PAPER TRADING
+🎓 Professional Trading: ENABLED
+📝 PID guardado en bot.pid
+✅ Bot iniciado en modo continuo
+   Presiona Ctrl+C para detener
+
+
+🤖 Starting continuous mode (interval: 60 min)
+Press Ctrl+C to stop
+
+⚠️  Error 409: Otra instancia del bot está haciendo polling
+   💡 Detén otras instancias del bot antes de iniciar esta
+⚠️  No se pudo iniciar el polling de Telegram (puede haber otra instancia corriendo)
+   ℹ️  El bot continuará funcionando normalmente, solo sin comandos de Telegram
+
+============================================================
+📊 Generando reporte diario...
+============================================================
+2025-12-01 23:37:28 | [32m[1mINFO[0m | trading_bot.daily_report | Reporte guardado: data\daily_reports\report_2025-12-01.json
+2025-12-01 23:37:29 | [32m[1mINFO[0m | trading_bot.daily_report | Reporte diario enviado por Telegram
+✅ Reporte diario enviado correctamente
+
+############################################################
+🔄 Starting Analysis Cycle - 2025-12-01 23:37:29
+############################################################
+2025-12-01 23:37:29 | [32m[1mINFO[0m | trading_bot.advanced_learning | 🔄 Iniciando ciclo de aprendizaje...
+2025-12-01 23:37:29 | [32m[1mINFO[0m | trading_bot.advanced_learning | ✅ Ciclo de aprendizaje completado
+
+📚 Lecciones Aprendidas:
+   Aún no hay suficientes datos para aprender
+📥 Fetching latest data for PAMP...
+📥 Descargando datos para PAMP...
+2025-12-01 23:37:29 | [32m[1mINFO[0m | trading_bot.multi_source_client | Intentando obtener datos desde Yahoo Finance para PAMP...
+2025-12-01 23:37:32 | [32m[1mINFO[0m | trading_bot.multi_source_client | Intentando obtener datos desde BYMA/Yahoo para PAMP...
+2025-12-01 23:37:32 | [32m[1mINFO[0m | trading_bot.byma_client | Obteniendo datos históricos de Yahoo Finance para PAMP.BA
+2025-12-01 23:37:32 | [32m[1mINFO[0m | trading_bot.byma_client | ✅ Obtenidos 5 registros desde Yahoo Finance para PAMP
+   ✅ Datos obtenidos desde BYMA/Yahoo
+✓ Ingested 1 new records for PAMP
+  Total records in DB for PAMP: 494
+
+============================================================
+📊 Analyzing PAMP
+============================================================
+Autenticando con IOL como alexq2005@gmail.com...
+Autenticación exitosa.
+   📡 Real-time price from IOL: $5470.00
+   📊 Live data integrated: $5470.00
+
+📈 Technical Analysis:
+   RSI: 93.18
+   ATR: 333.57
+   Signal: BUY
+Using generic model for PAMP
+
+🤖 Prediction (IA Model):
+   Current: $5470.00
+   Predicted: $414.06
+   Change: -92.43%
+   Signal: SELL
+
+[94m[1m================================================================================[0m
+[94m[1m                            🤖 PREDICCIÓN IA[0m
+[94m[1m================================================================================[0m
+
+[1m📊 Símbolo:[0m [1mPAMP[0m
+[1m💵 Precio Actual:[0m $5,470.00
+[1m🔮 Precio Predicho:[0m $414.06
+[1m📊 Cambio Esperado:[0m [91m-92.43%[0m
+[1m🎯 Señal:[0m [91m📉 SELL[0m
+[1m⏰ Hora:[0m 2025-12-01 23:37:33
+
+[94m[1m================================================================================[0m
+
+2025-12-01 23:37:33 | [32m[1mINFO[0m | trading_bot.enhanced_sentiment | No hay sentimientos recientes para PAMP, obteniendo noticias automáticamente...
+2025-12-01 23:37:33 | [32m[1mINFO[0m | trading_bot.news_fetcher | Obteniendo noticias desde NewsAPI para PAMP...
+2025-12-01 23:37:34 | [32m[1mINFO[0m | trading_bot.news_fetcher | ✅ Obtenidas 0 noticias desde NewsAPI para PAMP
+2025-12-01 23:37:34 | [32m[1mINFO[0m | trading_bot.news_fetcher | Obteniendo noticias desde NewsData.io para PAMP...
+2025-12-01 23:37:35 | [31m[1mERROR[0m | trading_bot.news_fetcher | Error obteniendo noticias desde NewsData.io para PAMP: 422 Client Error: UNPROCESSABLE ENTITY for url: https://newsdata.io/api/1/news?apikey=pub_91dc6631d1e34a4b949e3d2f4613cc3c&q=PAMP+stock+OR+PAMP+shares+OR+PAMP+company&language=es%2Cen&category=business%2Cfinance&size=10&timeframe=7d
+2025-12-01 23:37:35 | [32m[1mINFO[0m | trading_bot.news_fetcher | Obteniendo noticias desde Alpha Vantage para PAMP...
+2025-12-01 23:37:36 | [32m[1mINFO[0m | trading_bot.news_fetcher | ✅ Obtenidas 0 noticias desde Alpha Vantage para PAMP
+2025-12-01 23:37:36 | [32m[1mINFO[0m | trading_bot.news_fetcher | Obteniendo noticias desde Finnhub para PAMP...
+2025-12-01 23:37:36 | [32m[1mINFO[0m | trading_bot.news_fetcher | ✅ Obtenidas 0 noticias desde Finnhub para PAMP
+2025-12-01 23:37:37 | [32m[1mINFO[0m | trading_bot.news_fetcher | Obteniendo noticias desde Google News para PAMP...
+2025-12-01 23:37:38 | [32m[1mINFO[0m | trading_bot.news_fetcher | ✅ Obtenidas 10 noticias desde Google News para PAMP
+2025-12-01 23:37:38 | [32m[1mINFO[0m | trading_bot.news_fetcher | ✅ 10 noticias obtenidas desde Google News
+2025-12-01 23:37:38 | [32m[1mINFO[0m | trading_bot.news_fetcher | ✅ Total: 9 noticias únicas obtenidas para PAMP
+2025-12-01 23:37:38 | [32m[1mINFO[0m | trading_bot.enhanced_sentiment | ✅ 9 noticias analizadas para PAMP
+
+💭 Sentiment Analysis:
+   Overall: NEUTRAL
+   Score: 0.000
+   Sample Size: 9 noticias
+
+📊 Scoring Analysis (Score: -25):
+   Buy Factors: MACD > Signal (+15), Price > SMA20 (+10)
+   Sell Factors: IA Bearish (-30), RSI Overbought (-20)
+
+🎯 Final Signal: SELL (Confidence: MEDIUM)
+
+[95m[1m================================================================================[0m
+[95m[1m                         📊 ANÁLISIS COMPLETO[0m
+[95m[1m================================================================================[0m
+
+[1m📊 Símbolo:[0m [1mPAMP[0m
+[1m🎯 Señal Final:[0m [91m[1mSELL[0m
+[1m📈 Score:[0m -25
+[1m🎯 Confianza:[0m [93mMEDIUM[0m
+[1m⏰ Hora:[0m 2025-12-01 23:37:38
+
+[1m📋 Factores de Decisión:[0m
+   [92m✅ Factores de Compra:[0m
+      • MACD > Signal (+15)
+      • Price > SMA20 (+10)
+   [91m❌ Factores de Venta:[0m
+      • IA Bearish (-30)
+      • RSI Overbought (-20)
+
+[95m[1m================================================================================[0m
+
+
+⏰ Filtro de Tiempo: Después del horario de trading (17:00)
+📥 Fetching latest data for CEPU...
+📥 Descargando datos para CEPU...
+2025-12-01 23:37:39 | [32m[1mINFO[0m | trading_bot.multi_source_client | Intentando obtener datos desde Yahoo Finance para CEPU...
+   ✅ Datos obtenidos desde Yahoo Finance
+✓ Ingested 0 new records for CEPU
+  Total records in DB for CEPU: 252
+
+============================================================
+📊 Analyzing CEPU
+============================================================
+   📡 Real-time price from IOL: $2550.00
+   📊 Live data integrated: $2550.00
+
+📈 Technical Analysis:
+   RSI: 99.91
+   ATR: 182.06
+   Signal: BUY
+
+🤖 Prediction (IA Model):
+   Current: $16.35
+   Predicted: $12.93
+   Change: -20.93%
+   Signal: SELL
+
+[94m[1m================================================================================[0m
+[94m[1m                            🤖 PREDICCIÓN IA[0m
+[94m[1m================================================================================[0m
+
+[1m📊 Símbolo:[0m [1mCEPU[0m
+[1m💵 Precio Actual:[0m $16.35
+[1m🔮 Precio Predicho:[0m $12.93
+[1m📊 Cambio Esperado:[0m [91m-20.93%[0m
+[1m🎯 Señal:[0m [91m📉 SELL[0m
+[1m⏰ Hora:[0m 2025-12-01 23:37:41
+
+[94m[1m================================================================================[0m
+
+2025-12-01 23:37:41 | [32m[1mINFO[0m | trading_bot.enhanced_sentiment | No hay sentimientos recientes para CEPU, obteniendo noticias automáticamente...
+2025-12-01 23:37:41 | [32m[1mINFO[0m | trading_bot.news_fetcher | Obteniendo noticias desde NewsAPI para CEPU...
+2025-12-01 23:37:41 | [32m[1mINFO[0m | trading_bot.news_fetcher | ✅ Obtenidas 0 noticias desde NewsAPI para CEPU
+2025-12-01 23:37:41 | [32m[1mINFO[0m | trading_bot.news_fetcher | Obteniendo noticias desde NewsData.io para CEPU...
+2025-12-01 23:37:42 | [31m[1mERROR[0m | trading_bot.news_fetcher | Error obteniendo noticias desde NewsData.io para CEPU: 422 Client Error: UNPROCESSABLE ENTITY for url: https://newsdata.io/api/1/news?apikey=pub_91dc6631d1e34a4b949e3d2f4613cc3c&q=CEPU+stock+OR+CEPU+shares+OR+CEPU+company&language=es%2Cen&category=business%2Cfinance&size=10&timeframe=7d
+2025-12-01 23:37:42 | [32m[1mINFO[0m | trading_bot.news_fetcher | Obteniendo noticias desde Alpha Vantage para CEPU...
+2025-12-01 23:37:43 | [32m[1mINFO[0m | trading_bot.news_fetcher | ✅ Obtenidas 20 noticias desde Alpha Vantage para CEPU
+2025-12-01 23:37:43 | [32m[1mINFO[0m | trading_bot.news_fetcher | ✅ 20 noticias obtenidas desde Alpha Vantage
+2025-12-01 23:37:43 | [32m[1mINFO[0m | trading_bot.news_fetcher | ✅ Total: 10 noticias únicas obtenidas para CEPU
+2025-12-01 23:37:43 | [32m[1mINFO[0m | trading_bot.enhanced_sentiment | ✅ 10 noticias analizadas para CEPU
+
+💭 Sentiment Analysis:
+   Overall: NEUTRAL
+   Score: 0.000
+   Sample Size: 10 noticias
+
+📊 Scoring Analysis (Score: -25):
+   Buy Factors: MACD > Signal (+15), Price > SMA20 (+10)
+   Sell Factors: IA Bearish (-30), RSI Overbought (-20)
+
+🎯 Final Signal: SELL (Confidence: MEDIUM)
+
+[95m[1m================================================================================[0m
+[95m[1m                         📊 ANÁLISIS COMPLETO[0m
+[95m[1m================================================================================[0m
+
+[1m📊 Símbolo:[0m [1mCEPU[0m
+[1m🎯 Señal Final:[0m [91m[1mSELL[0m
+[1m📈 Score:[0m -25
+[1m🎯 Confianza:[0m [93mMEDIUM[0m
+[1m⏰ Hora:[0m 2025-12-01 23:37:43
+
+[1m📋 Factores de Decisión:[0m
+   [92m✅ Factores de Compra:[0m
+      • MACD > Signal (+15)
+      • Price > SMA20 (+10)
+   [91m❌ Factores de Venta:[0m
+      • IA Bearish (-30)
+      • RSI Overbought (-20)
+
+[95m[1m================================================================================[0m
+
+
+⏰ Filtro de Tiempo: Después del horario de trading (17:00)
+📥 Fetching latest data for T15D5...
+📥 Descargando datos para T15D5...
+2025-12-01 23:37:45 | [32m[1mINFO[0m | trading_bot.multi_source_client | Intentando obtener datos desde Yahoo Finance para T15D5...
+2025-12-01 23:37:47 | [32m[1mINFO[0m | trading_bot.multi_source_client | Intentando obtener datos desde BYMA/Yahoo para T15D5...
+2025-12-01 23:37:47 | [32m[1mINFO[0m | trading_bot.byma_client | Obteniendo datos históricos de Yahoo Finance para T15D5.BA
+2025-12-01 23:37:48 | [33m[1mWARNING[0m | trading_bot.byma_client | ⚠️ No se encontraron datos en Yahoo Finance para T15D5.BA
+2025-12-01 23:37:48 | [32m[1mINFO[0m | trading_bot.multi_source_client | Intentando obtener datos desde Alpha Vantage para T15D5...
+2025-12-01 23:37:48 | [33m[1mWARNING[0m | trading_bot.multi_source_client | Alpha Vantage error: Invalid API call. Please retry or visit the documentation (https://www.alphavantage.co/documentation/) for TIME_SERIES_DAILY.
+2025-12-01 23:37:48 | [32m[1mINFO[0m | trading_bot.multi_source_client | Intentando obtener datos desde Finnhub para T15D5...
+2025-12-01 23:37:49 | [31m[1mERROR[0m | trading_bot.multi_source_client | Error obteniendo datos desde Finnhub para T15D5: 403 Client Error: Forbidden for url: https://finnhub.io/api/v1/stock/candle?symbol=T15D5&resolution=D&from=1764211068&to=1764643068&token=d4ibighr01qkv40hre2gd4ibighr01qkv40hre30
+2025-12-01 23:37:49 | [31m[1mERROR[0m | trading_bot.multi_source_client | ❌ No se pudieron obtener datos para T15D5 desde ninguna fuente
+No data found for T15D5
+
+============================================================
+📊 Analyzing T15D5
+============================================================
+⚠️  Technical Analysis failed: No data found for T15D5
+Using generic model for T15D5
+
+⚠️  AI Prediction no disponible - usando solo análisis técnico
+2025-12-01 23:37:49 | [32m[1mINFO[0m | trading_bot.enhanced_sentiment | No hay sentimientos recientes para T15D5, obteniendo noticias automáticamente...
+2025-12-01 23:37:49 | [32m[1mINFO[0m | trading_bot.news_fetcher | Obteniendo noticias desde NewsAPI para T15D5...
+2025-12-01 23:37:50 | [32m[1mINFO[0m | trading_bot.news_fetcher | ✅ Obtenidas 0 noticias desde NewsAPI para T15D5
+2025-12-01 23:37:50 | [32m[1mINFO[0m | trading_bot.news_fetcher | Obteniendo noticias desde NewsData.io para T15D5...
+2025-12-01 23:37:51 | [31m[1mERROR[0m | trading_bot.news_fetcher | Error obteniendo noticias desde NewsData.io para T15D5: 422 Client Error: UNPROCESSABLE ENTITY for url: https://newsdata.io/api/1/news?apikey=pub_91dc6631d1e34a4b949e3d2f4613cc3c&q=T15D5+stock+OR+T15D5+shares+OR+T15D5+company&language=es%2Cen&category=business%2Cfinance&size=10&timeframe=7d
+2025-12-01 23:37:51 | [32m[1mINFO[0m | trading_bot.news_fetcher | Obteniendo noticias desde Alpha Vantage para T15D5...
+2025-12-01 23:37:52 | [32m[1mINFO[0m | trading_bot.news_fetcher | ✅ Obtenidas 0 noticias desde Alpha Vantage para T15D5
+2025-12-01 23:37:52 | [32m[1mINFO[0m | trading_bot.news_fetcher | Obteniendo noticias desde Finnhub para T15D5...
+2025-12-01 23:37:52 | [32m[1mINFO[0m | trading_bot.news_fetcher | ✅ Obtenidas 0 noticias desde Finnhub para T15D5
+2025-12-01 23:37:53 | [32m[1mINFO[0m | trading_bot.news_fetcher | Obteniendo noticias desde Google News para T15D5...
+2025-12-01 23:37:53 | [32m[1mINFO[0m | trading_bot.news_fetcher | ✅ Obtenidas 8 noticias desde Google News para T15D5
+2025-12-01 23:37:53 | [32m[1mINFO[0m | trading_bot.news_fetcher | ✅ 8 noticias obtenidas desde Google News
+2025-12-01 23:37:54 | [32m[1mINFO[0m | trading_bot.news_fetcher | Obteniendo noticias desde RSS Feeds para T15D5...
+2025-12-01 23:37:58 | [32m[1mINFO[0m | trading_bot.news_fetcher | ✅ Total: 8 noticias únicas obtenidas para T15D5
+2025-12-01 23:37:58 | [32m[1mINFO[0m | trading_bot.enhanced_sentiment | ✅ 8 noticias analizadas para T15D5
+
+💭 Sentiment Analysis:
+   Overall: NEUTRAL
+   Score: 0.003
+   Sample Size: 8 noticias
+
+📊 Scoring Analysis (Score: 0):
+   Buy Factors: None
+   Sell Factors: None
+
+🎯 Final Signal: HOLD (Confidence: LOW)
+
+[95m[1m================================================================================[0m
+[95m[1m                         📊 ANÁLISIS COMPLETO[0m
+[95m[1m================================================================================[0m
+
+[1m📊 Símbolo:[0m [1mT15D5[0m
+[1m🎯 Señal Final:[0m [93m[1mHOLD[0m
+[1m📈 Score:[0m 0
+[1m🎯 Confianza:[0m [96mLOW[0m
+[1m⏰ Hora:[0m 2025-12-01 23:37:58
+
+[1m📋 Factores de Decisión:[0m
+
+[95m[1m================================================================================[0m
+
+📥 Fetching latest data for GD35...
+📥 Descargando datos para GD35...
+2025-12-01 23:37:59 | [32m[1mINFO[0m | trading_bot.multi_source_client | Intentando obtener datos desde Yahoo Finance para GD35...
+2025-12-01 23:38:00 | [32m[1mINFO[0m | trading_bot.multi_source_client | Intentando obtener datos desde BYMA/Yahoo para GD35...
+2025-12-01 23:38:00 | [32m[1mINFO[0m | trading_bot.byma_client | Obteniendo datos históricos de Yahoo Finance para GD35.BA
+2025-12-01 23:38:01 | [33m[1mWARNING[0m | trading_bot.byma_client | ⚠️ No se encontraron datos en Yahoo Finance para GD35.BA
+2025-12-01 23:38:01 | [32m[1mINFO[0m | trading_bot.multi_source_client | Intentando obtener datos desde Alpha Vantage para GD35...
+2025-12-01 23:38:01 | [33m[1mWARNING[0m | trading_bot.multi_source_client | Alpha Vantage error: Invalid API call. Please retry or visit the documentation (https://www.alphavantage.co/documentation/) for TIME_SERIES_DAILY.
+2025-12-01 23:38:01 | [32m[1mINFO[0m | trading_bot.multi_source_client | Intentando obtener datos desde Finnhub para GD35...
+2025-12-01 23:38:01 | [31m[1mERROR[0m | trading_bot.multi_source_client | Error obteniendo datos desde Finnhub para GD35: 403 Client Error: Forbidden for url: https://finnhub.io/api/v1/stock/candle?symbol=GD35&resolution=D&from=1764211081&to=1764643081&token=d4ibighr01qkv40hre2gd4ibighr01qkv40hre30
+2025-12-01 23:38:01 | [31m[1mERROR[0m | trading_bot.multi_source_client | ❌ No se pudieron obtener datos para GD35 desde ninguna fuente
+No data found for GD35
+
+============================================================
+📊 Analyzing GD35
+============================================================
+   📡 Real-time price from IOL: $110200.00
+   📊 Live data integrated: $110200.00
+⚠️  Technical Analysis failed: index 13 is out of bounds for axis 0 with size 2
+Using generic model for GD35
+
+⚠️  AI Prediction no disponible - usando solo análisis técnico
+2025-12-01 23:38:02 | [32m[1mINFO[0m | trading_bot.enhanced_sentiment | No hay sentimientos recientes para GD35, obteniendo noticias automáticamente...
+2025-12-01 23:38:02 | [32m[1mINFO[0m | trading_bot.news_fetcher | Obteniendo noticias desde NewsAPI para GD35...
+2025-12-01 23:38:03 | [32m[1mINFO[0m | trading_bot.news_fetcher | ✅ Obtenidas 0 noticias desde NewsAPI para GD35
+2025-12-01 23:38:03 | [32m[1mINFO[0m | trading_bot.news_fetcher | Obteniendo noticias desde NewsData.io para GD35...
+2025-12-01 23:38:04 | [31m[1mERROR[0m | trading_bot.news_fetcher | Error obteniendo noticias desde NewsData.io para GD35: 422 Client Error: UNPROCESSABLE ENTITY for url: https://newsdata.io/api/1/news?apikey=pub_91dc6631d1e34a4b949e3d2f4613cc3c&q=GD35+stock+OR+GD35+shares+OR+GD35+company&language=es%2Cen&category=business%2Cfinance&size=10&timeframe=7d
+2025-12-01 23:38:04 | [32m[1mINFO[0m | trading_bot.news_fetcher | Obteniendo noticias desde Alpha Vantage para GD35...
+2025-12-01 23:38:05 | [32m[1mINFO[0m | trading_bot.news_fetcher | ✅ Obtenidas 0 noticias desde Alpha Vantage para GD35
+2025-12-01 23:38:05 | [32m[1mINFO[0m | trading_bot.news_fetcher | Obteniendo noticias desde Finnhub para GD35...
+2025-12-01 23:38:05 | [32m[1mINFO[0m | trading_bot.news_fetcher | ✅ Obtenidas 0 noticias desde Finnhub para GD35
+2025-12-01 23:38:06 | [32m[1mINFO[0m | trading_bot.news_fetcher | Obteniendo noticias desde Google News para GD35...
+2025-12-01 23:38:06 | [32m[1mINFO[0m | trading_bot.news_fetcher | ✅ Obtenidas 10 noticias desde Google News para GD35
+2025-12-01 23:38:06 | [32m[1mINFO[0m | trading_bot.news_fetcher | ✅ 10 noticias obtenidas desde Google News
+2025-12-01 23:38:06 | [32m[1mINFO[0m | trading_bot.news_fetcher | ✅ Total: 7 noticias únicas obtenidas para GD35
+2025-12-01 23:38:06 | [32m[1mINFO[0m | trading_bot.enhanced_sentiment | ✅ 7 noticias analizadas para GD35
+
+💭 Sentiment Analysis:
+   Overall: NEUTRAL
+   Score: 0.004
+   Sample Size: 7 noticias
+
+📊 Scoring Analysis (Score: 0):
+   Buy Factors: None
+   Sell Factors: None
+
+🎯 Final Signal: HOLD (Confidence: LOW)
+
+[95m[1m================================================================================[0m
+[95m[1m                         📊 ANÁLISIS COMPLETO[0m
+[95m[1m================================================================================[0m
+
+[1m📊 Símbolo:[0m [1mGD35[0m
+[1m🎯 Señal Final:[0m [93m[1mHOLD[0m
+[1m📈 Score:[0m 0
+[1m🎯 Confianza:[0m [96mLOW[0m
+[1m⏰ Hora:[0m 2025-12-01 23:38:06
+
+[1m📋 Factores de Decisión:[0m
+
+[95m[1m================================================================================[0m
+
+📥 Fetching latest data for NU...
+📥 Descargando datos para NU...
+2025-12-01 23:38:07 | [32m[1mINFO[0m | trading_bot.multi_source_client | Intentando obtener datos desde Yahoo Finance para NU...
+   ✅ Datos obtenidos desde Yahoo Finance
+✓ Ingested 0 new records for NU
+  Total records in DB for NU: 252
+
+============================================================
+📊 Analyzing NU
+============================================================
+   📡 Real-time price from IOL: $17.50
+   📊 Live data integrated: $17.50
+
+📈 Technical Analysis:
+   RSI: 83.03
+   ATR: 0.94
+   Signal: BUY
+
+🤖 Prediction (IA Model):
+   Current: $17.48
+   Predicted: $15.74
+   Change: -9.97%
+   Signal: SELL
+
+[94m[1m================================================================================[0m
+[94m[1m                            🤖 PREDICCIÓN IA[0m
+[94m[1m================================================================================[0m
+
+[1m📊 Símbolo:[0m [1mNU[0m
+[1m💵 Precio Actual:[0m $17.48
+[1m🔮 Precio Predicho:[0m $15.74
+[1m📊 Cambio Esperado:[0m [91m-9.97%[0m
+[1m🎯 Señal:[0m [91m📉 SELL[0m
+[1m⏰ Hora:[0m 2025-12-01 23:38:09
+
+[94m[1m================================================================================[0m
+
+2025-12-01 23:38:09 | [32m[1mINFO[0m | trading_bot.enhanced_sentiment | No hay sentimientos recientes para NU, obteniendo noticias automáticamente...
+2025-12-01 23:38:09 | [32m[1mINFO[0m | trading_bot.news_fetcher | Obteniendo noticias desde NewsAPI para NU...
+2025-12-01 23:38:09 | [32m[1mINFO[0m | trading_bot.news_fetcher | ✅ Obtenidas 0 noticias desde NewsAPI para NU
+2025-12-01 23:38:09 | [32m[1mINFO[0m | trading_bot.news_fetcher | Obteniendo noticias desde NewsData.io para NU...
+2025-12-01 23:38:10 | [31m[1mERROR[0m | trading_bot.news_fetcher | Error obteniendo noticias desde NewsData.io para NU: 422 Client Error: UNPROCESSABLE ENTITY for url: https://newsdata.io/api/1/news?apikey=pub_91dc6631d1e34a4b949e3d2f4613cc3c&q=NU+stock+OR+NU+shares+OR+NU+company&language=es%2Cen&category=business%2Cfinance&size=10&timeframe=7d
+2025-12-01 23:38:10 | [32m[1mINFO[0m | trading_bot.news_fetcher | Obteniendo noticias desde Alpha Vantage para NU...
+2025-12-01 23:38:11 | [32m[1mINFO[0m | trading_bot.news_fetcher | ✅ Obtenidas 12 noticias desde Alpha Vantage para NU
+2025-12-01 23:38:11 | [32m[1mINFO[0m | trading_bot.news_fetcher | ✅ 12 noticias obtenidas desde Alpha Vantage
+2025-12-01 23:38:11 | [32m[1mINFO[0m | trading_bot.news_fetcher | ✅ Total: 10 noticias únicas obtenidas para NU
+2025-12-01 23:38:11 | [32m[1mINFO[0m | trading_bot.enhanced_sentiment | ✅ 10 noticias analizadas para NU
+
+💭 Sentiment Analysis:
+   Overall: NEUTRAL
+   Score: 0.000
+   Sample Size: 10 noticias
+
+📊 Scoring Analysis (Score: -25):
+   Buy Factors: MACD > Signal (+15), Price > SMA20 (+10)
+   Sell Factors: IA Bearish (-30), RSI Overbought (-20)
+
+🎯 Final Signal: SELL (Confidence: MEDIUM)
+
+[95m[1m================================================================================[0m
+[95m[1m                         📊 ANÁLISIS COMPLETO[0m
+[95m[1m================================================================================[0m
+
+[1m📊 Símbolo:[0m [1mNU[0m
+[1m🎯 Señal Final:[0m [91m[1mSELL[0m
+[1m📈 Score:[0m -25
+[1m🎯 Confianza:[0m [93mMEDIUM[0m
+[1m⏰ Hora:[0m 2025-12-01 23:38:11
+
+[1m📋 Factores de Decisión:[0m
+   [92m✅ Factores de Compra:[0m
+      • MACD > Signal (+15)
+      • Price > SMA20 (+10)
+   [91m❌ Factores de Venta:[0m
+      • IA Bearish (-30)
+      • RSI Overbought (-20)
+
+[95m[1m================================================================================[0m
+
+
+⏰ Filtro de Tiempo: Después del horario de trading (17:00)
+📥 Fetching latest data for NVDA...
+📥 Descargando datos para NVDA...
+2025-12-01 23:38:13 | [32m[1mINFO[0m | trading_bot.multi_source_client | Intentando obtener datos desde Yahoo Finance para NVDA...
+   ✅ Datos obtenidos desde Yahoo Finance
+✓ Ingested 0 new records for NVDA
+  Total records in DB for NVDA: 252
+
+============================================================
+📊 Analyzing NVDA
+============================================================
+   📡 Real-time price from IOL: $180.00
+   📊 Live data integrated: $180.00
+
+📈 Technical Analysis:
+   RSI: 78.47
+   ATR: 11.64
+   Signal: BUY
+
+🤖 Prediction (IA Model):
+   Current: $179.92
+   Predicted: $174.37
+   Change: -3.09%
+   Signal: SELL
+
+[94m[1m================================================================================[0m
+[94m[1m                            🤖 PREDICCIÓN IA[0m
+[94m[1m================================================================================[0m
+
+[1m📊 Símbolo:[0m [1mNVDA[0m
+[1m💵 Precio Actual:[0m $179.92
+[1m🔮 Precio Predicho:[0m $174.37
+[1m📊 Cambio Esperado:[0m [91m-3.09%[0m
+[1m🎯 Señal:[0m [91m📉 SELL[0m
+[1m⏰ Hora:[0m 2025-12-01 23:38:14
+
+[94m[1m================================================================================[0m
+
+2025-12-01 23:38:14 | [32m[1mINFO[0m | trading_bot.enhanced_sentiment | No hay sentimientos recientes para NVDA, obteniendo noticias automáticamente...
+2025-12-01 23:38:14 | [32m[1mINFO[0m | trading_bot.news_fetcher | Obteniendo noticias desde NewsAPI para NVDA...
+2025-12-01 23:38:14 | [32m[1mINFO[0m | trading_bot.news_fetcher | ✅ Obtenidas 0 noticias desde NewsAPI para NVDA
+2025-12-01 23:38:15 | [32m[1mINFO[0m | trading_bot.news_fetcher | Obteniendo noticias desde NewsData.io para NVDA...
+2025-12-01 23:38:15 | [31m[1mERROR[0m | trading_bot.news_fetcher | Error obteniendo noticias desde NewsData.io para NVDA: 422 Client Error: UNPROCESSABLE ENTITY for url: https://newsdata.io/api/1/news?apikey=pub_91dc6631d1e34a4b949e3d2f4613cc3c&q=NVDA+stock+OR+NVDA+shares+OR+NVDA+company&language=es%2Cen&category=business%2Cfinance&size=10&timeframe=7d
+2025-12-01 23:38:16 | [32m[1mINFO[0m | trading_bot.news_fetcher | Obteniendo noticias desde Alpha Vantage para NVDA...
+2025-12-01 23:38:16 | [32m[1mINFO[0m | trading_bot.news_fetcher | ✅ Obtenidas 50 noticias desde Alpha Vantage para NVDA
+2025-12-01 23:38:16 | [32m[1mINFO[0m | trading_bot.news_fetcher | ✅ 50 noticias obtenidas desde Alpha Vantage
+2025-12-01 23:38:16 | [32m[1mINFO[0m | trading_bot.news_fetcher | ✅ Total: 10 noticias únicas obtenidas para NVDA
+2025-12-01 23:38:16 | [32m[1mINFO[0m | trading_bot.enhanced_sentiment | ✅ 10 noticias analizadas para NVDA
+
+💭 Sentiment Analysis:
+   Overall: NEUTRAL
+   Score: 0.002
+   Sample Size: 10 noticias
+
+📊 Scoring Analysis (Score: -25):
+   Buy Factors: MACD > Signal (+15), Price > SMA20 (+10)
+   Sell Factors: IA Bearish (-30), RSI Overbought (-20)
+
+🎯 Final Signal: SELL (Confidence: MEDIUM)
+
+[95m[1m================================================================================[0m
+[95m[1m                         📊 ANÁLISIS COMPLETO[0m
+[95m[1m================================================================================[0m
+
+[1m📊 Símbolo:[0m [1mNVDA[0m
+[1m🎯 Señal Final:[0m [91m[1mSELL[0m
+[1m📈 Score:[0m -25
+[1m🎯 Confianza:[0m [93mMEDIUM[0m
+[1m⏰ Hora:[0m 2025-12-01 23:38:16
+
+[1m📋 Factores de Decisión:[0m
+   [92m✅ Factores de Compra:[0m
+      • MACD > Signal (+15)
+      • Price > SMA20 (+10)
+   [91m❌ Factores de Venta:[0m
+      • IA Bearish (-30)
+      • RSI Overbought (-20)
+
+[95m[1m================================================================================[0m
+
+
+⏰ Filtro de Tiempo: Después del horario de trading (17:00)
+📥 Fetching latest data for COME...
+📥 Descargando datos para COME...
+2025-12-01 23:38:18 | [32m[1mINFO[0m | trading_bot.multi_source_client | Intentando obtener datos desde Yahoo Finance para COME...
+2025-12-01 23:38:20 | [32m[1mINFO[0m | trading_bot.multi_source_client | Intentando obtener datos desde BYMA/Yahoo para COME...
+2025-12-01 23:38:20 | [32m[1mINFO[0m | trading_bot.byma_client | Obteniendo datos históricos de Yahoo Finance para COME.BA
+2025-12-01 23:38:20 | [32m[1mINFO[0m | trading_bot.byma_client | ✅ Obtenidos 5 registros desde Yahoo Finance para COME
+   ✅ Datos obtenidos desde BYMA/Yahoo
+✓ Ingested 1 new records for COME
+  Total records in DB for COME: 494
+
+============================================================
+📊 Analyzing COME
+============================================================
+   📡 Real-time price from IOL: $74.00
+   📊 Live data integrated: $74.00
+
+📈 Technical Analysis:
+   RSI: 80.54
+   ATR: 4.29
+   Signal: BUY
+Using generic model for COME
+
+🤖 Prediction (IA Model):
+   Current: $74.00
+   Predicted: $81.97
+   Change: +10.77%
+   Signal: BUY
+
+[94m[1m================================================================================[0m
+[94m[1m                            🤖 PREDICCIÓN IA[0m
+[94m[1m================================================================================[0m
+
+[1m📊 Símbolo:[0m [1mCOME[0m
+[1m💵 Precio Actual:[0m $74.00
+[1m🔮 Precio Predicho:[0m $81.97
+[1m📊 Cambio Esperado:[0m [92m+10.77%[0m
+[1m🎯 Señal:[0m [92m📈 BUY[0m
+[1m⏰ Hora:[0m 2025-12-01 23:38:21
+
+[94m[1m================================================================================[0m
+
+2025-12-01 23:38:21 | [32m[1mINFO[0m | trading_bot.enhanced_sentiment | No hay sentimientos recientes para COME, obteniendo noticias automáticamente...
+2025-12-01 23:38:21 | [32m[1mINFO[0m | trading_bot.news_fetcher | Obteniendo noticias desde NewsAPI para COME...
+2025-12-01 23:38:21 | [32m[1mINFO[0m | trading_bot.news_fetcher | ✅ Obtenidas 0 noticias desde NewsAPI para COME
+2025-12-01 23:38:21 | [32m[1mINFO[0m | trading_bot.news_fetcher | Obteniendo noticias desde NewsData.io para COME...
+2025-12-01 23:38:22 | [31m[1mERROR[0m | trading_bot.news_fetcher | Error obteniendo noticias desde NewsData.io para COME: 422 Client Error: UNPROCESSABLE ENTITY for url: https://newsdata.io/api/1/news?apikey=pub_91dc6631d1e34a4b949e3d2f4613cc3c&q=COME+stock+OR+COME+shares+OR+COME+company&language=es%2Cen&category=business%2Cfinance&size=10&timeframe=7d
+2025-12-01 23:38:22 | [32m[1mINFO[0m | trading_bot.news_fetcher | Obteniendo noticias desde Alpha Vantage para COME...
+2025-12-01 23:38:23 | [32m[1mINFO[0m | trading_bot.news_fetcher | ✅ Obtenidas 0 noticias desde Alpha Vantage para COME
+2025-12-01 23:38:23 | [32m[1mINFO[0m | trading_bot.news_fetcher | Obteniendo noticias desde Finnhub para COME...
+2025-12-01 23:38:23 | [32m[1mINFO[0m | trading_bot.news_fetcher | ✅ Obtenidas 0 noticias desde Finnhub para COME
+2025-12-01 23:38:24 | [32m[1mINFO[0m | trading_bot.news_fetcher | Obteniendo noticias desde Google News para COME...
+2025-12-01 23:38:25 | [32m[1mINFO[0m | trading_bot.news_fetcher | ✅ Obtenidas 10 noticias desde Google News para COME
+2025-12-01 23:38:25 | [32m[1mINFO[0m | trading_bot.news_fetcher | ✅ 10 noticias obtenidas desde Google News
+2025-12-01 23:38:25 | [32m[1mINFO[0m | trading_bot.news_fetcher | ✅ Total: 10 noticias únicas obtenidas para COME
+2025-12-01 23:38:25 | [32m[1mINFO[0m | trading_bot.enhanced_sentiment | ✅ 10 noticias analizadas para COME
+
+💭 Sentiment Analysis:
+   Overall: NEUTRAL
+   Score: 0.002
+   Sample Size: 10 noticias
+
+📊 Scoring Analysis (Score: 35):
+   Buy Factors: IA Bullish (+30), MACD > Signal (+15), Price > SMA20 (+10)
+   Sell Factors: RSI Overbought (-20)
+
+🎯 Final Signal: BUY (Confidence: MEDIUM)
+
+[95m[1m================================================================================[0m
+[95m[1m                         📊 ANÁLISIS COMPLETO[0m
+[95m[1m================================================================================[0m
+
+[1m📊 Símbolo:[0m [1mCOME[0m
+[1m🎯 Señal Final:[0m [92m[1mBUY[0m
+[1m📈 Score:[0m 35
+[1m🎯 Confianza:[0m [93mMEDIUM[0m
+[1m⏰ Hora:[0m 2025-12-01 23:38:25
+
+[1m📋 Factores de Decisión:[0m
+   [92m✅ Factores de Compra:[0m
+      • IA Bullish (+30)
+      • MACD > Signal (+15)
+      • Price > SMA20 (+10)
+   [91m❌ Factores de Venta:[0m
+      • RSI Overbought (-20)
+
+[95m[1m================================================================================[0m
+
+
+⏰ Filtro de Tiempo: Después del horario de trading (17:00)
+📥 Fetching latest data for TRAN...
+📥 Descargando datos para TRAN...
+2025-12-01 23:38:27 | [32m[1mINFO[0m | trading_bot.multi_source_client | Intentando obtener datos desde Yahoo Finance para TRAN...
+2025-12-01 23:38:28 | [32m[1mINFO[0m | trading_bot.multi_source_client | Intentando obtener datos desde BYMA/Yahoo para TRAN...
+2025-12-01 23:38:28 | [32m[1mINFO[0m | trading_bot.byma_client | Obteniendo datos históricos de Yahoo Finance para TRAN.BA
+2025-12-01 23:38:28 | [32m[1mINFO[0m | trading_bot.byma_client | ✅ Obtenidos 5 registros desde Yahoo Finance para TRAN
+   ✅ Datos obtenidos desde BYMA/Yahoo
+✓ Ingested 0 new records for TRAN
+  Total records in DB for TRAN: 494
+
+============================================================
+📊 Analyzing TRAN
+============================================================
+   📡 Real-time price from IOL: $3630.00
+   📊 Live data integrated: $3630.00
+
+📈 Technical Analysis:
+   RSI: 92.96
+   ATR: 247.97
+   Signal: BUY
+Using generic model for TRAN
+
+🤖 Prediction (IA Model):
+   Current: $3630.00
+   Predicted: $498.77
+   Change: -86.26%
+   Signal: SELL
+
+[94m[1m================================================================================[0m
+[94m[1m                            🤖 PREDICCIÓN IA[0m
+[94m[1m================================================================================[0m
+
+[1m📊 Símbolo:[0m [1mTRAN[0m
+[1m💵 Precio Actual:[0m $3,630.00
+[1m🔮 Precio Predicho:[0m $498.77
+[1m📊 Cambio Esperado:[0m [91m-86.26%[0m
+[1m🎯 Señal:[0m [91m📉 SELL[0m
+[1m⏰ Hora:[0m 2025-12-01 23:38:29
+
+[94m[1m================================================================================[0m
+
+2025-12-01 23:38:29 | [32m[1mINFO[0m | trading_bot.enhanced_sentiment | No hay sentimientos recientes para TRAN, obteniendo noticias automáticamente...
+2025-12-01 23:38:29 | [32m[1mINFO[0m | trading_bot.news_fetcher | Obteniendo noticias desde NewsAPI para TRAN...
+2025-12-01 23:38:29 | [32m[1mINFO[0m | trading_bot.news_fetcher | ✅ Obtenidas 0 noticias desde NewsAPI para TRAN
+2025-12-01 23:38:29 | [32m[1mINFO[0m | trading_bot.news_fetcher | Obteniendo noticias desde NewsData.io para TRAN...
+2025-12-01 23:38:30 | [31m[1mERROR[0m | trading_bot.news_fetcher | Error obteniendo noticias desde NewsData.io para TRAN: 422 Client Error: UNPROCESSABLE ENTITY for url: https://newsdata.io/api/1/news?apikey=pub_91dc6631d1e34a4b949e3d2f4613cc3c&q=TRAN+stock+OR+TRAN+shares+OR+TRAN+company&language=es%2Cen&category=business%2Cfinance&size=10&timeframe=7d
+2025-12-01 23:38:30 | [32m[1mINFO[0m | trading_bot.news_fetcher | Obteniendo noticias desde Alpha Vantage para TRAN...
+2025-12-01 23:38:31 | [32m[1mINFO[0m | trading_bot.news_fetcher | ✅ Obtenidas 0 noticias desde Alpha Vantage para TRAN
+2025-12-01 23:38:31 | [32m[1mINFO[0m | trading_bot.news_fetcher | Obteniendo noticias desde Finnhub para TRAN...
+2025-12-01 23:38:32 | [32m[1mINFO[0m | trading_bot.news_fetcher | ✅ Obtenidas 0 noticias desde Finnhub para TRAN
+2025-12-01 23:38:32 | [32m[1mINFO[0m | trading_bot.news_fetcher | Obteniendo noticias desde Google News para TRAN...
+2025-12-01 23:38:33 | [32m[1mINFO[0m | trading_bot.news_fetcher | ✅ Obtenidas 10 noticias desde Google News para TRAN
+2025-12-01 23:38:33 | [32m[1mINFO[0m | trading_bot.news_fetcher | ✅ 10 noticias obtenidas desde Google News
+2025-12-01 23:38:33 | [32m[1mINFO[0m | trading_bot.news_fetcher | ✅ Total: 10 noticias únicas obtenidas para TRAN
+2025-12-01 23:38:33 | [32m[1mINFO[0m | trading_bot.enhanced_sentiment | ✅ 10 noticias analizadas para TRAN
+
+💭 Sentiment Analysis:
+   Overall: NEUTRAL
+   Score: 0.000
+   Sample Size: 10 noticias
+
+📊 Scoring Analysis (Score: -25):
+   Buy Factors: MACD > Signal (+15), Price > SMA20 (+10)
+   Sell Factors: IA Bearish (-30), RSI Overbought (-20)
+
+🎯 Final Signal: SELL (Confidence: MEDIUM)
+
+[95m[1m================================================================================[0m
+[95m[1m                         📊 ANÁLISIS COMPLETO[0m
+[95m[1m================================================================================[0m
+
+[1m📊 Símbolo:[0m [1mTRAN[0m
+[1m🎯 Señal Final:[0m [91m[1mSELL[0m
+[1m📈 Score:[0m -25
+[1m🎯 Confianza:[0m [93mMEDIUM[0m
+[1m⏰ Hora:[0m 2025-12-01 23:38:33
+
+[1m📋 Factores de Decisión:[0m
+   [92m✅ Factores de Compra:[0m
+      • MACD > Signal (+15)
+      • Price > SMA20 (+10)
+   [91m❌ Factores de Venta:[0m
+      • IA Bearish (-30)
+      • RSI Overbought (-20)
+
+[95m[1m================================================================================[0m
+
+
+⏰ Filtro de Tiempo: Después del horario de trading (17:00)
+📥 Fetching latest data for BPOC7...
+📥 Descargando datos para BPOC7...
+2025-12-01 23:38:35 | [32m[1mINFO[0m | trading_bot.multi_source_client | Intentando obtener datos desde Yahoo Finance para BPOC7...
+2025-12-01 23:38:36 | [32m[1mINFO[0m | trading_bot.multi_source_client | Intentando obtener datos desde BYMA/Yahoo para BPOC7...
+2025-12-01 23:38:36 | [32m[1mINFO[0m | trading_bot.byma_client | Obteniendo datos históricos de Yahoo Finance para BPOC7.BA
+2025-12-01 23:38:36 | [33m[1mWARNING[0m | trading_bot.byma_client | ⚠️ No se encontraron datos en Yahoo Finance para BPOC7.BA
+2025-12-01 23:38:36 | [32m[1mINFO[0m | trading_bot.multi_source_client | Intentando obtener datos desde Alpha Vantage para BPOC7...
+2025-12-01 23:38:36 | [33m[1mWARNING[0m | trading_bot.multi_source_client | Alpha Vantage error: Invalid API call. Please retry or visit the documentation (https://www.alphavantage.co/documentation/) for TIME_SERIES_DAILY.
+2025-12-01 23:38:36 | [32m[1mINFO[0m | trading_bot.multi_source_client | Intentando obtener datos desde Finnhub para BPOC7...
+2025-12-01 23:38:37 | [31m[1mERROR[0m | trading_bot.multi_source_client | Error obteniendo datos desde Finnhub para BPOC7: 403 Client Error: Forbidden for url: https://finnhub.io/api/v1/stock/candle?symbol=BPOC7&resolution=D&from=1764211116&to=1764643116&token=d4ibighr01qkv40hre2gd4ibighr01qkv40hre30
+2025-12-01 23:38:37 | [31m[1mERROR[0m | trading_bot.multi_source_client | ❌ No se pudieron obtener datos para BPOC7 desde ninguna fuente
+No data found for BPOC7
+
+============================================================
+📊 Analyzing BPOC7
+============================================================
+   📡 Real-time price from IOL: $142650.00
+   📊 Live data integrated: $142650.00
+⚠️  Technical Analysis failed: index 13 is out of bounds for axis 0 with size 2
+Using generic model for BPOC7
+
+⚠️  AI Prediction no disponible - usando solo análisis técnico
+2025-12-01 23:38:38 | [32m[1mINFO[0m | trading_bot.enhanced_sentiment | No hay sentimientos recientes para BPOC7, obteniendo noticias automáticamente...
+2025-12-01 23:38:38 | [32m[1mINFO[0m | trading_bot.news_fetcher | Obteniendo noticias desde NewsAPI para BPOC7...
+2025-12-01 23:38:38 | [32m[1mINFO[0m | trading_bot.news_fetcher | ✅ Obtenidas 0 noticias desde NewsAPI para BPOC7
+2025-12-01 23:38:39 | [32m[1mINFO[0m | trading_bot.news_fetcher | Obteniendo noticias desde NewsData.io para BPOC7...
+2025-12-01 23:38:39 | [31m[1mERROR[0m | trading_bot.news_fetcher | Error obteniendo noticias desde NewsData.io para BPOC7: 422 Client Error: UNPROCESSABLE ENTITY for url: https://newsdata.io/api/1/news?apikey=pub_91dc6631d1e34a4b949e3d2f4613cc3c&q=BPOC7+stock+OR+BPOC7+shares+OR+BPOC7+company&language=es%2Cen&category=business%2Cfinance&size=10&timeframe=7d
+2025-12-01 23:38:40 | [32m[1mINFO[0m | trading_bot.news_fetcher | Obteniendo noticias desde Alpha Vantage para BPOC7...
+2025-12-01 23:38:40 | [32m[1mINFO[0m | trading_bot.news_fetcher | ✅ Obtenidas 0 noticias desde Alpha Vantage para BPOC7
+2025-12-01 23:38:41 | [32m[1mINFO[0m | trading_bot.news_fetcher | Obteniendo noticias desde Finnhub para BPOC7...
+2025-12-01 23:38:41 | [32m[1mINFO[0m | trading_bot.news_fetcher | ✅ Obtenidas 0 noticias desde Finnhub para BPOC7
+2025-12-01 23:38:42 | [32m[1mINFO[0m | trading_bot.news_fetcher | Obteniendo noticias desde Google News para BPOC7...
+2025-12-01 23:38:42 | [32m[1mINFO[0m | trading_bot.news_fetcher | ✅ Obtenidas 10 noticias desde Google News para BPOC7
+2025-12-01 23:38:42 | [32m[1mINFO[0m | trading_bot.news_fetcher | ✅ 10 noticias obtenidas desde Google News
+2025-12-01 23:38:42 | [32m[1mINFO[0m | trading_bot.news_fetcher | ✅ Total: 7 noticias únicas obtenidas para BPOC7
+2025-12-01 23:38:42 | [32m[1mINFO[0m | trading_bot.enhanced_sentiment | ✅ 7 noticias analizadas para BPOC7
+
+💭 Sentiment Analysis:
+   Overall: NEUTRAL
+   Score: 0.003
+   Sample Size: 7 noticias
+
+📊 Scoring Analysis (Score: 0):
+   Buy Factors: None
+   Sell Factors: None
+
+🎯 Final Signal: HOLD (Confidence: LOW)
+
+[95m[1m================================================================================[0m
+[95m[1m                         📊 ANÁLISIS COMPLETO[0m
+[95m[1m================================================================================[0m
+
+[1m📊 Símbolo:[0m [1mBPOC7[0m
+[1m🎯 Señal Final:[0m [93m[1mHOLD[0m
+[1m📈 Score:[0m 0
+[1m🎯 Confianza:[0m [96mLOW[0m
+[1m⏰ Hora:[0m 2025-12-01 23:38:42
+
+[1m📋 Factores de Decisión:[0m
+
+[95m[1m================================================================================[0m
+
+📥 Fetching latest data for BA37D...
+📥 Descargando datos para BA37D...
+2025-12-01 23:38:43 | [32m[1mINFO[0m | trading_bot.multi_source_client | Intentando obtener datos desde Yahoo Finance para BA37D...
+2025-12-01 23:38:44 | [32m[1mINFO[0m | trading_bot.multi_source_client | Intentando obtener datos desde BYMA/Yahoo para BA37D...
+2025-12-01 23:38:44 | [32m[1mINFO[0m | trading_bot.byma_client | Obteniendo datos históricos de Yahoo Finance para BA37D.BA
+2025-12-01 23:38:44 | [33m[1mWARNING[0m | trading_bot.byma_client | ⚠️ No se encontraron datos en Yahoo Finance para BA37D.BA
+2025-12-01 23:38:44 | [32m[1mINFO[0m | trading_bot.multi_source_client | Intentando obtener datos desde Alpha Vantage para BA37D...
+2025-12-01 23:38:45 | [33m[1mWARNING[0m | trading_bot.multi_source_client | Alpha Vantage error: Invalid API call. Please retry or visit the documentation (https://www.alphavantage.co/documentation/) for TIME_SERIES_DAILY.
+2025-12-01 23:38:45 | [32m[1mINFO[0m | trading_bot.multi_source_client | Intentando obtener datos desde Finnhub para BA37D...
+2025-12-01 23:38:45 | [31m[1mERROR[0m | trading_bot.multi_source_client | Error obteniendo datos desde Finnhub para BA37D: 403 Client Error: Forbidden for url: https://finnhub.io/api/v1/stock/candle?symbol=BA37D&resolution=D&from=1764211125&to=1764643125&token=d4ibighr01qkv40hre2gd4ibighr01qkv40hre30
+2025-12-01 23:38:45 | [31m[1mERROR[0m | trading_bot.multi_source_client | ❌ No se pudieron obtener datos para BA37D desde ninguna fuente
+No data found for BA37D
+
+============================================================
+📊 Analyzing BA37D
+============================================================
+   📡 Real-time price from IOL: $102380.00
+   📊 Live data integrated: $102380.00
+⚠️  Technical Analysis failed: index 13 is out of bounds for axis 0 with size 2
+Using generic model for BA37D
+
+⚠️  AI Prediction no disponible - usando solo análisis técnico
+2025-12-01 23:38:46 | [32m[1mINFO[0m | trading_bot.enhanced_sentiment | No hay sentimientos recientes para BA37D, obteniendo noticias automáticamente...
+2025-12-01 23:38:46 | [32m[1mINFO[0m | trading_bot.news_fetcher | Obteniendo noticias desde NewsAPI para BA37D...
+2025-12-01 23:38:47 | [32m[1mINFO[0m | trading_bot.news_fetcher | ✅ Obtenidas 0 noticias desde NewsAPI para BA37D
+2025-12-01 23:38:47 | [32m[1mINFO[0m | trading_bot.news_fetcher | Obteniendo noticias desde NewsData.io para BA37D...
+2025-12-01 23:38:48 | [31m[1mERROR[0m | trading_bot.news_fetcher | Error obteniendo noticias desde NewsData.io para BA37D: 422 Client Error: UNPROCESSABLE ENTITY for url: https://newsdata.io/api/1/news?apikey=pub_91dc6631d1e34a4b949e3d2f4613cc3c&q=BA37D+stock+OR+BA37D+shares+OR+BA37D+company&language=es%2Cen&category=business%2Cfinance&size=10&timeframe=7d
+2025-12-01 23:38:48 | [32m[1mINFO[0m | trading_bot.news_fetcher | Obteniendo noticias desde Alpha Vantage para BA37D...
+2025-12-01 23:38:48 | [32m[1mINFO[0m | trading_bot.news_fetcher | ✅ Obtenidas 0 noticias desde Alpha Vantage para BA37D
+2025-12-01 23:38:49 | [32m[1mINFO[0m | trading_bot.news_fetcher | Obteniendo noticias desde Finnhub para BA37D...
+2025-12-01 23:38:49 | [32m[1mINFO[0m | trading_bot.news_fetcher | ✅ Obtenidas 0 noticias desde Finnhub para BA37D
+2025-12-01 23:38:50 | [32m[1mINFO[0m | trading_bot.news_fetcher | Obteniendo noticias desde Google News para BA37D...
+2025-12-01 23:38:50 | [32m[1mINFO[0m | trading_bot.news_fetcher | ✅ Obtenidas 6 noticias desde Google News para BA37D
+2025-12-01 23:38:50 | [32m[1mINFO[0m | trading_bot.news_fetcher | ✅ 6 noticias obtenidas desde Google News
+2025-12-01 23:38:51 | [32m[1mINFO[0m | trading_bot.news_fetcher | Obteniendo noticias desde RSS Feeds para BA37D...
+2025-12-01 23:38:55 | [32m[1mINFO[0m | trading_bot.news_fetcher | ✅ Total: 6 noticias únicas obtenidas para BA37D
+2025-12-01 23:38:55 | [32m[1mINFO[0m | trading_bot.enhanced_sentiment | ✅ 6 noticias analizadas para BA37D
+
+💭 Sentiment Analysis:
+   Overall: NEUTRAL
+   Score: 0.000
+   Sample Size: 6 noticias
+
+📊 Scoring Analysis (Score: 0):
+   Buy Factors: None
+   Sell Factors: None
+
+🎯 Final Signal: HOLD (Confidence: LOW)
+
+[95m[1m================================================================================[0m
+[95m[1m                         📊 ANÁLISIS COMPLETO[0m
+[95m[1m================================================================================[0m
+
+[1m📊 Símbolo:[0m [1mBA37D[0m
+[1m🎯 Señal Final:[0m [93m[1mHOLD[0m
+[1m📈 Score:[0m 0
+[1m🎯 Confianza:[0m [96mLOW[0m
+[1m⏰ Hora:[0m 2025-12-01 23:38:55
+
+[1m📋 Factores de Decisión:[0m
+
+[95m[1m================================================================================[0m
+
+📥 Fetching latest data for LOMA...
+📥 Descargando datos para LOMA...
+2025-12-01 23:38:56 | [32m[1mINFO[0m | trading_bot.multi_source_client | Intentando obtener datos desde Yahoo Finance para LOMA...
+   ✅ Datos obtenidos desde Yahoo Finance
+✓ Ingested 0 new records for LOMA
+  Total records in DB for LOMA: 252
+
+============================================================
+📊 Analyzing LOMA
+============================================================
+   📡 Real-time price from IOL: $3792.50
+   📊 Live data integrated: $3792.50
+
+📈 Technical Analysis:
+   RSI: 99.94
+   ATR: 270.78
+   Signal: BUY
+
+🤖 Prediction (IA Model):
+   Current: $12.19
+   Predicted: $12.86
+   Change: +5.50%
+   Signal: BUY
+
+[94m[1m================================================================================[0m
+[94m[1m                            🤖 PREDICCIÓN IA[0m
+[94m[1m================================================================================[0m
+
+[1m📊 Símbolo:[0m [1mLOMA[0m
+[1m💵 Precio Actual:[0m $12.19
+[1m🔮 Precio Predicho:[0m $12.86
+[1m📊 Cambio Esperado:[0m [92m+5.50%[0m
+[1m🎯 Señal:[0m [92m📈 BUY[0m
+[1m⏰ Hora:[0m 2025-12-01 23:38:57
+
+[94m[1m================================================================================[0m
+
+2025-12-01 23:38:57 | [32m[1mINFO[0m | trading_bot.enhanced_sentiment | No hay sentimientos recientes para LOMA, obteniendo noticias automáticamente...
+2025-12-01 23:38:57 | [32m[1mINFO[0m | trading_bot.news_fetcher | Obteniendo noticias desde NewsAPI para LOMA...
+2025-12-01 23:38:58 | [32m[1mINFO[0m | trading_bot.news_fetcher | ✅ Obtenidas 0 noticias desde NewsAPI para LOMA
+2025-12-01 23:38:58 | [32m[1mINFO[0m | trading_bot.news_fetcher | Obteniendo noticias desde NewsData.io para LOMA...
+2025-12-01 23:38:59 | [31m[1mERROR[0m | trading_bot.news_fetcher | Error obteniendo noticias desde NewsData.io para LOMA: 422 Client Error: UNPROCESSABLE ENTITY for url: https://newsdata.io/api/1/news?apikey=pub_91dc6631d1e34a4b949e3d2f4613cc3c&q=LOMA+stock+OR+LOMA+shares+OR+LOMA+company&language=es%2Cen&category=business%2Cfinance&size=10&timeframe=7d
+2025-12-01 23:38:59 | [32m[1mINFO[0m | trading_bot.news_fetcher | Obteniendo noticias desde Alpha Vantage para LOMA...
+2025-12-01 23:39:00 | [32m[1mINFO[0m | trading_bot.news_fetcher | ✅ Obtenidas 10 noticias desde Alpha Vantage para LOMA
+2025-12-01 23:39:00 | [32m[1mINFO[0m | trading_bot.news_fetcher | ✅ 10 noticias obtenidas desde Alpha Vantage
+2025-12-01 23:39:00 | [32m[1mINFO[0m | trading_bot.news_fetcher | ✅ Total: 10 noticias únicas obtenidas para LOMA
+2025-12-01 23:39:00 | [32m[1mINFO[0m | trading_bot.enhanced_sentiment | ✅ 10 noticias analizadas para LOMA
+
+💭 Sentiment Analysis:
+   Overall: NEUTRAL
+   Score: -0.001
+   Sample Size: 10 noticias
+
+📊 Scoring Analysis (Score: 35):
+   Buy Factors: IA Bullish (+30), MACD > Signal (+15), Price > SMA20 (+10)
+   Sell Factors: RSI Overbought (-20)
+
+🎯 Final Signal: BUY (Confidence: MEDIUM)
+
+[95m[1m================================================================================[0m
+[95m[1m                         📊 ANÁLISIS COMPLETO[0m
+[95m[1m================================================================================[0m
+
+[1m📊 Símbolo:[0m [1mLOMA[0m
+[1m🎯 Señal Final:[0m [92m[1mBUY[0m
+[1m📈 Score:[0m 35
+[1m🎯 Confianza:[0m [93mMEDIUM[0m
+[1m⏰ Hora:[0m 2025-12-01 23:39:00
+
+[1m📋 Factores de Decisión:[0m
+   [92m✅ Factores de Compra:[0m
+      • IA Bullish (+30)
+      • MACD > Signal (+15)
+      • Price > SMA20 (+10)
+   [91m❌ Factores de Venta:[0m
+      • RSI Overbought (-20)
+
+[95m[1m================================================================================[0m
+
+
+⏰ Filtro de Tiempo: Después del horario de trading (17:00)
+📥 Fetching latest data for TGSU2...
+📥 Descargando datos para TGSU2...
+2025-12-01 23:39:02 | [32m[1mINFO[0m | trading_bot.multi_source_client | Intentando obtener datos desde Yahoo Finance para TGSU2...
+2025-12-01 23:39:03 | [32m[1mINFO[0m | trading_bot.multi_source_client | Intentando obtener datos desde BYMA/Yahoo para TGSU2...
+2025-12-01 23:39:03 | [32m[1mINFO[0m | trading_bot.byma_client | Obteniendo datos históricos de Yahoo Finance para TGSU2.BA
+2025-12-01 23:39:03 | [32m[1mINFO[0m | trading_bot.byma_client | ✅ Obtenidos 5 registros desde Yahoo Finance para TGSU2
+   ✅ Datos obtenidos desde BYMA/Yahoo
+✓ Ingested 1 new records for TGSU2
+  Total records in DB for TGSU2: 494
+
+============================================================
+📊 Analyzing TGSU2
+============================================================
+   📡 Real-time price from IOL: $9435.00
+   📊 Live data integrated: $9435.00
+
+📈 Technical Analysis:
+   RSI: 92.43
+   ATR: 608.16
+   Signal: BUY
+Using generic model for TGSU2
+
+🤖 Prediction (IA Model):
+   Current: $9435.00
+   Predicted: $313.95
+   Change: -96.67%
+   Signal: SELL
+
+[94m[1m================================================================================[0m
+[94m[1m                            🤖 PREDICCIÓN IA[0m
+[94m[1m================================================================================[0m
+
+[1m📊 Símbolo:[0m [1mTGSU2[0m
+[1m💵 Precio Actual:[0m $9,435.00
+[1m🔮 Precio Predicho:[0m $313.95
+[1m📊 Cambio Esperado:[0m [91m-96.67%[0m
+[1m🎯 Señal:[0m [91m📉 SELL[0m
+[1m⏰ Hora:[0m 2025-12-01 23:39:04
+
+[94m[1m================================================================================[0m
+
+2025-12-01 23:39:04 | [32m[1mINFO[0m | trading_bot.enhanced_sentiment | No hay sentimientos recientes para TGSU2, obteniendo noticias automáticamente...
+2025-12-01 23:39:04 | [32m[1mINFO[0m | trading_bot.news_fetcher | Obteniendo noticias desde NewsAPI para TGSU2...
+2025-12-01 23:39:04 | [32m[1mINFO[0m | trading_bot.news_fetcher | ✅ Obtenidas 0 noticias desde NewsAPI para TGSU2
+2025-12-01 23:39:05 | [32m[1mINFO[0m | trading_bot.news_fetcher | Obteniendo noticias desde NewsData.io para TGSU2...
+2025-12-01 23:39:05 | [31m[1mERROR[0m | trading_bot.news_fetcher | Error obteniendo noticias desde NewsData.io para TGSU2: 422 Client Error: UNPROCESSABLE ENTITY for url: https://newsdata.io/api/1/news?apikey=pub_91dc6631d1e34a4b949e3d2f4613cc3c&q=TGSU2+stock+OR+TGSU2+shares+OR+TGSU2+company&language=es%2Cen&category=business%2Cfinance&size=10&timeframe=7d
+2025-12-01 23:39:06 | [32m[1mINFO[0m | trading_bot.news_fetcher | Obteniendo noticias desde Alpha Vantage para TGSU2...
+2025-12-01 23:39:06 | [32m[1mINFO[0m | trading_bot.news_fetcher | ✅ Obtenidas 0 noticias desde Alpha Vantage para TGSU2
+2025-12-01 23:39:06 | [32m[1mINFO[0m | trading_bot.news_fetcher | Obteniendo noticias desde Finnhub para TGSU2...
+2025-12-01 23:39:07 | [32m[1mINFO[0m | trading_bot.news_fetcher | ✅ Obtenidas 0 noticias desde Finnhub para TGSU2
+2025-12-01 23:39:07 | [32m[1mINFO[0m | trading_bot.news_fetcher | Obteniendo noticias desde Google News para TGSU2...
+2025-12-01 23:39:08 | [32m[1mINFO[0m | trading_bot.news_fetcher | ✅ Obtenidas 10 noticias desde Google News para TGSU2
+2025-12-01 23:39:08 | [32m[1mINFO[0m | trading_bot.news_fetcher | ✅ 10 noticias obtenidas desde Google News
+2025-12-01 23:39:08 | [32m[1mINFO[0m | trading_bot.news_fetcher | ✅ Total: 10 noticias únicas obtenidas para TGSU2
+2025-12-01 23:39:08 | [32m[1mINFO[0m | trading_bot.enhanced_sentiment | ✅ 10 noticias analizadas para TGSU2
+
+💭 Sentiment Analysis:
+   Overall: NEUTRAL
+   Score: 0.000
+   Sample Size: 10 noticias
+
+📊 Scoring Analysis (Score: -25):
+   Buy Factors: MACD > Signal (+15), Price > SMA20 (+10)
+   Sell Factors: IA Bearish (-30), RSI Overbought (-20)
+
+🎯 Final Signal: SELL (Confidence: MEDIUM)
+
+[95m[1m================================================================================[0m
+[95m[1m                         📊 ANÁLISIS COMPLETO[0m
+[95m[1m================================================================================[0m
+
+[1m📊 Símbolo:[0m [1mTGSU2[0m
+[1m🎯 Señal Final:[0m [91m[1mSELL[0m
+[1m📈 Score:[0m -25
+[1m🎯 Confianza:[0m [93mMEDIUM[0m
+[1m⏰ Hora:[0m 2025-12-01 23:39:08
+
+[1m📋 Factores de Decisión:[0m
+   [92m✅ Factores de Compra:[0m
+      • MACD > Signal (+15)
+      • Price > SMA20 (+10)
+   [91m❌ Factores de Venta:[0m
+      • IA Bearish (-30)
+      • RSI Overbought (-20)
+
+[95m[1m================================================================================[0m
+
+
+⏰ Filtro de Tiempo: Después del horario de trading (17:00)
+📥 Fetching latest data for GGAL...
+📥 Descargando datos para GGAL...
+2025-12-01 23:39:10 | [32m[1mINFO[0m | trading_bot.multi_source_client | Intentando obtener datos desde Yahoo Finance para GGAL...
+   ✅ Datos obtenidos desde Yahoo Finance
+✓ Ingested 0 new records for GGAL
+  Total records in DB for GGAL: 252
+
+============================================================
+📊 Analyzing GGAL
+============================================================
+   📡 Real-time price from IOL: $8005.00
+   📊 Live data integrated: $8005.00
+
+📈 Technical Analysis:
+   RSI: 99.86
+   ATR: 570.89
+   Signal: BUY
+
+🤖 Prediction (IA Model):
+   Current: $52.51
+   Predicted: $40.16
+   Change: -23.52%
+   Signal: SELL
+
+[94m[1m================================================================================[0m
+[94m[1m                            🤖 PREDICCIÓN IA[0m
+[94m[1m================================================================================[0m
+
+[1m📊 Símbolo:[0m [1mGGAL[0m
+[1m💵 Precio Actual:[0m $52.51
+[1m🔮 Precio Predicho:[0m $40.16
+[1m📊 Cambio Esperado:[0m [91m-23.52%[0m
+[1m🎯 Señal:[0m [91m📉 SELL[0m
+[1m⏰ Hora:[0m 2025-12-01 23:39:11
+
+[94m[1m================================================================================[0m
+
+2025-12-01 23:39:11 | [32m[1mINFO[0m | trading_bot.enhanced_sentiment | No hay sentimientos recientes para GGAL, obteniendo noticias automáticamente...
+2025-12-01 23:39:11 | [32m[1mINFO[0m | trading_bot.news_fetcher | Obteniendo noticias desde NewsAPI para GGAL...
+2025-12-01 23:39:11 | [32m[1mINFO[0m | trading_bot.news_fetcher | ✅ Obtenidas 0 noticias desde NewsAPI para GGAL
+2025-12-01 23:39:11 | [32m[1mINFO[0m | trading_bot.news_fetcher | Obteniendo noticias desde NewsData.io para GGAL...
+2025-12-01 23:39:12 | [31m[1mERROR[0m | trading_bot.news_fetcher | Error obteniendo noticias desde NewsData.io para GGAL: 422 Client Error: UNPROCESSABLE ENTITY for url: https://newsdata.io/api/1/news?apikey=pub_91dc6631d1e34a4b949e3d2f4613cc3c&q=GGAL+stock+OR+GGAL+shares+OR+GGAL+company&language=es%2Cen&category=business%2Cfinance&size=10&timeframe=7d
+
+
+🛑 Bot stopped by user
+🛑 Polling de Telegram detenido
+📝 Archivo PID eliminado
+
+============================================================
+✅ Bot finalizado correctamente
+============================================================
+🛑 Polling de Telegram detenido

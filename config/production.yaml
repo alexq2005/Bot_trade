@@ -1,0 +1,16 @@
+# Configuración para Producción
+# Sobrescribe valores de base.yaml
+
+trading:
+  initial_capital: 100000.0
+  risk_per_trade: 2.0  # Riesgo conservador en producción
+  max_position_size: 5000.0  # Posiciones más pequeñas
+
+iol:
+  environment: "live"  # Producción usa cuenta real
+
+model:
+  prediction_threshold: 2.5  # Umbral más alto para menos señales pero más precisas
+
+logging_level: "INFO"  # Menos verboso en producción
+

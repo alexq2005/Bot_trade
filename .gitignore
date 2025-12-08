@@ -1,0 +1,52 @@
+# Credenciales y configuración sensible
+.env
+.env.local
+.env.*.local
+
+# Archivos de trading
+trades.json
+risk_manager_history.json
+bot.pid
+restart_flag.txt
+
+# Datos y logs
+data/
+logs/
+*.log
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+ENV/
+.venv
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Modelos entrenados (opcional - pueden ser grandes)
+models/*.h5
+models/*.pkl
+*.h5
+*.pkl
+
+# Archivos temporales
+*.tmp
+*.temp
+*.bak
+*.backup
+backups/
+*.db

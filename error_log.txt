@@ -1,0 +1,15 @@
+
+[2025-11-29T22:50:31.464453] Training Error for AGRO.BA:
+No hay salida disponible
+
+[2025-11-29T22:50:34.980973] Training Error for ALUA.BA:
+No hay salida disponible
+
+[2025-11-29T22:50:38.492540] Training Error for AUSO.BA:
+No hay salida disponible
+
+[2025-11-29T22:50:42.006864] Training Error for BBAR.BA:
+No hay salida disponible
+
+[2025-11-29T22:50:45.523267] Training Error for BHIP.BA:
+No hay salida disponible

@@ -1,0 +1,16 @@
+# Configuración para Paper Trading (Simulación)
+# Sobrescribe valores de base.yaml
+
+trading:
+  initial_capital: 100000.0
+  risk_per_trade: 3.0  # Más riesgo permitido en simulación
+  max_position_size: 15000.0  # Posiciones más grandes para probar
+
+iol:
+  environment: "demo"  # Paper trading usa demo
+
+model:
+  prediction_threshold: 2.0
+
+logging_level: "INFO"
+

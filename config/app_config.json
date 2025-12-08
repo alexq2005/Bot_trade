@@ -1,0 +1,37 @@
+{
+  "app": {
+    "environment": "development",
+    "debug": false,
+    "log_level": "INFO",
+    "name": "IOL Quantum AI Trading Bot",
+    "version": "2.0.0"
+  },
+  "bot": {
+    "max_position_size_pct": 18,
+    "max_daily_trades": 10,
+    "max_daily_loss_pct": 5,
+    "stop_loss_atr_multiplier": 2.0,
+    "take_profit_atr_multiplier": 3.0
+  },
+  "database": {
+    "path": "trading_bot.db",
+    "backup_enabled": true,
+    "backup_interval_hours": 24
+  },
+  "logging": {
+    "enabled": true,
+    "log_dir": "logs",
+    "max_log_files": 30
+  },
+  "trading": {
+    "paper_trading": true,
+    "initial_capital": 10000.0,
+    "symbols": [
+      "AAPL",
+      "MSFT",
+      "GOOGL",
+      "SPY"
+    ]
+  }
+}
+

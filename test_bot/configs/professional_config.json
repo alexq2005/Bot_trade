@@ -1,0 +1,33 @@
+{
+  "risk_per_trade": 0.024,
+  "max_position_size_pct": 14,
+  "max_daily_trades": 8,
+  "max_daily_loss_pct": 5,
+  "stop_loss_atr_multiplier": 1.8,
+  "take_profit_atr_multiplier": 3.3,
+  "min_confidence": "LOW",
+  "buy_threshold": 0,
+  "sell_threshold": -20,
+  "analysis_interval_minutes": 60,
+  "enable_sentiment_analysis": true,
+  "enable_news_fetching": true,
+  "auto_retrain_on_low_accuracy": true,
+  "min_accuracy_for_retrain": 55,
+  "auto_configuration_enabled": true,
+  "configuration_mode": "manual",
+  "monitoring": {
+    "use_portfolio_symbols": true,
+    "auto_sync_portfolio": true,
+    "additional_symbols": [],
+    "max_symbols": 100
+  },
+  "time_management": {
+    "trading_hours_start": "11:00",
+    "trading_hours_end": "17:00",
+    "trade_on_friday": false,
+    "avoid_first_minutes": 0,
+    "avoid_last_minutes": 0,
+    "cooldown_after_loss_minutes": 60,
+    "cooldown_after_win_minutes": 15
+  }
+}

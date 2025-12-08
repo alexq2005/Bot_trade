@@ -1,0 +1,2086 @@
+============================================================
+🚀 IOL QUANTUM AI TRADING BOT
+============================================================
+Modo: PAPER TRADING
+Ejecución: Continua
+Intervalo: 60 minutos
+============================================================
+
+📂 El bot usará automáticamente los símbolos de tu portafolio guardado (my_portfolio.json)
+   💡 Si quieres especificar símbolos manualmente, usa: --symbols SYMBOL1,SYMBOL2,...
+
+✅ Telegram configurado (usando método directo vía requests)
+⚠️  Error preparando mensaje de inicio: get_config() takes 0 positional arguments but 2 were given
+✅ Telegram configurado (usando método directo vía requests)
+✅ Telegram configurado (usando método directo vía requests)
+2025-12-01 23:33:08 | [32m[1mINFO[0m | trading_bot.config_manager | Configuración cargada para entorno: development
+✅ Telegram configurado (usando método directo vía requests)
+
+📂 ✅ Cargados 26 símbolos del portafolio guardado:
+   PAMP, BYMA, AMZN, CEPU, BA37D, NU, EDN, TGNO4, BPOC7, LOMA...
+
+🚀 IOL Quantum AI Trading Bot Initialized
+📊 Monitoring 26 symbols: GGAL, NU, BYMA, BPOC7, METR...
+💰 Capital: $100.00 ARS
+🎯 Mode: 🧪 PAPER TRADING
+🎓 Professional Trading: ENABLED
+📝 PID guardado en bot.pid
+✅ Bot iniciado en modo continuo
+   Presiona Ctrl+C para detener
+
+
+🤖 Starting continuous mode (interval: 60 min)
+Press Ctrl+C to stop
+
+🔄 Iniciando polling de Telegram...
+✅ Polling de Telegram iniciado - Escuchando mensajes...
+   Token: ✅ Configurado
+   Chat ID: ✅ Configurado
+   💡 Envía /start a tu bot para probar
+✅ Telegram command handler iniciado - Puedes enviar comandos desde Telegram
+   💡 Envía /start a tu bot para probar
+
+============================================================
+📊 Generando reporte diario...
+============================================================
+2025-12-01 23:33:10 | [31m[1mERROR[0m | trading_bot.daily_report | Error generando/enviando reporte diario: 'str' object has no attribute 'get'
+⚠️  Error generando reporte diario
+
+############################################################
+🔄 Starting Analysis Cycle - 2025-12-01 23:33:10
+############################################################
+2025-12-01 23:33:10 | [32m[1mINFO[0m | trading_bot.advanced_learning | 🔄 Iniciando ciclo de aprendizaje...
+2025-12-01 23:33:10 | [32m[1mINFO[0m | trading_bot.advanced_learning | ✅ Ciclo de aprendizaje completado
+
+📚 Lecciones Aprendidas:
+   Aún no hay suficientes datos para aprender
+📥 Fetching latest data for GGAL...
+📥 Descargando datos para GGAL...
+2025-12-01 23:33:10 | [32m[1mINFO[0m | trading_bot.multi_source_client | Intentando obtener datos desde Yahoo Finance para GGAL...
+   ✅ Datos obtenidos desde Yahoo Finance
+✓ Ingested 0 new records for GGAL
+  Total records in DB for GGAL: 252
+
+============================================================
+📊 Analyzing GGAL
+============================================================
+Autenticando con IOL como alexq2005@gmail.com...
+Autenticación exitosa.
+   📡 Real-time price from IOL: $8005.00
+   📊 Live data integrated: $8005.00
+
+📈 Technical Analysis:
+   RSI: 99.86
+   ATR: 570.89
+   Signal: BUY
+Using generic model for GGAL
+
+📊 Prediction (Análisis Técnico (Fallback)):
+   Current: $8005.00
+   Predicted: $8405.25
+   Change: +5.00%
+   Signal: BUY
+
+[94m[1m================================================================================[0m
+[94m[1m                            🤖 PREDICCIÓN IA[0m
+[94m[1m================================================================================[0m
+
+[1m📊 Símbolo:[0m [1mGGAL[0m
+[1m💵 Precio Actual:[0m $8,005.00
+[1m🔮 Precio Predicho:[0m $8,405.25
+[1m📊 Cambio Esperado:[0m [92m+5.00%[0m
+[1m🎯 Señal:[0m [92m📈 BUY[0m
+[1m⏰ Hora:[0m 2025-12-01 23:33:12
+
+[94m[1m================================================================================[0m
+
+2025-12-01 23:33:12 | [32m[1mINFO[0m | trading_bot.enhanced_sentiment | No hay sentimientos recientes para GGAL, obteniendo noticias automáticamente...
+⚠️  Sentiment Analysis failed: I/O operation on closed file.
+
+📊 Scoring Analysis (Score: 26):
+   Buy Factors: Técnico Bullish (+21), MACD > Signal (+15), Price > SMA20 (+10)
+   Sell Factors: RSI Overbought (-20)
+
+🎯 Final Signal: BUY (Confidence: MEDIUM)
+
+[95m[1m================================================================================[0m
+[95m[1m                         📊 ANÁLISIS COMPLETO[0m
+[95m[1m================================================================================[0m
+
+[1m📊 Símbolo:[0m [1mGGAL[0m
+[1m🎯 Señal Final:[0m [92m[1mBUY[0m
+[1m📈 Score:[0m 26
+[1m🎯 Confianza:[0m [93mMEDIUM[0m
+[1m⏰ Hora:[0m 2025-12-01 23:33:12
+
+[1m📋 Factores de Decisión:[0m
+   [92m✅ Factores de Compra:[0m
+      • Técnico Bullish (+21)
+      • MACD > Signal (+15)
+      • Price > SMA20 (+10)
+   [91m❌ Factores de Venta:[0m
+      • RSI Overbought (-20)
+
+[95m[1m================================================================================[0m
+
+
+⏰ Filtro de Tiempo: Después del horario de trading (17:00)
+📥 Fetching latest data for NU...
+📥 Descargando datos para NU...
+2025-12-01 23:33:14 | [32m[1mINFO[0m | trading_bot.multi_source_client | Intentando obtener datos desde Yahoo Finance para NU...
+2025-12-01 23:33:14 | [33m[1mWARNING[0m | trading_bot.multi_source_client | Error de I/O con Yahoo Finance para NU (archivo cerrado) - continuando con siguiente fuente
+   ⚠️  Error con multi-source: I/O operation on closed file.
+   ✅ Datos obtenidos desde Yahoo Finance
+✓ Ingested 0 new records for NU
+  Total records in DB for NU: 252
+
+============================================================
+📊 Analyzing NU
+============================================================
+   📡 Real-time price from IOL: $17.50
+   📊 Live data integrated: $17.50
+
+📈 Technical Analysis:
+   RSI: 83.03
+   ATR: 0.94
+   Signal: BUY
+Using generic model for NU
+
+📊 Prediction (Análisis Técnico (Fallback)):
+   Current: $17.50
+   Predicted: $18.37
+   Change: +5.00%
+   Signal: BUY
+
+[94m[1m================================================================================[0m
+[94m[1m                            🤖 PREDICCIÓN IA[0m
+[94m[1m================================================================================[0m
+
+[1m📊 Símbolo:[0m [1mNU[0m
+[1m💵 Precio Actual:[0m $17.50
+[1m🔮 Precio Predicho:[0m $18.37
+[1m📊 Cambio Esperado:[0m [92m+5.00%[0m
+[1m🎯 Señal:[0m [92m📈 BUY[0m
+[1m⏰ Hora:[0m 2025-12-01 23:33:15
+
+[94m[1m================================================================================[0m
+
+2025-12-01 23:33:15 | [32m[1mINFO[0m | trading_bot.enhanced_sentiment | No hay sentimientos recientes para NU, obteniendo noticias automáticamente...
+⚠️  Sentiment Analysis failed: I/O operation on closed file.
+
+📊 Scoring Analysis (Score: 26):
+   Buy Factors: Técnico Bullish (+21), MACD > Signal (+15), Price > SMA20 (+10)
+   Sell Factors: RSI Overbought (-20)
+
+🎯 Final Signal: BUY (Confidence: MEDIUM)
+
+[95m[1m================================================================================[0m
+[95m[1m                         📊 ANÁLISIS COMPLETO[0m
+[95m[1m================================================================================[0m
+
+[1m📊 Símbolo:[0m [1mNU[0m
+[1m🎯 Señal Final:[0m [92m[1mBUY[0m
+[1m📈 Score:[0m 26
+[1m🎯 Confianza:[0m [93mMEDIUM[0m
+[1m⏰ Hora:[0m 2025-12-01 23:33:15
+
+[1m📋 Factores de Decisión:[0m
+   [92m✅ Factores de Compra:[0m
+      • Técnico Bullish (+21)
+      • MACD > Signal (+15)
+      • Price > SMA20 (+10)
+   [91m❌ Factores de Venta:[0m
+      • RSI Overbought (-20)
+
+[95m[1m================================================================================[0m
+
+
+⏰ Filtro de Tiempo: Después del horario de trading (17:00)
+📥 Fetching latest data for BYMA...
+📥 Descargando datos para BYMA...
+2025-12-01 23:33:17 | [32m[1mINFO[0m | trading_bot.multi_source_client | Intentando obtener datos desde Yahoo Finance para BYMA...
+2025-12-01 23:33:17 | [33m[1mWARNING[0m | trading_bot.multi_source_client | Error de I/O con Yahoo Finance para BYMA (archivo cerrado) - continuando con siguiente fuente
+   ⚠️  Error con multi-source: I/O operation on closed file.
+No data found for BYMA
+
+============================================================
+📊 Analyzing BYMA
+============================================================
+   📡 Real-time price from IOL: $300.00
+   📊 Live data integrated: $300.00
+
+📈 Technical Analysis:
+   RSI: 90.59
+   ATR: 19.18
+   Signal: BUY
+Using generic model for BYMA
+
+📊 Prediction (Análisis Técnico (Fallback)):
+   Current: $300.00
+   Predicted: $315.00
+   Change: +5.00%
+   Signal: BUY
+
+[94m[1m================================================================================[0m
+[94m[1m                            🤖 PREDICCIÓN IA[0m
+[94m[1m================================================================================[0m
+
+[1m📊 Símbolo:[0m [1mBYMA[0m
+[1m💵 Precio Actual:[0m $300.00
+[1m🔮 Precio Predicho:[0m $315.00
+[1m📊 Cambio Esperado:[0m [92m+5.00%[0m
+[1m🎯 Señal:[0m [92m📈 BUY[0m
+[1m⏰ Hora:[0m 2025-12-01 23:33:20
+
+[94m[1m================================================================================[0m
+
+2025-12-01 23:33:20 | [32m[1mINFO[0m | trading_bot.enhanced_sentiment | No hay sentimientos recientes para BYMA, obteniendo noticias automáticamente...
+⚠️  Sentiment Analysis failed: I/O operation on closed file.
+
+📊 Scoring Analysis (Score: 26):
+   Buy Factors: Técnico Bullish (+21), MACD > Signal (+15), Price > SMA20 (+10)
+   Sell Factors: RSI Overbought (-20)
+
+🎯 Final Signal: BUY (Confidence: MEDIUM)
+
+[95m[1m================================================================================[0m
+[95m[1m                         📊 ANÁLISIS COMPLETO[0m
+[95m[1m================================================================================[0m
+
+[1m📊 Símbolo:[0m [1mBYMA[0m
+[1m🎯 Señal Final:[0m [92m[1mBUY[0m
+[1m📈 Score:[0m 26
+[1m🎯 Confianza:[0m [93mMEDIUM[0m
+[1m⏰ Hora:[0m 2025-12-01 23:33:20
+
+[1m📋 Factores de Decisión:[0m
+   [92m✅ Factores de Compra:[0m
+      • Técnico Bullish (+21)
+      • MACD > Signal (+15)
+      • Price > SMA20 (+10)
+   [91m❌ Factores de Venta:[0m
+      • RSI Overbought (-20)
+
+[95m[1m================================================================================[0m
+
+
+⏰ Filtro de Tiempo: Después del horario de trading (17:00)
+📥 Fetching latest data for BPOC7...
+📥 Descargando datos para BPOC7...
+2025-12-01 23:33:22 | [32m[1mINFO[0m | trading_bot.multi_source_client | Intentando obtener datos desde Yahoo Finance para BPOC7...
+2025-12-01 23:33:22 | [33m[1mWARNING[0m | trading_bot.multi_source_client | Error de I/O con Yahoo Finance para BPOC7 (archivo cerrado) - continuando con siguiente fuente
+   ⚠️  Error con multi-source: I/O operation on closed file.
+No data found for BPOC7
+
+============================================================
+📊 Analyzing BPOC7
+============================================================
+   📡 Real-time price from IOL: $142650.00
+   📊 Live data integrated: $142650.00
+⚠️  Technical Analysis failed: index 13 is out of bounds for axis 0 with size 2
+Using generic model for BPOC7
+
+⚠️  AI Prediction no disponible - usando solo análisis técnico
+2025-12-01 23:33:25 | [32m[1mINFO[0m | trading_bot.enhanced_sentiment | No hay sentimientos recientes para BPOC7, obteniendo noticias automáticamente...
+⚠️  Sentiment Analysis failed: I/O operation on closed file.
+
+📊 Scoring Analysis (Score: 0):
+   Buy Factors: None
+   Sell Factors: None
+
+🎯 Final Signal: HOLD (Confidence: LOW)
+
+[95m[1m================================================================================[0m
+[95m[1m                         📊 ANÁLISIS COMPLETO[0m
+[95m[1m================================================================================[0m
+
+[1m📊 Símbolo:[0m [1mBPOC7[0m
+[1m🎯 Señal Final:[0m [93m[1mHOLD[0m
+[1m📈 Score:[0m 0
+[1m🎯 Confianza:[0m [96mLOW[0m
+[1m⏰ Hora:[0m 2025-12-01 23:33:25
+
+[1m📋 Factores de Decisión:[0m
+
+[95m[1m================================================================================[0m
+
+📥 Fetching latest data for METR...
+📥 Descargando datos para METR...
+2025-12-01 23:33:26 | [32m[1mINFO[0m | trading_bot.multi_source_client | Intentando obtener datos desde Yahoo Finance para METR...
+2025-12-01 23:33:26 | [33m[1mWARNING[0m | trading_bot.multi_source_client | Error de I/O con Yahoo Finance para METR (archivo cerrado) - continuando con siguiente fuente
+   ⚠️  Error con multi-source: I/O operation on closed file.
+No data found for METR
+
+============================================================
+📊 Analyzing METR
+============================================================
+   📡 Real-time price from IOL: $2580.00
+   📊 Live data integrated: $2580.00
+
+📈 Technical Analysis:
+   RSI: 90.42
+   ATR: 187.33
+   Signal: BUY
+Using generic model for METR
+
+📊 Prediction (Análisis Técnico (Fallback)):
+   Current: $2580.00
+   Predicted: $2709.00
+   Change: +5.00%
+   Signal: BUY
+
+[94m[1m================================================================================[0m
+[94m[1m                            🤖 PREDICCIÓN IA[0m
+[94m[1m================================================================================[0m
+
+[1m📊 Símbolo:[0m [1mMETR[0m
+[1m💵 Precio Actual:[0m $2,580.00
+[1m🔮 Precio Predicho:[0m $2,709.00
+[1m📊 Cambio Esperado:[0m [92m+5.00%[0m
+[1m🎯 Señal:[0m [92m📈 BUY[0m
+[1m⏰ Hora:[0m 2025-12-01 23:33:27
+
+[94m[1m================================================================================[0m
+
+2025-12-01 23:33:27 | [32m[1mINFO[0m | trading_bot.enhanced_sentiment | No hay sentimientos recientes para METR, obteniendo noticias automáticamente...
+⚠️  Sentiment Analysis failed: I/O operation on closed file.
+
+📊 Scoring Analysis (Score: 26):
+   Buy Factors: Técnico Bullish (+21), MACD > Signal (+15), Price > SMA20 (+10)
+   Sell Factors: RSI Overbought (-20)
+
+🎯 Final Signal: BUY (Confidence: MEDIUM)
+
+[95m[1m================================================================================[0m
+[95m[1m                         📊 ANÁLISIS COMPLETO[0m
+[95m[1m================================================================================[0m
+
+[1m📊 Símbolo:[0m [1mMETR[0m
+[1m🎯 Señal Final:[0m [92m[1mBUY[0m
+[1m📈 Score:[0m 26
+[1m🎯 Confianza:[0m [93mMEDIUM[0m
+[1m⏰ Hora:[0m 2025-12-01 23:33:27
+
+[1m📋 Factores de Decisión:[0m
+   [92m✅ Factores de Compra:[0m
+      • Técnico Bullish (+21)
+      • MACD > Signal (+15)
+      • Price > SMA20 (+10)
+   [91m❌ Factores de Venta:[0m
+      • RSI Overbought (-20)
+
+[95m[1m================================================================================[0m
+
+
+⏰ Filtro de Tiempo: Después del horario de trading (17:00)
+📥 Fetching latest data for TTM26...
+📥 Descargando datos para TTM26...
+2025-12-01 23:33:29 | [32m[1mINFO[0m | trading_bot.multi_source_client | Intentando obtener datos desde Yahoo Finance para TTM26...
+2025-12-01 23:33:29 | [33m[1mWARNING[0m | trading_bot.multi_source_client | Error de I/O con Yahoo Finance para TTM26 (archivo cerrado) - continuando con siguiente fuente
+   ⚠️  Error con multi-source: I/O operation on closed file.
+No data found for TTM26
+
+============================================================
+📊 Analyzing TTM26
+============================================================
+   📡 Real-time price from IOL: $138.35
+   📊 Live data integrated: $138.35
+⚠️  Technical Analysis failed: index 13 is out of bounds for axis 0 with size 2
+Using generic model for TTM26
+
+⚠️  AI Prediction no disponible - usando solo análisis técnico
+2025-12-01 23:33:31 | [32m[1mINFO[0m | trading_bot.enhanced_sentiment | No hay sentimientos recientes para TTM26, obteniendo noticias automáticamente...
+⚠️  Sentiment Analysis failed: I/O operation on closed file.
+
+📊 Scoring Analysis (Score: 0):
+   Buy Factors: None
+   Sell Factors: None
+
+🎯 Final Signal: HOLD (Confidence: LOW)
+
+[95m[1m================================================================================[0m
+[95m[1m                         📊 ANÁLISIS COMPLETO[0m
+[95m[1m================================================================================[0m
+
+[1m📊 Símbolo:[0m [1mTTM26[0m
+[1m🎯 Señal Final:[0m [93m[1mHOLD[0m
+[1m📈 Score:[0m 0
+[1m🎯 Confianza:[0m [96mLOW[0m
+[1m⏰ Hora:[0m 2025-12-01 23:33:31
+
+[1m📋 Factores de Decisión:[0m
+
+[95m[1m================================================================================[0m
+
+📥 Fetching latest data for AMZN...
+📥 Descargando datos para AMZN...
+2025-12-01 23:33:32 | [32m[1mINFO[0m | trading_bot.multi_source_client | Intentando obtener datos desde Yahoo Finance para AMZN...
+2025-12-01 23:33:32 | [33m[1mWARNING[0m | trading_bot.multi_source_client | Error de I/O con Yahoo Finance para AMZN (archivo cerrado) - continuando con siguiente fuente
+   ⚠️  Error con multi-source: I/O operation on closed file.
+   ✅ Datos obtenidos desde Yahoo Finance
+✓ Ingested 0 new records for AMZN
+  Total records in DB for AMZN: 252
+
+============================================================
+📊 Analyzing AMZN
+============================================================
+   📡 Real-time price from IOL: $234.00
+   📊 Live data integrated: $234.00
+
+📈 Technical Analysis:
+   RSI: 70.48
+   ATR: 12.20
+   Signal: BUY
+Using generic model for AMZN
+
+📊 Prediction (Análisis Técnico (Fallback)):
+   Current: $234.00
+   Predicted: $245.70
+   Change: +5.00%
+   Signal: BUY
+
+[94m[1m================================================================================[0m
+[94m[1m                            🤖 PREDICCIÓN IA[0m
+[94m[1m================================================================================[0m
+
+[1m📊 Símbolo:[0m [1mAMZN[0m
+[1m💵 Precio Actual:[0m $234.00
+[1m🔮 Precio Predicho:[0m $245.70
+[1m📊 Cambio Esperado:[0m [92m+5.00%[0m
+[1m🎯 Señal:[0m [92m📈 BUY[0m
+[1m⏰ Hora:[0m 2025-12-01 23:33:33
+
+[94m[1m================================================================================[0m
+
+2025-12-01 23:33:33 | [32m[1mINFO[0m | trading_bot.enhanced_sentiment | No hay sentimientos recientes para AMZN, obteniendo noticias automáticamente...
+⚠️  Sentiment Analysis failed: I/O operation on closed file.
+
+📊 Scoring Analysis (Score: 26):
+   Buy Factors: Técnico Bullish (+21), MACD > Signal (+15), Price > SMA20 (+10)
+   Sell Factors: RSI Overbought (-20)
+
+🎯 Final Signal: BUY (Confidence: MEDIUM)
+
+[95m[1m================================================================================[0m
+[95m[1m                         📊 ANÁLISIS COMPLETO[0m
+[95m[1m================================================================================[0m
+
+[1m📊 Símbolo:[0m [1mAMZN[0m
+[1m🎯 Señal Final:[0m [92m[1mBUY[0m
+[1m📈 Score:[0m 26
+[1m🎯 Confianza:[0m [93mMEDIUM[0m
+[1m⏰ Hora:[0m 2025-12-01 23:33:33
+
+[1m📋 Factores de Decisión:[0m
+   [92m✅ Factores de Compra:[0m
+      • Técnico Bullish (+21)
+      • MACD > Signal (+15)
+      • Price > SMA20 (+10)
+   [91m❌ Factores de Venta:[0m
+      • RSI Overbought (-20)
+
+[95m[1m================================================================================[0m
+
+
+⏰ Filtro de Tiempo: Después del horario de trading (17:00)
+📥 Fetching latest data for COME...
+📥 Descargando datos para COME...
+2025-12-01 23:33:35 | [32m[1mINFO[0m | trading_bot.multi_source_client | Intentando obtener datos desde Yahoo Finance para COME...
+2025-12-01 23:33:35 | [33m[1mWARNING[0m | trading_bot.multi_source_client | Error de I/O con Yahoo Finance para COME (archivo cerrado) - continuando con siguiente fuente
+   ⚠️  Error con multi-source: I/O operation on closed file.
+No data found for COME
+
+============================================================
+📊 Analyzing COME
+============================================================
+   📡 Real-time price from IOL: $74.00
+   📊 Live data integrated: $74.00
+
+📈 Technical Analysis:
+   RSI: 80.54
+   ATR: 4.29
+   Signal: BUY
+Using generic model for COME
+
+📊 Prediction (Análisis Técnico (Fallback)):
+   Current: $74.00
+   Predicted: $77.70
+   Change: +5.00%
+   Signal: BUY
+
+[94m[1m================================================================================[0m
+[94m[1m                            🤖 PREDICCIÓN IA[0m
+[94m[1m================================================================================[0m
+
+[1m📊 Símbolo:[0m [1mCOME[0m
+[1m💵 Precio Actual:[0m $74.00
+[1m🔮 Precio Predicho:[0m $77.70
+[1m📊 Cambio Esperado:[0m [92m+5.00%[0m
+[1m🎯 Señal:[0m [92m📈 BUY[0m
+[1m⏰ Hora:[0m 2025-12-01 23:33:36
+
+[94m[1m================================================================================[0m
+
+2025-12-01 23:33:36 | [32m[1mINFO[0m | trading_bot.enhanced_sentiment | No hay sentimientos recientes para COME, obteniendo noticias automáticamente...
+⚠️  Sentiment Analysis failed: I/O operation on closed file.
+
+📊 Scoring Analysis (Score: 26):
+   Buy Factors: Técnico Bullish (+21), MACD > Signal (+15), Price > SMA20 (+10)
+   Sell Factors: RSI Overbought (-20)
+
+🎯 Final Signal: BUY (Confidence: MEDIUM)
+
+[95m[1m================================================================================[0m
+[95m[1m                         📊 ANÁLISIS COMPLETO[0m
+[95m[1m================================================================================[0m
+
+[1m📊 Símbolo:[0m [1mCOME[0m
+[1m🎯 Señal Final:[0m [92m[1mBUY[0m
+[1m📈 Score:[0m 26
+[1m🎯 Confianza:[0m [93mMEDIUM[0m
+[1m⏰ Hora:[0m 2025-12-01 23:33:36
+
+[1m📋 Factores de Decisión:[0m
+   [92m✅ Factores de Compra:[0m
+      • Técnico Bullish (+21)
+      • MACD > Signal (+15)
+      • Price > SMA20 (+10)
+   [91m❌ Factores de Venta:[0m
+      • RSI Overbought (-20)
+
+[95m[1m================================================================================[0m
+
+
+⏰ Filtro de Tiempo: Después del horario de trading (17:00)
+📥 Fetching latest data for TGNO4...
+📥 Descargando datos para TGNO4...
+2025-12-01 23:33:38 | [32m[1mINFO[0m | trading_bot.multi_source_client | Intentando obtener datos desde Yahoo Finance para TGNO4...
+2025-12-01 23:33:38 | [33m[1mWARNING[0m | trading_bot.multi_source_client | Error de I/O con Yahoo Finance para TGNO4 (archivo cerrado) - continuando con siguiente fuente
+   ⚠️  Error con multi-source: I/O operation on closed file.
+No data found for TGNO4
+
+============================================================
+📊 Analyzing TGNO4
+============================================================
+   📡 Real-time price from IOL: $4500.00
+   📊 Live data integrated: $4500.00
+
+📈 Technical Analysis:
+   RSI: 89.28
+   ATR: 303.70
+   Signal: BUY
+Using generic model for TGNO4
+
+📊 Prediction (Análisis Técnico (Fallback)):
+   Current: $4500.00
+   Predicted: $4725.00
+   Change: +5.00%
+   Signal: BUY
+
+[94m[1m================================================================================[0m
+[94m[1m                            🤖 PREDICCIÓN IA[0m
+[94m[1m================================================================================[0m
+
+[1m📊 Símbolo:[0m [1mTGNO4[0m
+[1m💵 Precio Actual:[0m $4,500.00
+[1m🔮 Precio Predicho:[0m $4,725.00
+[1m📊 Cambio Esperado:[0m [92m+5.00%[0m
+[1m🎯 Señal:[0m [92m📈 BUY[0m
+[1m⏰ Hora:[0m 2025-12-01 23:33:40
+
+[94m[1m================================================================================[0m
+
+2025-12-01 23:33:40 | [32m[1mINFO[0m | trading_bot.enhanced_sentiment | No hay sentimientos recientes para TGNO4, obteniendo noticias automáticamente...
+⚠️  Sentiment Analysis failed: I/O operation on closed file.
+
+📊 Scoring Analysis (Score: 26):
+   Buy Factors: Técnico Bullish (+21), MACD > Signal (+15), Price > SMA20 (+10)
+   Sell Factors: RSI Overbought (-20)
+
+🎯 Final Signal: BUY (Confidence: MEDIUM)
+
+[95m[1m================================================================================[0m
+[95m[1m                         📊 ANÁLISIS COMPLETO[0m
+[95m[1m================================================================================[0m
+
+[1m📊 Símbolo:[0m [1mTGNO4[0m
+[1m🎯 Señal Final:[0m [92m[1mBUY[0m
+[1m📈 Score:[0m 26
+[1m🎯 Confianza:[0m [93mMEDIUM[0m
+[1m⏰ Hora:[0m 2025-12-01 23:33:40
+
+[1m📋 Factores de Decisión:[0m
+   [92m✅ Factores de Compra:[0m
+      • Técnico Bullish (+21)
+      • MACD > Signal (+15)
+      • Price > SMA20 (+10)
+   [91m❌ Factores de Venta:[0m
+      • RSI Overbought (-20)
+
+[95m[1m================================================================================[0m
+
+
+⏰ Filtro de Tiempo: Después del horario de trading (17:00)
+📥 Fetching latest data for GOOGL...
+📥 Descargando datos para GOOGL...
+2025-12-01 23:33:42 | [32m[1mINFO[0m | trading_bot.multi_source_client | Intentando obtener datos desde Yahoo Finance para GOOGL...
+2025-12-01 23:33:42 | [33m[1mWARNING[0m | trading_bot.multi_source_client | Error de I/O con Yahoo Finance para GOOGL (archivo cerrado) - continuando con siguiente fuente
+   ⚠️  Error con multi-source: I/O operation on closed file.
+   ✅ Datos obtenidos desde Yahoo Finance
+✓ Ingested 0 new records for GOOGL
+  Total records in DB for GOOGL: 252
+
+============================================================
+📊 Analyzing GOOGL
+============================================================
+   📡 Real-time price from IOL: $315.06
+   📊 Live data integrated: $315.06
+
+📈 Technical Analysis:
+   RSI: 88.81
+   ATR: 16.58
+   Signal: BUY
+Using generic model for GOOGL
+
+📊 Prediction (Análisis Técnico (Fallback)):
+   Current: $315.06
+   Predicted: $330.81
+   Change: +5.00%
+   Signal: BUY
+
+[94m[1m================================================================================[0m
+[94m[1m                            🤖 PREDICCIÓN IA[0m
+[94m[1m================================================================================[0m
+
+[1m📊 Símbolo:[0m [1mGOOGL[0m
+[1m💵 Precio Actual:[0m $315.06
+[1m🔮 Precio Predicho:[0m $330.81
+[1m📊 Cambio Esperado:[0m [92m+5.00%[0m
+[1m🎯 Señal:[0m [92m📈 BUY[0m
+[1m⏰ Hora:[0m 2025-12-01 23:33:43
+
+[94m[1m================================================================================[0m
+
+2025-12-01 23:33:43 | [32m[1mINFO[0m | trading_bot.enhanced_sentiment | No hay sentimientos recientes para GOOGL, obteniendo noticias automáticamente...
+⚠️  Sentiment Analysis failed: I/O operation on closed file.
+
+📊 Scoring Analysis (Score: 26):
+   Buy Factors: Técnico Bullish (+21), MACD > Signal (+15), Price > SMA20 (+10)
+   Sell Factors: RSI Overbought (-20)
+
+🎯 Final Signal: BUY (Confidence: MEDIUM)
+
+[95m[1m================================================================================[0m
+[95m[1m                         📊 ANÁLISIS COMPLETO[0m
+[95m[1m================================================================================[0m
+
+[1m📊 Símbolo:[0m [1mGOOGL[0m
+[1m🎯 Señal Final:[0m [92m[1mBUY[0m
+[1m📈 Score:[0m 26
+[1m🎯 Confianza:[0m [93mMEDIUM[0m
+[1m⏰ Hora:[0m 2025-12-01 23:33:43
+
+[1m📋 Factores de Decisión:[0m
+   [92m✅ Factores de Compra:[0m
+      • Técnico Bullish (+21)
+      • MACD > Signal (+15)
+      • Price > SMA20 (+10)
+   [91m❌ Factores de Venta:[0m
+      • RSI Overbought (-20)
+
+[95m[1m================================================================================[0m
+
+
+⏰ Filtro de Tiempo: Después del horario de trading (17:00)
+📥 Fetching latest data for PAMP...
+📥 Descargando datos para PAMP...
+2025-12-01 23:33:45 | [32m[1mINFO[0m | trading_bot.multi_source_client | Intentando obtener datos desde Yahoo Finance para PAMP...
+2025-12-01 23:33:45 | [33m[1mWARNING[0m | trading_bot.multi_source_client | Error de I/O con Yahoo Finance para PAMP (archivo cerrado) - continuando con siguiente fuente
+   ⚠️  Error con multi-source: I/O operation on closed file.
+2025-12-01 23:33:46 | [32m[1mINFO[0m | trading_bot.byma_client | Obteniendo datos históricos de Yahoo Finance para PAMP.BA
+2025-12-01 23:33:46 | [33m[1mWARNING[0m | trading_bot.byma_client | Error de I/O con Yahoo Finance para PAMP (archivo cerrado) - reintentando...
+   ⚠️  Error con BYMA: I/O operation on closed file.
+No data found for PAMP
+
+============================================================
+📊 Analyzing PAMP
+============================================================
+   📡 Real-time price from IOL: $5470.00
+   📊 Live data integrated: $5470.00
+
+📈 Technical Analysis:
+   RSI: 93.18
+   ATR: 333.57
+   Signal: BUY
+Using generic model for PAMP
+
+📊 Prediction (Análisis Técnico (Fallback)):
+   Current: $5470.00
+   Predicted: $5743.50
+   Change: +5.00%
+   Signal: BUY
+
+[94m[1m================================================================================[0m
+[94m[1m                            🤖 PREDICCIÓN IA[0m
+[94m[1m================================================================================[0m
+
+[1m📊 Símbolo:[0m [1mPAMP[0m
+[1m💵 Precio Actual:[0m $5,470.00
+[1m🔮 Precio Predicho:[0m $5,743.50
+[1m📊 Cambio Esperado:[0m [92m+5.00%[0m
+[1m🎯 Señal:[0m [92m📈 BUY[0m
+[1m⏰ Hora:[0m 2025-12-01 23:33:47
+
+[94m[1m================================================================================[0m
+
+2025-12-01 23:33:47 | [32m[1mINFO[0m | trading_bot.enhanced_sentiment | No hay sentimientos recientes para PAMP, obteniendo noticias automáticamente...
+⚠️  Sentiment Analysis failed: I/O operation on closed file.
+
+📊 Scoring Analysis (Score: 26):
+   Buy Factors: Técnico Bullish (+21), MACD > Signal (+15), Price > SMA20 (+10)
+   Sell Factors: RSI Overbought (-20)
+
+🎯 Final Signal: BUY (Confidence: MEDIUM)
+
+[95m[1m================================================================================[0m
+[95m[1m                         📊 ANÁLISIS COMPLETO[0m
+[95m[1m================================================================================[0m
+
+[1m📊 Símbolo:[0m [1mPAMP[0m
+[1m🎯 Señal Final:[0m [92m[1mBUY[0m
+[1m📈 Score:[0m 26
+[1m🎯 Confianza:[0m [93mMEDIUM[0m
+[1m⏰ Hora:[0m 2025-12-01 23:33:47
+
+[1m📋 Factores de Decisión:[0m
+   [92m✅ Factores de Compra:[0m
+      • Técnico Bullish (+21)
+      • MACD > Signal (+15)
+      • Price > SMA20 (+10)
+   [91m❌ Factores de Venta:[0m
+      • RSI Overbought (-20)
+
+[95m[1m================================================================================[0m
+
+
+⏰ Filtro de Tiempo: Después del horario de trading (17:00)
+📥 Fetching latest data for TRAN...
+📥 Descargando datos para TRAN...
+2025-12-01 23:33:49 | [32m[1mINFO[0m | trading_bot.multi_source_client | Intentando obtener datos desde Yahoo Finance para TRAN...
+2025-12-01 23:33:49 | [33m[1mWARNING[0m | trading_bot.multi_source_client | Error de I/O con Yahoo Finance para TRAN (archivo cerrado) - continuando con siguiente fuente
+   ⚠️  Error con multi-source: I/O operation on closed file.
+No data found for TRAN
+
+============================================================
+📊 Analyzing TRAN
+============================================================
+   📡 Real-time price from IOL: $3630.00
+   📊 Live data integrated: $3630.00
+
+📈 Technical Analysis:
+   RSI: 92.96
+   ATR: 247.97
+   Signal: BUY
+Using generic model for TRAN
+
+📊 Prediction (Análisis Técnico (Fallback)):
+   Current: $3630.00
+   Predicted: $3811.50
+   Change: +5.00%
+   Signal: BUY
+
+[94m[1m================================================================================[0m
+[94m[1m                            🤖 PREDICCIÓN IA[0m
+[94m[1m================================================================================[0m
+
+[1m📊 Símbolo:[0m [1mTRAN[0m
+[1m💵 Precio Actual:[0m $3,630.00
+[1m🔮 Precio Predicho:[0m $3,811.50
+[1m📊 Cambio Esperado:[0m [92m+5.00%[0m
+[1m🎯 Señal:[0m [92m📈 BUY[0m
+[1m⏰ Hora:[0m 2025-12-01 23:33:50
+
+[94m[1m================================================================================[0m
+
+2025-12-01 23:33:50 | [32m[1mINFO[0m | trading_bot.enhanced_sentiment | No hay sentimientos recientes para TRAN, obteniendo noticias automáticamente...
+⚠️  Sentiment Analysis failed: I/O operation on closed file.
+
+📊 Scoring Analysis (Score: 26):
+   Buy Factors: Técnico Bullish (+21), MACD > Signal (+15), Price > SMA20 (+10)
+   Sell Factors: RSI Overbought (-20)
+
+🎯 Final Signal: BUY (Confidence: MEDIUM)
+
+[95m[1m================================================================================[0m
+[95m[1m                         📊 ANÁLISIS COMPLETO[0m
+[95m[1m================================================================================[0m
+
+[1m📊 Símbolo:[0m [1mTRAN[0m
+[1m🎯 Señal Final:[0m [92m[1mBUY[0m
+[1m📈 Score:[0m 26
+[1m🎯 Confianza:[0m [93mMEDIUM[0m
+[1m⏰ Hora:[0m 2025-12-01 23:33:50
+
+[1m📋 Factores de Decisión:[0m
+   [92m✅ Factores de Compra:[0m
+      • Técnico Bullish (+21)
+      • MACD > Signal (+15)
+      • Price > SMA20 (+10)
+   [91m❌ Factores de Venta:[0m
+      • RSI Overbought (-20)
+
+[95m[1m================================================================================[0m
+
+
+⏰ Filtro de Tiempo: Después del horario de trading (17:00)
+📥 Fetching latest data for NVDA...
+📥 Descargando datos para NVDA...
+2025-12-01 23:33:52 | [32m[1mINFO[0m | trading_bot.multi_source_client | Intentando obtener datos desde Yahoo Finance para NVDA...
+2025-12-01 23:33:52 | [33m[1mWARNING[0m | trading_bot.multi_source_client | Error de I/O con Yahoo Finance para NVDA (archivo cerrado) - continuando con siguiente fuente
+   ⚠️  Error con multi-source: I/O operation on closed file.
+   ✅ Datos obtenidos desde Yahoo Finance
+✓ Ingested 0 new records for NVDA
+  Total records in DB for NVDA: 252
+
+============================================================
+📊 Analyzing NVDA
+============================================================
+   📡 Real-time price from IOL: $180.00
+   📊 Live data integrated: $180.00
+
+📈 Technical Analysis:
+   RSI: 78.47
+   ATR: 11.64
+   Signal: BUY
+Using generic model for NVDA
+
+📊 Prediction (Análisis Técnico (Fallback)):
+   Current: $180.00
+   Predicted: $189.00
+   Change: +5.00%
+   Signal: BUY
+
+[94m[1m================================================================================[0m
+[94m[1m                            🤖 PREDICCIÓN IA[0m
+[94m[1m================================================================================[0m
+
+[1m📊 Símbolo:[0m [1mNVDA[0m
+[1m💵 Precio Actual:[0m $180.00
+[1m🔮 Precio Predicho:[0m $189.00
+[1m📊 Cambio Esperado:[0m [92m+5.00%[0m
+[1m🎯 Señal:[0m [92m📈 BUY[0m
+[1m⏰ Hora:[0m 2025-12-01 23:33:53
+
+[94m[1m================================================================================[0m
+
+2025-12-01 23:33:53 | [32m[1mINFO[0m | trading_bot.enhanced_sentiment | No hay sentimientos recientes para NVDA, obteniendo noticias automáticamente...
+⚠️  Sentiment Analysis failed: I/O operation on closed file.
+
+📊 Scoring Analysis (Score: 26):
+   Buy Factors: Técnico Bullish (+21), MACD > Signal (+15), Price > SMA20 (+10)
+   Sell Factors: RSI Overbought (-20)
+
+🎯 Final Signal: BUY (Confidence: MEDIUM)
+
+[95m[1m================================================================================[0m
+[95m[1m                         📊 ANÁLISIS COMPLETO[0m
+[95m[1m================================================================================[0m
+
+[1m📊 Símbolo:[0m [1mNVDA[0m
+[1m🎯 Señal Final:[0m [92m[1mBUY[0m
+[1m📈 Score:[0m 26
+[1m🎯 Confianza:[0m [93mMEDIUM[0m
+[1m⏰ Hora:[0m 2025-12-01 23:33:53
+
+[1m📋 Factores de Decisión:[0m
+   [92m✅ Factores de Compra:[0m
+      • Técnico Bullish (+21)
+      • MACD > Signal (+15)
+      • Price > SMA20 (+10)
+   [91m❌ Factores de Venta:[0m
+      • RSI Overbought (-20)
+
+[95m[1m================================================================================[0m
+
+
+⏰ Filtro de Tiempo: Después del horario de trading (17:00)
+📥 Fetching latest data for YPFD...
+📥 Descargando datos para YPFD...
+2025-12-01 23:33:55 | [32m[1mINFO[0m | trading_bot.multi_source_client | Intentando obtener datos desde Yahoo Finance para YPFD...
+2025-12-01 23:33:55 | [33m[1mWARNING[0m | trading_bot.multi_source_client | Error de I/O con Yahoo Finance para YPFD (archivo cerrado) - continuando con siguiente fuente
+   ⚠️  Error con multi-source: I/O operation on closed file.
+2025-12-01 23:33:56 | [32m[1mINFO[0m | trading_bot.byma_client | Obteniendo datos históricos de Yahoo Finance para YPFD.BA
+2025-12-01 23:33:56 | [33m[1mWARNING[0m | trading_bot.byma_client | Error de I/O con Yahoo Finance para YPFD (archivo cerrado) - reintentando...
+   ⚠️  Error con BYMA: I/O operation on closed file.
+No data found for YPFD
+
+============================================================
+📊 Analyzing YPFD
+============================================================
+   📡 Real-time price from IOL: $55800.00
+   📊 Live data integrated: $55800.00
+
+📈 Technical Analysis:
+   RSI: 93.31
+   ATR: 3244.38
+   Signal: BUY
+Using generic model for YPFD
+
+📊 Prediction (Análisis Técnico (Fallback)):
+   Current: $55800.00
+   Predicted: $58590.00
+   Change: +5.00%
+   Signal: BUY
+
+[94m[1m================================================================================[0m
+[94m[1m                            🤖 PREDICCIÓN IA[0m
+[94m[1m================================================================================[0m
+
+[1m📊 Símbolo:[0m [1mYPFD[0m
+[1m💵 Precio Actual:[0m $55,800.00
+[1m🔮 Precio Predicho:[0m $58,590.00
+[1m📊 Cambio Esperado:[0m [92m+5.00%[0m
+[1m🎯 Señal:[0m [92m📈 BUY[0m
+[1m⏰ Hora:[0m 2025-12-01 23:33:57
+
+[94m[1m================================================================================[0m
+
+2025-12-01 23:33:57 | [32m[1mINFO[0m | trading_bot.enhanced_sentiment | No hay sentimientos recientes para YPFD, obteniendo noticias automáticamente...
+⚠️  Sentiment Analysis failed: I/O operation on closed file.
+
+📊 Scoring Analysis (Score: 26):
+   Buy Factors: Técnico Bullish (+21), MACD > Signal (+15), Price > SMA20 (+10)
+   Sell Factors: RSI Overbought (-20)
+
+🎯 Final Signal: BUY (Confidence: MEDIUM)
+
+[95m[1m================================================================================[0m
+[95m[1m                         📊 ANÁLISIS COMPLETO[0m
+[95m[1m================================================================================[0m
+
+[1m📊 Símbolo:[0m [1mYPFD[0m
+[1m🎯 Señal Final:[0m [92m[1mBUY[0m
+[1m📈 Score:[0m 26
+[1m🎯 Confianza:[0m [93mMEDIUM[0m
+[1m⏰ Hora:[0m 2025-12-01 23:33:57
+
+[1m📋 Factores de Decisión:[0m
+   [92m✅ Factores de Compra:[0m
+      • Técnico Bullish (+21)
+      • MACD > Signal (+15)
+      • Price > SMA20 (+10)
+   [91m❌ Factores de Venta:[0m
+      • RSI Overbought (-20)
+
+[95m[1m================================================================================[0m
+
+
+⏰ Filtro de Tiempo: Después del horario de trading (17:00)
+📥 Fetching latest data for LOMA...
+📥 Descargando datos para LOMA...
+2025-12-01 23:33:59 | [32m[1mINFO[0m | trading_bot.multi_source_client | Intentando obtener datos desde Yahoo Finance para LOMA...
+2025-12-01 23:33:59 | [33m[1mWARNING[0m | trading_bot.multi_source_client | Error de I/O con Yahoo Finance para LOMA (archivo cerrado) - continuando con siguiente fuente
+   ⚠️  Error con multi-source: I/O operation on closed file.
+   ✅ Datos obtenidos desde Yahoo Finance
+✓ Ingested 0 new records for LOMA
+  Total records in DB for LOMA: 252
+
+============================================================
+📊 Analyzing LOMA
+============================================================
+   📡 Real-time price from IOL: $3792.50
+   📊 Live data integrated: $3792.50
+
+📈 Technical Analysis:
+   RSI: 99.94
+   ATR: 270.78
+   Signal: BUY
+Using generic model for LOMA
+
+📊 Prediction (Análisis Técnico (Fallback)):
+   Current: $3792.50
+   Predicted: $3982.12
+   Change: +5.00%
+   Signal: BUY
+
+[94m[1m================================================================================[0m
+[94m[1m                            🤖 PREDICCIÓN IA[0m
+[94m[1m================================================================================[0m
+
+[1m📊 Símbolo:[0m [1mLOMA[0m
+[1m💵 Precio Actual:[0m $3,792.50
+[1m🔮 Precio Predicho:[0m $3,982.12
+[1m📊 Cambio Esperado:[0m [92m+5.00%[0m
+[1m🎯 Señal:[0m [92m📈 BUY[0m
+[1m⏰ Hora:[0m 2025-12-01 23:34:01
+
+[94m[1m================================================================================[0m
+
+2025-12-01 23:34:01 | [32m[1mINFO[0m | trading_bot.enhanced_sentiment | No hay sentimientos recientes para LOMA, obteniendo noticias automáticamente...
+⚠️  Sentiment Analysis failed: I/O operation on closed file.
+
+📊 Scoring Analysis (Score: 26):
+   Buy Factors: Técnico Bullish (+21), MACD > Signal (+15), Price > SMA20 (+10)
+   Sell Factors: RSI Overbought (-20)
+
+🎯 Final Signal: BUY (Confidence: MEDIUM)
+
+[95m[1m================================================================================[0m
+[95m[1m                         📊 ANÁLISIS COMPLETO[0m
+[95m[1m================================================================================[0m
+
+[1m📊 Símbolo:[0m [1mLOMA[0m
+[1m🎯 Señal Final:[0m [92m[1mBUY[0m
+[1m📈 Score:[0m 26
+[1m🎯 Confianza:[0m [93mMEDIUM[0m
+[1m⏰ Hora:[0m 2025-12-01 23:34:01
+
+[1m📋 Factores de Decisión:[0m
+   [92m✅ Factores de Compra:[0m
+      • Técnico Bullish (+21)
+      • MACD > Signal (+15)
+      • Price > SMA20 (+10)
+   [91m❌ Factores de Venta:[0m
+      • RSI Overbought (-20)
+
+[95m[1m================================================================================[0m
+
+
+⏰ Filtro de Tiempo: Después del horario de trading (17:00)
+📥 Fetching latest data for TGSU2...
+📥 Descargando datos para TGSU2...
+2025-12-01 23:34:03 | [32m[1mINFO[0m | trading_bot.multi_source_client | Intentando obtener datos desde Yahoo Finance para TGSU2...
+2025-12-01 23:34:03 | [33m[1mWARNING[0m | trading_bot.multi_source_client | Error de I/O con Yahoo Finance para TGSU2 (archivo cerrado) - continuando con siguiente fuente
+   ⚠️  Error con multi-source: I/O operation on closed file.
+No data found for TGSU2
+
+============================================================
+📊 Analyzing TGSU2
+============================================================
+   📡 Real-time price from IOL: $9435.00
+   📊 Live data integrated: $9435.00
+
+📈 Technical Analysis:
+   RSI: 92.43
+   ATR: 608.16
+   Signal: BUY
+Using generic model for TGSU2
+
+📊 Prediction (Análisis Técnico (Fallback)):
+   Current: $9435.00
+   Predicted: $9906.75
+   Change: +5.00%
+   Signal: BUY
+
+[94m[1m================================================================================[0m
+[94m[1m                            🤖 PREDICCIÓN IA[0m
+[94m[1m================================================================================[0m
+
+[1m📊 Símbolo:[0m [1mTGSU2[0m
+[1m💵 Precio Actual:[0m $9,435.00
+[1m🔮 Precio Predicho:[0m $9,906.75
+[1m📊 Cambio Esperado:[0m [92m+5.00%[0m
+[1m🎯 Señal:[0m [92m📈 BUY[0m
+[1m⏰ Hora:[0m 2025-12-01 23:34:05
+
+[94m[1m================================================================================[0m
+
+2025-12-01 23:34:05 | [32m[1mINFO[0m | trading_bot.enhanced_sentiment | No hay sentimientos recientes para TGSU2, obteniendo noticias automáticamente...
+⚠️  Sentiment Analysis failed: I/O operation on closed file.
+
+📊 Scoring Analysis (Score: 26):
+   Buy Factors: Técnico Bullish (+21), MACD > Signal (+15), Price > SMA20 (+10)
+   Sell Factors: RSI Overbought (-20)
+
+🎯 Final Signal: BUY (Confidence: MEDIUM)
+
+[95m[1m================================================================================[0m
+[95m[1m                         📊 ANÁLISIS COMPLETO[0m
+[95m[1m================================================================================[0m
+
+[1m📊 Símbolo:[0m [1mTGSU2[0m
+[1m🎯 Señal Final:[0m [92m[1mBUY[0m
+[1m📈 Score:[0m 26
+[1m🎯 Confianza:[0m [93mMEDIUM[0m
+[1m⏰ Hora:[0m 2025-12-01 23:34:05
+
+[1m📋 Factores de Decisión:[0m
+   [92m✅ Factores de Compra:[0m
+      • Técnico Bullish (+21)
+      • MACD > Signal (+15)
+      • Price > SMA20 (+10)
+   [91m❌ Factores de Venta:[0m
+      • RSI Overbought (-20)
+
+[95m[1m================================================================================[0m
+
+
+⏰ Filtro de Tiempo: Después del horario de trading (17:00)
+📥 Fetching latest data for BA37D...
+📥 Descargando datos para BA37D...
+2025-12-01 23:34:07 | [32m[1mINFO[0m | trading_bot.multi_source_client | Intentando obtener datos desde Yahoo Finance para BA37D...
+2025-12-01 23:34:07 | [33m[1mWARNING[0m | trading_bot.multi_source_client | Error de I/O con Yahoo Finance para BA37D (archivo cerrado) - continuando con siguiente fuente
+   ⚠️  Error con multi-source: I/O operation on closed file.
+No data found for BA37D
+
+============================================================
+📊 Analyzing BA37D
+============================================================
+   📡 Real-time price from IOL: $102380.00
+   📊 Live data integrated: $102380.00
+⚠️  Technical Analysis failed: index 13 is out of bounds for axis 0 with size 2
+Using generic model for BA37D
+
+⚠️  AI Prediction no disponible - usando solo análisis técnico
+2025-12-01 23:34:08 | [32m[1mINFO[0m | trading_bot.enhanced_sentiment | No hay sentimientos recientes para BA37D, obteniendo noticias automáticamente...
+⚠️  Sentiment Analysis failed: I/O operation on closed file.
+
+📊 Scoring Analysis (Score: 0):
+   Buy Factors: None
+   Sell Factors: None
+
+🎯 Final Signal: HOLD (Confidence: LOW)
+
+[95m[1m================================================================================[0m
+[95m[1m                         📊 ANÁLISIS COMPLETO[0m
+[95m[1m================================================================================[0m
+
+[1m📊 Símbolo:[0m [1mBA37D[0m
+[1m🎯 Señal Final:[0m [93m[1mHOLD[0m
+[1m📈 Score:[0m 0
+[1m🎯 Confianza:[0m [96mLOW[0m
+[1m⏰ Hora:[0m 2025-12-01 23:34:08
+
+[1m📋 Factores de Decisión:[0m
+
+[95m[1m================================================================================[0m
+
+
+
+🛑 Bot stopped by user
+🛑 Polling de Telegram detenido
+📝 Archivo PID eliminado
+
+============================================================
+✅ Bot finalizado correctamente
+============================================================
+🛑 Polling de Telegram detenido
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         📨 Recibidas 1 actualizaciones
+📨 Mensaje recibido de Alex (@Alexq2005): /status
+🔍 Comando detectado: /status (args: )
+⚙️  Ejecutando comando: /status
+📤 Enviando mensaje a chat_id 996079375...
+✅ Mensaje enviado exitosamente
+✅ Comando /status ejecutado exitosamente
+📨 Recibidas 1 actualizaciones
+📨 Mensaje recibido de Alex (@Alexq2005): /start_live
+🔍 Comando detectado: /start_live (args: )
+⚙️  Ejecutando comando: /start_live
+📤 Enviando mensaje a chat_id 996079375...
+✅ Mensaje enviado exitosamente
+📤 Enviando mensaje a chat_id 996079375...
+✅ Mensaje enviado exitosamente
+✅ Comando /start_live ejecutado exitosamente
+📨 Recibidas 1 actualizaciones
+📨 Mensaje recibido de Alex (@Alexq2005): /help
+🔍 Comando detectado: /help (args: )
+⚙️  Ejecutando comando: /help
+📤 Enviando mensaje a chat_id 996079375...
+✅ Mensaje enviado exitosamente
+✅ Comando /help ejecutado exitosamente
+📨 Recibidas 1 actualizaciones
+📨 Mensaje recibido de Alex (@Alexq2005): /
+🔍 Comando detectado: / (args: )
+❓ Comando no reconocido: /
+📤 Enviando mensaje a chat_id 996079375...
+✅ Mensaje enviado exitosamente
+📨 Recibidas 1 actualizaciones
+📨 Mensaje recibido de Alex (@Alexq2005): /establecermodo
+🔍 Comando detectado: /establecermodo (args: )
+⚙️  Ejecutando comando: /establecermodo
+📤 Enviando mensaje a chat_id 996079375...
+✅ Mensaje enviado exitosamente
+✅ Comando /establecermodo ejecutado exitosamente
+📨 Recibidas 1 actualizaciones
+📨 Mensaje recibido de Alex (@Alexq2005): /restart_full
+🔍 Comando detectado: /restart_full (args: )
+⚙️  Ejecutando comando: /restart_full
+📤 Enviando mensaje a chat_id 996079375...
+✅ Mensaje enviado exitosamente
+✅ Comando /restart_full ejecutado exitosamente
+📨 Recibidas 1 actualizaciones
+📨 Mensaje recibido de Alex (@Alexq2005): /status
+🔍 Comando detectado: /status (args: )
+⚙️  Ejecutando comando: /status
+📤 Enviando mensaje a chat_id 996079375...
+✅ Mensaje enviado exitosamente
+✅ Comando /status ejecutado exitosamente
+📨 Recibidas 1 actualizaciones
+📨 Mensaje recibido de Alex (@Alexq2005): /restart
+🔍 Comando detectado: /restart (args: )
+⚙️  Ejecutando comando: /restart
+📤 Enviando mensaje a chat_id 996079375...
+📤 Enviando mensaje a chat_id 996079375...
+✅ Mensaje enviado exitosamente
+
+############################################################
+🔄 Starting Analysis Cycle - 2025-12-02 00:31:59
+############################################################
+2025-12-02 00:31:59 | [32m[1mINFO[0m | trading_bot.advanced_learning | 🔄 Iniciando ciclo de aprendizaje...
+⚠️  Error en ciclo de aprendizaje: I/O operation on closed file.
+📥 Fetching latest data for TTM26...
+📥 Descargando datos para TTM26...
+2025-12-02 00:31:59 | [32m[1mINFO[0m | trading_bot.multi_source_client | Intentando obtener datos desde Yahoo Finance para TTM26...
+2025-12-02 00:31:59 | [33m[1mWARNING[0m | trading_bot.multi_source_client | Error de I/O con Yahoo Finance para TTM26 (archivo cerrado) - continuando con siguiente fuente
+   ⚠️  Error con multi-source: I/O operation on closed file.
+✅ Mensaje enviado exitosamente
+✅ Comando /restart ejecutado exitosamente
+No data found for TTM26
+
+============================================================
+📊 Analyzing TTM26
+============================================================
+Autenticando con IOL como alexq2005@gmail.com...
+Autenticación exitosa.
+   📡 Real-time price from IOL: $138.35
+   📊 Live data integrated: $138.35
+⚠️  Technical Analysis failed: index 13 is out of bounds for axis 0 with size 2
+Using generic model for TTM26
+
+⚠️  AI Prediction no disponible - usando solo análisis técnico
+⚠️  Sentiment Analysis failed: get_config() takes 0 positional arguments but 2 were given
+
+📊 Scoring Analysis (Score: 0):
+   Buy Factors: None
+   Sell Factors: None
+
+🎯 Final Signal: HOLD (Confidence: LOW)
+
+[95m[1m================================================================================[0m
+[95m[1m                         📊 ANÁLISIS COMPLETO[0m
+[95m[1m================================================================================[0m
+
+[1m📊 Símbolo:[0m [1mTTM26[0m
+[1m🎯 Señal Final:[0m [93m[1mHOLD[0m
+[1m📈 Score:[0m 0
+[1m🎯 Confianza:[0m [96mLOW[0m
+[1m⏰ Hora:[0m 2025-12-02 00:32:01
+
+[1m📋 Factores de Decisión:[0m
+
+[95m[1m================================================================================[0m
+
+📥 Fetching latest data for ECOG...
+📥 Descargando datos para ECOG...
+2025-12-02 00:32:02 | [32m[1mINFO[0m | trading_bot.multi_source_client | Intentando obtener datos desde Yahoo Finance para ECOG...
+2025-12-02 00:32:02 | [33m[1mWARNING[0m | trading_bot.multi_source_client | Error de I/O con Yahoo Finance para ECOG (archivo cerrado) - continuando con siguiente fuente
+   ⚠️  Error con multi-source: I/O operation on closed file.
+No data found for ECOG
+
+============================================================
+📊 Analyzing ECOG
+============================================================
+   📡 Real-time price from IOL: $3430.00
+   📊 Live data integrated: $3430.00
+
+📈 Technical Analysis:
+   RSI: 10.68
+   ATR: 2816.35
+   Signal: SELL
+Using generic model for ECOG
+
+📊 Prediction (Análisis Técnico (Fallback)):
+   Current: $3430.00
+   Predicted: $3258.50
+   Change: -5.00%
+   Signal: SELL
+
+[94m[1m================================================================================[0m
+[94m[1m                            🤖 PREDICCIÓN IA[0m
+[94m[1m================================================================================[0m
+
+[1m📊 Símbolo:[0m [1mECOG[0m
+[1m💵 Precio Actual:[0m $3,430.00
+[1m🔮 Precio Predicho:[0m $3,258.50
+[1m📊 Cambio Esperado:[0m [91m-5.00%[0m
+[1m🎯 Señal:[0m [91m📉 SELL[0m
+[1m⏰ Hora:[0m 2025-12-02 00:32:04
+
+[94m[1m================================================================================[0m
+
+⚠️  Sentiment Analysis failed: get_config() takes 0 positional arguments but 2 were given
+
+📊 Scoring Analysis (Score: -26):
+   Buy Factors: RSI Oversold (+20)
+   Sell Factors: Técnico Bearish (-21), MACD < Signal (-15), Price < SMA20 (-10)
+
+🎯 Final Signal: SELL (Confidence: MEDIUM)
+
+[95m[1m================================================================================[0m
+[95m[1m                         📊 ANÁLISIS COMPLETO[0m
+[95m[1m================================================================================[0m
+
+[1m📊 Símbolo:[0m [1mECOG[0m
+[1m🎯 Señal Final:[0m [91m[1mSELL[0m
+[1m📈 Score:[0m -26
+[1m🎯 Confianza:[0m [93mMEDIUM[0m
+[1m⏰ Hora:[0m 2025-12-02 00:32:04
+
+[1m📋 Factores de Decisión:[0m
+   [92m✅ Factores de Compra:[0m
+      • RSI Oversold (+20)
+   [91m❌ Factores de Venta:[0m
+      • Técnico Bearish (-21)
+      • MACD < Signal (-15)
+      • Price < SMA20 (-10)
+
+[95m[1m================================================================================[0m
+
+
+⏰ Filtro de Tiempo: Antes del horario de trading (11:00)
+📥 Fetching latest data for NU...
+📥 Descargando datos para NU...
+2025-12-02 00:32:05 | [32m[1mINFO[0m | trading_bot.multi_source_client | Intentando obtener datos desde Yahoo Finance para NU...
+2025-12-02 00:32:05 | [33m[1mWARNING[0m | trading_bot.multi_source_client | Error de I/O con Yahoo Finance para NU (archivo cerrado) - continuando con siguiente fuente
+   ⚠️  Error con multi-source: I/O operation on closed file.
+   ✅ Datos obtenidos desde Yahoo Finance
+✓ Ingested 0 new records for NU
+  Total records in DB for NU: 252
+
+============================================================
+📊 Analyzing NU
+============================================================
+   📡 Real-time price from IOL: $17.50
+   📊 Live data integrated: $17.50
+
+📈 Technical Analysis:
+   RSI: 83.03
+   ATR: 0.94
+   Signal: BUY
+Using generic model for NU
+
+📊 Prediction (Análisis Técnico (Fallback)):
+   Current: $17.50
+   Predicted: $18.37
+   Change: +5.00%
+   Signal: BUY
+
+[94m[1m================================================================================[0m
+[94m[1m                            🤖 PREDICCIÓN IA[0m
+[94m[1m================================================================================[0m
+
+[1m📊 Símbolo:[0m [1mNU[0m
+[1m💵 Precio Actual:[0m $17.50
+[1m🔮 Precio Predicho:[0m $18.37
+[1m📊 Cambio Esperado:[0m [92m+5.00%[0m
+[1m🎯 Señal:[0m [92m📈 BUY[0m
+[1m⏰ Hora:[0m 2025-12-02 00:32:06
+
+[94m[1m================================================================================[0m
+
+⚠️  Sentiment Analysis failed: get_config() takes 0 positional arguments but 2 were given
+
+📊 Scoring Analysis (Score: 26):
+   Buy Factors: Técnico Bullish (+21), MACD > Signal (+15), Price > SMA20 (+10)
+   Sell Factors: RSI Overbought (-20)
+
+🎯 Final Signal: BUY (Confidence: MEDIUM)
+
+[95m[1m================================================================================[0m
+[95m[1m                         📊 ANÁLISIS COMPLETO[0m
+[95m[1m================================================================================[0m
+
+[1m📊 Símbolo:[0m [1mNU[0m
+[1m🎯 Señal Final:[0m [92m[1mBUY[0m
+[1m📈 Score:[0m 26
+[1m🎯 Confianza:[0m [93mMEDIUM[0m
+[1m⏰ Hora:[0m 2025-12-02 00:32:06
+
+[1m📋 Factores de Decisión:[0m
+   [92m✅ Factores de Compra:[0m
+      • Técnico Bullish (+21)
+      • MACD > Signal (+15)
+      • Price > SMA20 (+10)
+   [91m❌ Factores de Venta:[0m
+      • RSI Overbought (-20)
+
+[95m[1m================================================================================[0m
+
+
+⏰ Filtro de Tiempo: Antes del horario de trading (11:00)
+📥 Fetching latest data for GD35...
+📥 Descargando datos para GD35...
+2025-12-02 00:32:08 | [32m[1mINFO[0m | trading_bot.multi_source_client | Intentando obtener datos desde Yahoo Finance para GD35...
+2025-12-02 00:32:08 | [33m[1mWARNING[0m | trading_bot.multi_source_client | Error de I/O con Yahoo Finance para GD35 (archivo cerrado) - continuando con siguiente fuente
+   ⚠️  Error con multi-source: I/O operation on closed file.
+No data found for GD35
+
+============================================================
+📊 Analyzing GD35
+============================================================
+   📡 Real-time price from IOL: $110200.00
+   📊 Live data integrated: $110200.00
+⚠️  Technical Analysis failed: index 13 is out of bounds for axis 0 with size 2
+Using generic model for GD35
+
+⚠️  AI Prediction no disponible - usando solo análisis técnico
+⚠️  Sentiment Analysis failed: get_config() takes 0 positional arguments but 2 were given
+
+📊 Scoring Analysis (Score: 0):
+   Buy Factors: None
+   Sell Factors: None
+
+🎯 Final Signal: HOLD (Confidence: LOW)
+
+[95m[1m================================================================================[0m
+[95m[1m                         📊 ANÁLISIS COMPLETO[0m
+[95m[1m================================================================================[0m
+
+[1m📊 Símbolo:[0m [1mGD35[0m
+[1m🎯 Señal Final:[0m [93m[1mHOLD[0m
+[1m📈 Score:[0m 0
+[1m🎯 Confianza:[0m [96mLOW[0m
+[1m⏰ Hora:[0m 2025-12-02 00:32:09
+
+[1m📋 Factores de Decisión:[0m
+
+[95m[1m================================================================================[0m
+
+📥 Fetching latest data for TGNO4...
+📥 Descargando datos para TGNO4...
+2025-12-02 00:32:10 | [32m[1mINFO[0m | trading_bot.multi_source_client | Intentando obtener datos desde Yahoo Finance para TGNO4...
+2025-12-02 00:32:10 | [33m[1mWARNING[0m | trading_bot.multi_source_client | Error de I/O con Yahoo Finance para TGNO4 (archivo cerrado) - continuando con siguiente fuente
+   ⚠️  Error con multi-source: I/O operation on closed file.
+No data found for TGNO4
+
+============================================================
+📊 Analyzing TGNO4
+============================================================
+   📡 Real-time price from IOL: $4500.00
+   📊 Live data integrated: $4500.00
+
+📈 Technical Analysis:
+   RSI: 89.28
+   ATR: 303.70
+   Signal: BUY
+Using generic model for TGNO4
+
+📊 Prediction (Análisis Técnico (Fallback)):
+   Current: $4500.00
+   Predicted: $4725.00
+   Change: +5.00%
+   Signal: BUY
+
+[94m[1m================================================================================[0m
+[94m[1m                            🤖 PREDICCIÓN IA[0m
+[94m[1m================================================================================[0m
+
+[1m📊 Símbolo:[0m [1mTGNO4[0m
+[1m💵 Precio Actual:[0m $4,500.00
+[1m🔮 Precio Predicho:[0m $4,725.00
+[1m📊 Cambio Esperado:[0m [92m+5.00%[0m
+[1m🎯 Señal:[0m [92m📈 BUY[0m
+[1m⏰ Hora:[0m 2025-12-02 00:32:12
+
+[94m[1m================================================================================[0m
+
+⚠️  Sentiment Analysis failed: get_config() takes 0 positional arguments but 2 were given
+
+📊 Scoring Analysis (Score: 26):
+   Buy Factors: Técnico Bullish (+21), MACD > Signal (+15), Price > SMA20 (+10)
+   Sell Factors: RSI Overbought (-20)
+
+🎯 Final Signal: BUY (Confidence: MEDIUM)
+
+[95m[1m================================================================================[0m
+[95m[1m                         📊 ANÁLISIS COMPLETO[0m
+[95m[1m================================================================================[0m
+
+[1m📊 Símbolo:[0m [1mTGNO4[0m
+[1m🎯 Señal Final:[0m [92m[1mBUY[0m
+[1m📈 Score:[0m 26
+[1m🎯 Confianza:[0m [93mMEDIUM[0m
+[1m⏰ Hora:[0m 2025-12-02 00:32:12
+
+[1m📋 Factores de Decisión:[0m
+   [92m✅ Factores de Compra:[0m
+      • Técnico Bullish (+21)
+      • MACD > Signal (+15)
+      • Price > SMA20 (+10)
+   [91m❌ Factores de Venta:[0m
+      • RSI Overbought (-20)
+
+[95m[1m================================================================================[0m
+
+
+⏰ Filtro de Tiempo: Antes del horario de trading (11:00)
+📥 Fetching latest data for BA37D...
+📥 Descargando datos para BA37D...
+2025-12-02 00:32:14 | [32m[1mINFO[0m | trading_bot.multi_source_client | Intentando obtener datos desde Yahoo Finance para BA37D...
+2025-12-02 00:32:14 | [33m[1mWARNING[0m | trading_bot.multi_source_client | Error de I/O con Yahoo Finance para BA37D (archivo cerrado) - continuando con siguiente fuente
+   ⚠️  Error con multi-source: I/O operation on closed file.
+No data found for BA37D
+
+============================================================
+📊 Analyzing BA37D
+============================================================
+   📡 Real-time price from IOL: $102380.00
+   📊 Live data integrated: $102380.00
+⚠️  Technical Analysis failed: index 13 is out of bounds for axis 0 with size 2
+Using generic model for BA37D
+
+⚠️  AI Prediction no disponible - usando solo análisis técnico
+⚠️  Sentiment Analysis failed: get_config() takes 0 positional arguments but 2 were given
+
+📊 Scoring Analysis (Score: 0):
+   Buy Factors: None
+   Sell Factors: None
+
+🎯 Final Signal: HOLD (Confidence: LOW)
+
+[95m[1m================================================================================[0m
+[95m[1m                         📊 ANÁLISIS COMPLETO[0m
+[95m[1m================================================================================[0m
+
+[1m📊 Símbolo:[0m [1mBA37D[0m
+[1m🎯 Señal Final:[0m [93m[1mHOLD[0m
+[1m📈 Score:[0m 0
+[1m🎯 Confianza:[0m [96mLOW[0m
+[1m⏰ Hora:[0m 2025-12-02 00:32:15
+
+[1m📋 Factores de Decisión:[0m
+
+[95m[1m================================================================================[0m
+
+📥 Fetching latest data for BYMA...
+📥 Descargando datos para BYMA...
+2025-12-02 00:32:16 | [32m[1mINFO[0m | trading_bot.multi_source_client | Intentando obtener datos desde Yahoo Finance para BYMA...
+2025-12-02 00:32:16 | [33m[1mWARNING[0m | trading_bot.multi_source_client | Error de I/O con Yahoo Finance para BYMA (archivo cerrado) - continuando con siguiente fuente
+   ⚠️  Error con multi-source: I/O operation on closed file.
+No data found for BYMA
+
+============================================================
+📊 Analyzing BYMA
+============================================================
+   📡 Real-time price from IOL: $300.00
+   📊 Live data integrated: $300.00
+
+📈 Technical Analysis:
+   RSI: 90.59
+   ATR: 19.18
+   Signal: BUY
+Using generic model for BYMA
+
+📊 Prediction (Análisis Técnico (Fallback)):
+   Current: $300.00
+   Predicted: $315.00
+   Change: +5.00%
+   Signal: BUY
+
+[94m[1m================================================================================[0m
+[94m[1m                            🤖 PREDICCIÓN IA[0m
+[94m[1m================================================================================[0m
+
+[1m📊 Símbolo:[0m [1mBYMA[0m
+[1m💵 Precio Actual:[0m $300.00
+[1m🔮 Precio Predicho:[0m $315.00
+[1m📊 Cambio Esperado:[0m [92m+5.00%[0m
+[1m🎯 Señal:[0m [92m📈 BUY[0m
+[1m⏰ Hora:[0m 2025-12-02 00:32:18
+
+[94m[1m================================================================================[0m
+
+⚠️  Sentiment Analysis failed: get_config() takes 0 positional arguments but 2 were given
+
+📊 Scoring Analysis (Score: 26):
+   Buy Factors: Técnico Bullish (+21), MACD > Signal (+15), Price > SMA20 (+10)
+   Sell Factors: RSI Overbought (-20)
+
+🎯 Final Signal: BUY (Confidence: MEDIUM)
+
+[95m[1m================================================================================[0m
+[95m[1m                         📊 ANÁLISIS COMPLETO[0m
+[95m[1m================================================================================[0m
+
+[1m📊 Símbolo:[0m [1mBYMA[0m
+[1m🎯 Señal Final:[0m [92m[1mBUY[0m
+[1m📈 Score:[0m 26
+[1m🎯 Confianza:[0m [93mMEDIUM[0m
+[1m⏰ Hora:[0m 2025-12-02 00:32:18
+
+[1m📋 Factores de Decisión:[0m
+   [92m✅ Factores de Compra:[0m
+      • Técnico Bullish (+21)
+      • MACD > Signal (+15)
+      • Price > SMA20 (+10)
+   [91m❌ Factores de Venta:[0m
+      • RSI Overbought (-20)
+
+[95m[1m================================================================================[0m
+
+
+⏰ Filtro de Tiempo: Antes del horario de trading (11:00)
+📥 Fetching latest data for COME...
+📥 Descargando datos para COME...
+2025-12-02 00:32:20 | [32m[1mINFO[0m | trading_bot.multi_source_client | Intentando obtener datos desde Yahoo Finance para COME...
+2025-12-02 00:32:20 | [33m[1mWARNING[0m | trading_bot.multi_source_client | Error de I/O con Yahoo Finance para COME (archivo cerrado) - continuando con siguiente fuente
+   ⚠️  Error con multi-source: I/O operation on closed file.
+No data found for COME
+
+============================================================
+📊 Analyzing COME
+============================================================
+   📡 Real-time price from IOL: $74.00
+   📊 Live data integrated: $74.00
+
+📈 Technical Analysis:
+   RSI: 80.54
+   ATR: 4.29
+   Signal: BUY
+Using generic model for COME
+
+📊 Prediction (Análisis Técnico (Fallback)):
+   Current: $74.00
+   Predicted: $77.70
+   Change: +5.00%
+   Signal: BUY
+
+[94m[1m================================================================================[0m
+[94m[1m                            🤖 PREDICCIÓN IA[0m
+[94m[1m================================================================================[0m
+
+[1m📊 Símbolo:[0m [1mCOME[0m
+[1m💵 Precio Actual:[0m $74.00
+[1m🔮 Precio Predicho:[0m $77.70
+[1m📊 Cambio Esperado:[0m [92m+5.00%[0m
+[1m🎯 Señal:[0m [92m📈 BUY[0m
+[1m⏰ Hora:[0m 2025-12-02 00:32:21
+
+[94m[1m================================================================================[0m
+
+⚠️  Sentiment Analysis failed: get_config() takes 0 positional arguments but 2 were given
+
+📊 Scoring Analysis (Score: 26):
+   Buy Factors: Técnico Bullish (+21), MACD > Signal (+15), Price > SMA20 (+10)
+   Sell Factors: RSI Overbought (-20)
+
+🎯 Final Signal: BUY (Confidence: MEDIUM)
+
+[95m[1m================================================================================[0m
+[95m[1m                         📊 ANÁLISIS COMPLETO[0m
+[95m[1m================================================================================[0m
+
+[1m📊 Símbolo:[0m [1mCOME[0m
+[1m🎯 Señal Final:[0m [92m[1mBUY[0m
+[1m📈 Score:[0m 26
+[1m🎯 Confianza:[0m [93mMEDIUM[0m
+[1m⏰ Hora:[0m 2025-12-02 00:32:21
+
+[1m📋 Factores de Decisión:[0m
+   [92m✅ Factores de Compra:[0m
+      • Técnico Bullish (+21)
+      • MACD > Signal (+15)
+      • Price > SMA20 (+10)
+   [91m❌ Factores de Venta:[0m
+      • RSI Overbought (-20)
+
+[95m[1m================================================================================[0m
+
+
+⏰ Filtro de Tiempo: Antes del horario de trading (11:00)
+📥 Fetching latest data for TX26...
+📥 Descargando datos para TX26...
+2025-12-02 00:32:23 | [32m[1mINFO[0m | trading_bot.multi_source_client | Intentando obtener datos desde Yahoo Finance para TX26...
+2025-12-02 00:32:23 | [33m[1mWARNING[0m | trading_bot.multi_source_client | Error de I/O con Yahoo Finance para TX26 (archivo cerrado) - continuando con siguiente fuente
+   ⚠️  Error con multi-source: I/O operation on closed file.
+No data found for TX26
+
+============================================================
+📊 Analyzing TX26
+============================================================
+⚠️  Technical Analysis failed: No data found for TX26
+Using generic model for TX26
+
+⚠️  AI Prediction no disponible - usando solo análisis técnico
+⚠️  Sentiment Analysis failed: get_config() takes 0 positional arguments but 2 were given
+
+📊 Scoring Analysis (Score: 0):
+   Buy Factors: None
+   Sell Factors: None
+
+🎯 Final Signal: HOLD (Confidence: LOW)
+
+[95m[1m================================================================================[0m
+[95m[1m                         📊 ANÁLISIS COMPLETO[0m
+[95m[1m================================================================================[0m
+
+[1m📊 Símbolo:[0m [1mTX26[0m
+[1m🎯 Señal Final:[0m [93m[1mHOLD[0m
+[1m📈 Score:[0m 0
+[1m🎯 Confianza:[0m [96mLOW[0m
+[1m⏰ Hora:[0m 2025-12-02 00:32:24
+
+[1m📋 Factores de Decisión:[0m
+
+[95m[1m================================================================================[0m
+
+📥 Fetching latest data for TSM...
+📥 Descargando datos para TSM...
+2025-12-02 00:32:25 | [32m[1mINFO[0m | trading_bot.multi_source_client | Intentando obtener datos desde Yahoo Finance para TSM...
+2025-12-02 00:32:25 | [33m[1mWARNING[0m | trading_bot.multi_source_client | Error de I/O con Yahoo Finance para TSM (archivo cerrado) - continuando con siguiente fuente
+   ⚠️  Error con multi-source: I/O operation on closed file.
+   ✅ Datos obtenidos desde Yahoo Finance
+✓ Ingested 0 new records for TSM
+  Total records in DB for TSM: 252
+
+============================================================
+📊 Analyzing TSM
+============================================================
+   📡 Real-time price from IOL: $287.78
+   📊 Live data integrated: $287.78
+
+📈 Technical Analysis:
+   RSI: 84.24
+   ATR: 16.21
+   Signal: BUY
+Using generic model for TSM
+
+📊 Prediction (Análisis Técnico (Fallback)):
+   Current: $287.78
+   Predicted: $302.17
+   Change: +5.00%
+   Signal: BUY
+
+[94m[1m================================================================================[0m
+[94m[1m                            🤖 PREDICCIÓN IA[0m
+[94m[1m================================================================================[0m
+
+[1m📊 Símbolo:[0m [1mTSM[0m
+[1m💵 Precio Actual:[0m $287.78
+[1m🔮 Precio Predicho:[0m $302.17
+[1m📊 Cambio Esperado:[0m [92m+5.00%[0m
+[1m🎯 Señal:[0m [92m📈 BUY[0m
+[1m⏰ Hora:[0m 2025-12-02 00:32:26
+
+[94m[1m================================================================================[0m
+
+⚠️  Sentiment Analysis failed: get_config() takes 0 positional arguments but 2 were given
+
+📊 Scoring Analysis (Score: 26):
+   Buy Factors: Técnico Bullish (+21), MACD > Signal (+15), Price > SMA20 (+10)
+   Sell Factors: RSI Overbought (-20)
+
+🎯 Final Signal: BUY (Confidence: MEDIUM)
+
+[95m[1m================================================================================[0m
+[95m[1m                         📊 ANÁLISIS COMPLETO[0m
+[95m[1m================================================================================[0m
+
+[1m📊 Símbolo:[0m [1mTSM[0m
+[1m🎯 Señal Final:[0m [92m[1mBUY[0m
+[1m📈 Score:[0m 26
+[1m🎯 Confianza:[0m [93mMEDIUM[0m
+[1m⏰ Hora:[0m 2025-12-02 00:32:26
+
+[1m📋 Factores de Decisión:[0m
+   [92m✅ Factores de Compra:[0m
+      • Técnico Bullish (+21)
+      • MACD > Signal (+15)
+      • Price > SMA20 (+10)
+   [91m❌ Factores de Venta:[0m
+      • RSI Overbought (-20)
+
+[95m[1m================================================================================[0m
+
+
+⏰ Filtro de Tiempo: Antes del horario de trading (11:00)
+📥 Fetching latest data for AMZN...
+📥 Descargando datos para AMZN...
+2025-12-02 00:32:28 | [32m[1mINFO[0m | trading_bot.multi_source_client | Intentando obtener datos desde Yahoo Finance para AMZN...
+2025-12-02 00:32:28 | [33m[1mWARNING[0m | trading_bot.multi_source_client | Error de I/O con Yahoo Finance para AMZN (archivo cerrado) - continuando con siguiente fuente
+   ⚠️  Error con multi-source: I/O operation on closed file.
+   ✅ Datos obtenidos desde Yahoo Finance
+✓ Ingested 0 new records for AMZN
+  Total records in DB for AMZN: 252
+
+============================================================
+📊 Analyzing AMZN
+============================================================
+   📡 Real-time price from IOL: $234.00
+   📊 Live data integrated: $234.00
+
+📈 Technical Analysis:
+   RSI: 70.48
+   ATR: 12.20
+   Signal: BUY
+Using generic model for AMZN
+
+📊 Prediction (Análisis Técnico (Fallback)):
+   Current: $234.00
+   Predicted: $245.70
+   Change: +5.00%
+   Signal: BUY
+
+[94m[1m================================================================================[0m
+[94m[1m                            🤖 PREDICCIÓN IA[0m
+[94m[1m================================================================================[0m
+
+[1m📊 Símbolo:[0m [1mAMZN[0m
+[1m💵 Precio Actual:[0m $234.00
+[1m🔮 Precio Predicho:[0m $245.70
+[1m📊 Cambio Esperado:[0m [92m+5.00%[0m
+[1m🎯 Señal:[0m [92m📈 BUY[0m
+[1m⏰ Hora:[0m 2025-12-02 00:32:29
+
+[94m[1m================================================================================[0m
+
+⚠️  Sentiment Analysis failed: get_config() takes 0 positional arguments but 2 were given
+
+📊 Scoring Analysis (Score: 26):
+   Buy Factors: Técnico Bullish (+21), MACD > Signal (+15), Price > SMA20 (+10)
+   Sell Factors: RSI Overbought (-20)
+
+🎯 Final Signal: BUY (Confidence: MEDIUM)
+
+[95m[1m================================================================================[0m
+[95m[1m                         📊 ANÁLISIS COMPLETO[0m
+[95m[1m================================================================================[0m
+
+[1m📊 Símbolo:[0m [1mAMZN[0m
+[1m🎯 Señal Final:[0m [92m[1mBUY[0m
+[1m📈 Score:[0m 26
+[1m🎯 Confianza:[0m [93mMEDIUM[0m
+[1m⏰ Hora:[0m 2025-12-02 00:32:29
+
+[1m📋 Factores de Decisión:[0m
+   [92m✅ Factores de Compra:[0m
+      • Técnico Bullish (+21)
+      • MACD > Signal (+15)
+      • Price > SMA20 (+10)
+   [91m❌ Factores de Venta:[0m
+      • RSI Overbought (-20)
+
+[95m[1m================================================================================[0m
+
+
+⏰ Filtro de Tiempo: Antes del horario de trading (11:00)
+📥 Fetching latest data for YPFD...
+📥 Descargando datos para YPFD...
+2025-12-02 00:32:30 | [32m[1mINFO[0m | trading_bot.multi_source_client | Intentando obtener datos desde Yahoo Finance para YPFD...
+2025-12-02 00:32:30 | [33m[1mWARNING[0m | trading_bot.multi_source_client | Error de I/O con Yahoo Finance para YPFD (archivo cerrado) - continuando con siguiente fuente
+   ⚠️  Error con multi-source: I/O operation on closed file.
+2025-12-02 00:32:31 | [32m[1mINFO[0m | trading_bot.byma_client | Obteniendo datos históricos de Yahoo Finance para YPFD.BA
+2025-12-02 00:32:31 | [33m[1mWARNING[0m | trading_bot.byma_client | Error de I/O con Yahoo Finance para YPFD (archivo cerrado) - reintentando...
+   ⚠️  Error con BYMA: I/O operation on closed file.
+No data found for YPFD
+
+============================================================
+📊 Analyzing YPFD
+============================================================
+   📡 Real-time price from IOL: $55800.00
+   📊 Live data integrated: $55800.00
+
+📈 Technical Analysis:
+   RSI: 93.31
+   ATR: 3244.38
+   Signal: BUY
+Using generic model for YPFD
+
+📊 Prediction (Análisis Técnico (Fallback)):
+   Current: $55800.00
+   Predicted: $58590.00
+   Change: +5.00%
+   Signal: BUY
+
+[94m[1m================================================================================[0m
+[94m[1m                            🤖 PREDICCIÓN IA[0m
+[94m[1m================================================================================[0m
+
+[1m📊 Símbolo:[0m [1mYPFD[0m
+[1m💵 Precio Actual:[0m $55,800.00
+[1m🔮 Precio Predicho:[0m $58,590.00
+[1m📊 Cambio Esperado:[0m [92m+5.00%[0m
+[1m🎯 Señal:[0m [92m📈 BUY[0m
+[1m⏰ Hora:[0m 2025-12-02 00:32:32
+
+[94m[1m================================================================================[0m
+
+⚠️  Sentiment Analysis failed: get_config() takes 0 positional arguments but 2 were given
+
+📊 Scoring Analysis (Score: 26):
+   Buy Factors: Técnico Bullish (+21), MACD > Signal (+15), Price > SMA20 (+10)
+   Sell Factors: RSI Overbought (-20)
+
+🎯 Final Signal: BUY (Confidence: MEDIUM)
+
+[95m[1m================================================================================[0m
+[95m[1m                         📊 ANÁLISIS COMPLETO[0m
+[95m[1m================================================================================[0m
+
+[1m📊 Símbolo:[0m [1mYPFD[0m
+[1m🎯 Señal Final:[0m [92m[1mBUY[0m
+[1m📈 Score:[0m 26
+[1m🎯 Confianza:[0m [93mMEDIUM[0m
+[1m⏰ Hora:[0m 2025-12-02 00:32:32
+
+[1m📋 Factores de Decisión:[0m
+   [92m✅ Factores de Compra:[0m
+      • Técnico Bullish (+21)
+      • MACD > Signal (+15)
+      • Price > SMA20 (+10)
+   [91m❌ Factores de Venta:[0m
+      • RSI Overbought (-20)
+
+[95m[1m================================================================================[0m
+
+
+⏰ Filtro de Tiempo: Antes del horario de trading (11:00)
+📥 Fetching latest data for TGSU2...
+📥 Descargando datos para TGSU2...
+2025-12-02 00:32:34 | [32m[1mINFO[0m | trading_bot.multi_source_client | Intentando obtener datos desde Yahoo Finance para TGSU2...
+2025-12-02 00:32:34 | [33m[1mWARNING[0m | trading_bot.multi_source_client | Error de I/O con Yahoo Finance para TGSU2 (archivo cerrado) - continuando con siguiente fuente
+   ⚠️  Error con multi-source: I/O operation on closed file.
+No data found for TGSU2
+
+============================================================
+📊 Analyzing TGSU2
+============================================================
+
+============================================================
+🔄 Reinicio completo solicitado desde Telegram
+============================================================
+⚠️  Deteniendo bot para reinicio...
+   📡 Real-time price from IOL: $9435.00
+   📊 Live data integrated: $9435.00
+
+📈 Technical Analysis:
+   RSI: 92.43
+   ATR: 608.16
+   Signal: BUY
+Using generic model for TGSU2
+
+📊 Prediction (Análisis Técnico (Fallback)):
+   Current: $9435.00
+   Predicted: $9906.75
+   Change: +5.00%
+   Signal: BUY
+
+[94m[1m================================================================================[0m
+[94m[1m                            🤖 PREDICCIÓN IA[0m
+[94m[1m================================================================================[0m
+
+[1m📊 Símbolo:[0m [1mTGSU2[0m
+[1m💵 Precio Actual:[0m $9,435.00
+[1m🔮 Precio Predicho:[0m $9,906.75
+[1m📊 Cambio Esperado:[0m [92m+5.00%[0m
+[1m🎯 Señal:[0m [92m📈 BUY[0m
+[1m⏰ Hora:[0m 2025-12-02 00:32:35
+
+[94m[1m================================================================================[0m
+
+⚠️  Sentiment Analysis failed: get_config() takes 0 positional arguments but 2 were given
+
+📊 Scoring Analysis (Score: 26):
+   Buy Factors: Técnico Bullish (+21), MACD > Signal (+15), Price > SMA20 (+10)
+   Sell Factors: RSI Overbought (-20)
+
+🎯 Final Signal: BUY (Confidence: MEDIUM)
+
+[95m[1m================================================================================[0m
+[95m[1m                         📊 ANÁLISIS COMPLETO[0m
+[95m[1m================================================================================[0m
+
+[1m📊 Símbolo:[0m [1mTGSU2[0m
+[1m🎯 Señal Final:[0m [92m[1mBUY[0m
+[1m📈 Score:[0m 26
+[1m🎯 Confianza:[0m [93mMEDIUM[0m
+[1m⏰ Hora:[0m 2025-12-02 00:32:35
+
+[1m📋 Factores de Decisión:[0m
+   [92m✅ Factores de Compra:[0m
+      • Técnico Bullish (+21)
+      • MACD > Signal (+15)
+      • Price > SMA20 (+10)
+   [91m❌ Factores de Venta:[0m
+      • RSI Overbought (-20)
+
+[95m[1m================================================================================[0m
+
+
+⏰ Filtro de Tiempo: Antes del horario de trading (11:00)
+📥 Fetching latest data for EDN...
+📥 Descargando datos para EDN...
+2025-12-02 00:32:37 | [32m[1mINFO[0m | trading_bot.multi_source_client | Intentando obtener datos desde Yahoo Finance para EDN...
+2025-12-02 00:32:37 | [33m[1mWARNING[0m | trading_bot.multi_source_client | Error de I/O con Yahoo Finance para EDN (archivo cerrado) - continuando con siguiente fuente
+   ⚠️  Error con multi-source: I/O operation on closed file.
+   ✅ Datos obtenidos desde Yahoo Finance
+✓ Ingested 0 new records for EDN
+  Total records in DB for EDN: 252
+
+============================================================
+📊 Analyzing EDN
+============================================================
+   📡 Real-time price from IOL: $2675.00
+   📊 Live data integrated: $2675.00
+
+📈 Technical Analysis:
+   RSI: 99.68
+   ATR: 191.13
+   Signal: BUY
+Using generic model for EDN
+
+📊 Prediction (Análisis Técnico (Fallback)):
+   Current: $2675.00
+   Predicted: $2808.75
+   Change: +5.00%
+   Signal: BUY
+
+[94m[1m================================================================================[0m
+[94m[1m                            🤖 PREDICCIÓN IA[0m
+[94m[1m================================================================================[0m
+
+[1m📊 Símbolo:[0m [1mEDN[0m
+[1m💵 Precio Actual:[0m $2,675.00
+[1m🔮 Precio Predicho:[0m $2,808.75
+[1m📊 Cambio Esperado:[0m [92m+5.00%[0m
+[1m🎯 Señal:[0m [92m📈 BUY[0m
+[1m⏰ Hora:[0m 2025-12-02 00:32:38
+
+[94m[1m================================================================================[0m
+
+⚠️  Sentiment Analysis failed: get_config() takes 0 positional arguments but 2 were given
+
+📊 Scoring Analysis (Score: 26):
+   Buy Factors: Técnico Bullish (+21), MACD > Signal (+15), Price > SMA20 (+10)
+   Sell Factors: RSI Overbought (-20)
+
+🎯 Final Signal: BUY (Confidence: MEDIUM)
+
+[95m[1m================================================================================[0m
+[95m[1m                         📊 ANÁLISIS COMPLETO[0m
+[95m[1m================================================================================[0m
+
+[1m📊 Símbolo:[0m [1mEDN[0m
+[1m🎯 Señal Final:[0m [92m[1mBUY[0m
+[1m📈 Score:[0m 26
+[1m🎯 Confianza:[0m [93mMEDIUM[0m
+[1m⏰ Hora:[0m 2025-12-02 00:32:38
+
+[1m📋 Factores de Decisión:[0m
+   [92m✅ Factores de Compra:[0m
+      • Técnico Bullish (+21)
+      • MACD > Signal (+15)
+      • Price > SMA20 (+10)
+   [91m❌ Factores de Venta:[0m
+      • RSI Overbought (-20)
+
+[95m[1m================================================================================[0m
+
+🛑 Polling de Telegram detenido
+✅ Bot detenido. Reinicia manualmente o usa un script de monitoreo.
+📝 Archivo PID eliminado
+
+============================================================
+✅ Bot finalizado correctamente
+============================================================
+🛑 Polling de Telegram detenido
