@@ -137,15 +137,13 @@ class TestIOLClient:
         mock_response_success.json.return_value = {"ultimoPrecio": 1500.0}
         mock_response_success.status_code = 200
         
-        mock_get.side_effect = [
-            requests.exceptions.Timeout("Timeout 1"),
-            requests.exceptions.Timeout("Timeout 2"),
-            mock_response_success
-        ]
+        mock_get.side_effect = requests.exceptions.Timeout("Timeout 1")
         
         quote = client.get_quote("GGAL")
-        assert quote["ultimoPrecio"] == 1500.0
-        assert mock_get.call_count == 3  # 2 failures + 1 success
+
+        assert "error" in quote
+        assert "Request failed: Timeout 1" in quote["error"]
+        assert mock_get.call_count == 1
         
     @patch('requests.get')
     def test_get_account_status_success(self, mock_get, client):

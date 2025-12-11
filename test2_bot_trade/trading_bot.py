@@ -418,8 +418,8 @@ class TradingBot:
         try:
             use_full_universe = monitoring_config.get('use_full_universe', False)
             print(f"🔍 DEBUG: use_full_universe leído de config = {use_full_universe}")
-            print(f"🔍 DEBUG: symbols recibido en constructor = {symbols}")
-            print(f"🔍 DEBUG: type(symbols) = {type(symbols)}")
+            # print(f"🔍 DEBUG: symbols recibido en constructor = {symbols}")
+            # print(f"🔍 DEBUG: type(symbols) = {type(symbols)}")
             
             print("🔍 DEBUG: Entrando al bloque de carga de símbolos...")
             if use_full_universe:
@@ -884,8 +884,8 @@ class TradingBot:
         try:
             use_full_universe = monitoring_config.get('use_full_universe', False)
             print(f"🔍 DEBUG: use_full_universe leído de config = {use_full_universe}")
-            print(f"🔍 DEBUG: symbols recibido en constructor = {symbols}")
-            print(f"🔍 DEBUG: type(symbols) = {type(symbols)}")
+            # print(f"🔍 DEBUG: symbols recibido en constructor = {symbols}")
+            # print(f"🔍 DEBUG: type(symbols) = {type(symbols)}")
             
             print("🔍 DEBUG: Entrando al bloque de carga de símbolos...")
             if use_full_universe:

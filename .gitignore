@@ -50,3 +50,4 @@ models/*.pkl
 *.backup
 backups/
 *.db
+\n# Generated artifacts\ntraining_analytics/\ntraining_metrics.json
