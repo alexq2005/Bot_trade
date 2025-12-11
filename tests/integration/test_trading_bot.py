@@ -17,9 +17,12 @@ class TestTradingBot:
     """Tests de integración para TradingBot"""
     
     @patch('trading_bot.IOLClient')
-    def test_bot_initialization_paper_trading(self, mock_iol_class):
+    @patch('src.services.telegram_command_handler.TelegramCommandHandler')
+    def test_bot_initialization_paper_trading(self, mock_telegram_class, mock_iol_class, mock_iol_client):
         """Test inicialización del bot en modo paper trading"""
-        mock_iol_class.return_value = mock_iol_client()
+        mock_iol_class.return_value = mock_iol_client
+        mock_telegram_instance = mock_telegram_class.return_value
+        mock_telegram_instance.all_commands = {}
         
         bot = TradingBot(
             symbols=['GGAL', 'YPFD'],
@@ -32,11 +35,13 @@ class TestTradingBot:
         assert len(bot.symbols) == 2
     
     @patch('trading_bot.IOLClient')
-    def test_bot_initialization_live_trading(self, mock_iol_class):
+    @patch('src.services.telegram_command_handler.TelegramCommandHandler')
+    def test_bot_initialization_live_trading(self, mock_telegram_class, mock_iol_class, mock_iol_client):
         """Test inicialización del bot en modo live trading"""
-        mock_client = mock_iol_client()
-        mock_client.get_available_balance.return_value = 50000.0
-        mock_iol_class.return_value = mock_client
+        mock_iol_client.get_available_balance.return_value = 50000.0
+        mock_iol_class.return_value = mock_iol_client
+        mock_telegram_instance = mock_telegram_class.return_value
+        mock_telegram_instance.all_commands = {}
         
         bot = TradingBot(
             symbols=['GGAL'],

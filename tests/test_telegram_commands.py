@@ -20,8 +20,11 @@ except Exception as e:
     traceback.print_exc()
     sys.exit(1)
 
+@patch('trading_bot.IOLClient')
+@patch('src.services.telegram_command_handler.TelegramCommandHandler')
+@patch('trading_bot.DailyReportService')
+@patch('trading_bot.EnhancedSentimentAnalysis')
 class TestTelegramCommands(unittest.TestCase):
-    # Decorators removed for manual execution
     def setUp(self, MockSentiment, MockReport, MockTelegram, MockIOL):
         self.mock_telegram = MockTelegram.return_value
         self.mock_report = MockReport.return_value
@@ -48,9 +51,7 @@ class TestTelegramCommands(unittest.TestCase):
     def test_daily_report_command(self):
         """Test /daily_report command"""
         handler = self.handlers.get('/daily_report')
-        if not handler:
-            print("❌ /daily_report handler not found")
-            return
+        self.assertIsNotNone(handler)
         
         # Success case
         self.mock_report.send_daily_report.return_value = True
@@ -61,9 +62,7 @@ class TestTelegramCommands(unittest.TestCase):
     def test_set_interval_command(self):
         """Test /set_interval command"""
         handler = self.handlers.get('/set_interval')
-        if not handler:
-            print("❌ /set_interval handler not found")
-            return
+        self.assertIsNotNone(handler)
         
         # Mock file operations for load/save config
         m = mock_open(read_data='{"analysis_interval_minutes": 60}')
@@ -85,22 +84,13 @@ class TestTelegramCommands(unittest.TestCase):
 
     def test_restarfull_alias(self):
         """Test /restarfull alias exists"""
-        if '/restarfull' in self.handlers:
-            print("✅ /restarfull alias found")
-        else:
-            print("❌ /restarfull alias NOT found")
-            
-        if self.handlers.get('/restarfull') == self.handlers.get('/restart_full'):
-             print("✅ /restarfull maps to correct handler")
-        else:
-             print("❌ /restarfull maps to WRONG handler")
+        self.assertIn('/restarfull', self.handlers)
+        self.assertEqual(self.handlers.get('/restarfull'), self.handlers.get('/restart_full'))
 
     def test_market_command(self):
         """Test /market command"""
         handler = self.handlers.get('/market')
-        if not handler:
-            print("❌ /market handler not found")
-            return
+        self.assertIsNotNone(handler)
         
         with patch('yfinance.Ticker') as mock_ticker:
             mock_hist = MagicMock()
@@ -112,45 +102,4 @@ class TestTelegramCommands(unittest.TestCase):
             self.mock_telegram._send_message.assert_called()
             # Check if message contains "Resumen de Mercado"
             args, _ = self.mock_telegram._send_message.call_args
-            if "Resumen de Mercado" in args[1]:
-                print("✅ /market message content correct")
-            else:
-                print(f"❌ /market message content incorrect: {args[1][:50]}...")
-
-if __name__ == '__main__':
-    # Manual execution to debug
-    try:
-        print("DEBUG: Starting manual test execution")
-        test = TestTelegramCommands()
-        
-        # Mock setup
-        print("DEBUG: Setting up mocks...")
-        with patch('trading_bot.IOLClient') as MockIOL, \
-             patch('src.services.telegram_command_handler.TelegramCommandHandler') as MockTelegram, \
-             patch('trading_bot.DailyReportService') as MockReport, \
-             patch('trading_bot.EnhancedSentimentAnalysis') as MockSentiment:
-             
-            test.setUp(MockSentiment, MockReport, MockTelegram, MockIOL)
-            print("DEBUG: Setup complete")
-            
-            print("DEBUG: Testing /daily_report...")
-            test.test_daily_report_command()
-            print("DEBUG: /daily_report PASSED")
-            
-            print("DEBUG: Testing /set_interval...")
-            test.test_set_interval_command()
-            print("DEBUG: /set_interval PASSED")
-            
-            print("DEBUG: Testing /restarfull...")
-            test.test_restarfull_alias()
-            print("DEBUG: /restarfull PASSED")
-            
-            print("DEBUG: Testing /market...")
-            test.test_market_command()
-            print("DEBUG: /market PASSED")
-            
-        print("✅ ALL TESTS PASSED")
-    except Exception as e:
-        print(f"❌ TEST FAILED: {e}")
-        traceback.print_exc()
-        sys.exit(1)
+            self.assertIn("Resumen de Mercado", args[1])

@@ -144,7 +144,7 @@ class TestIOLClient:
         ]
         
         quote = client.get_quote("GGAL")
-        assert quote["ultimoPrecio"] == 1500.0
+        assert quote.get("ultimoPrecio") == 1500.0
         assert mock_get.call_count == 3  # 2 failures + 1 success
         
     @patch('requests.get')
