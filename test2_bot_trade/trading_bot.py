@@ -418,8 +418,8 @@ class TradingBot:
         try:
             use_full_universe = monitoring_config.get('use_full_universe', False)
             print(f"🔍 DEBUG: use_full_universe leído de config = {use_full_universe}")
-            print(f"🔍 DEBUG: symbols recibido en constructor = {symbols}")
-            print(f"🔍 DEBUG: type(symbols) = {type(symbols)}")
+            # print(f"🔍 DEBUG: symbols recibido en constructor = {symbols}")  # Commented: F821 - symbols may not be defined
+            # print(f"🔍 DEBUG: type(symbols) = {type(symbols)}")  # Commented: F821 - symbols may not be defined
             
             print("🔍 DEBUG: Entrando al bloque de carga de símbolos...")
             if use_full_universe:
@@ -659,8 +659,10 @@ class TradingBot:
                     level="warning"
                 )
                 
-                # Filtrar símbolos no disponibles (opcional - comentar si quieres mantenerlos)
-                # self.symbols = [s for s in self.symbols if s not in [u[0] for u in unavailable]]
+                # Filtrar símbolos no disponibles automáticamente
+                unavailable_symbols = [u[0] for u in unavailable]
+                self.symbols = [s for s in self.symbols if s not in unavailable_symbols]
+                print(f"✅ Símbolos filtrados: {len(unavailable_symbols)} eliminados, {len(self.symbols)} símbolos válidos restantes")
             else:
                 print("✅ Todos los símbolos están disponibles en IOL")
         
@@ -884,8 +886,8 @@ class TradingBot:
         try:
             use_full_universe = monitoring_config.get('use_full_universe', False)
             print(f"🔍 DEBUG: use_full_universe leído de config = {use_full_universe}")
-            print(f"🔍 DEBUG: symbols recibido en constructor = {symbols}")
-            print(f"🔍 DEBUG: type(symbols) = {type(symbols)}")
+            # print(f"🔍 DEBUG: symbols recibido en constructor = {symbols}")  # Commented: F821 - symbols not in scope
+            # print(f"🔍 DEBUG: type(symbols) = {type(symbols)}")  # Commented: F821 - symbols not in scope
             
             print("🔍 DEBUG: Entrando al bloque de carga de símbolos...")
             if use_full_universe:
@@ -1125,8 +1127,10 @@ class TradingBot:
                     level="warning"
                 )
                 
-                # Filtrar símbolos no disponibles (opcional - comentar si quieres mantenerlos)
-                # self.symbols = [s for s in self.symbols if s not in [u[0] for u in unavailable]]
+                # Filtrar símbolos no disponibles automáticamente
+                unavailable_symbols = [u[0] for u in unavailable]
+                self.symbols = [s for s in self.symbols if s not in unavailable_symbols]
+                print(f"✅ Símbolos filtrados: {len(unavailable_symbols)} eliminados, {len(self.symbols)} símbolos válidos restantes")
             else:
                 print("✅ Todos los símbolos están disponibles en IOL")
         
@@ -2009,7 +2013,7 @@ class TradingBot:
             return None
 
     def _calculate_sale_pnl_with_history(self, symbol, sale_price, sale_quantity):
-        """Calcula P&L de una venta usando historial de compras de IOL"""
+        """Calcula P&L de una venta usando historial de compras de IOL (incluyendo comisiones)"""
         buy_history = self._get_buy_history_for_symbol(symbol)
         
         if not buy_history:
@@ -2018,8 +2022,29 @@ class TradingBot:
         avg_buy_price = buy_history['avg_price']
         sale_value = sale_quantity * sale_price
         cost_basis = sale_quantity * avg_buy_price
-        pnl = sale_value - cost_basis
-        pnl_pct = ((sale_price - avg_buy_price) / avg_buy_price * 100) if avg_buy_price > 0 else 0
+        
+        # Calcular P&L BRUTO
+        gross_pnl = sale_value - cost_basis
+        gross_pnl_pct = ((sale_price - avg_buy_price) / avg_buy_price * 100) if avg_buy_price > 0 else 0
+        
+        # Calcular comisiones y P&L NETO
+        commission_cost = 0.0
+        net_pnl = gross_pnl
+        net_pnl_pct = gross_pnl_pct
+        
+        if hasattr(self, 'commission_calculator') and self.commission_calculator:
+            try:
+                # Calcular comisiones de compra y venta (round trip)
+                round_trip = self.commission_calculator.calculate_round_trip_cost(
+                    symbol, avg_buy_price, sale_price, int(sale_quantity)
+                )
+                commission_cost = round_trip['total_commissions']
+                net_pnl = round_trip['net_pnl']
+                net_pnl_pct = (net_pnl / cost_basis) * 100 if cost_basis > 0 else 0
+            except Exception as e:
+                # Si falla, usar P&L bruto
+                net_pnl = gross_pnl
+                net_pnl_pct = gross_pnl_pct
         
         return {
             'buy_price': avg_buy_price,
@@ -2027,8 +2052,13 @@ class TradingBot:
             'quantity': sale_quantity,
             'cost_basis': cost_basis,
             'sale_value': sale_value,
-            'pnl': pnl,
-            'pnl_pct': pnl_pct,
+            'gross_pnl': gross_pnl,
+            'gross_pnl_pct': gross_pnl_pct,
+            'commission': commission_cost,
+            'net_pnl': net_pnl,
+            'net_pnl_pct': net_pnl_pct,
+            'pnl': net_pnl,  # Mantener para compatibilidad (usar neto)
+            'pnl_pct': net_pnl_pct,  # Mantener para compatibilidad (usar neto)
             'buy_history': buy_history
         }
 
@@ -2062,6 +2092,11 @@ class TradingBot:
         print(f"{'Concepto':<30} {'Compra':<20} {'Venta':<20} {'Diferencia':<20}")
         print("-"*70)
         
+        # Mostrar comisiones si están disponibles
+        commission = sale_details.get('commission', 0)
+        gross_pnl = sale_details.get('gross_pnl', sale_details.get('pnl', 0))
+        net_pnl = sale_details.get('net_pnl', sale_details.get('pnl', 0))
+        
         price_diff = sale_details['sale_price'] - sale_details['buy_price']
         price_diff_pct = sale_details['pnl_pct']
         
@@ -2075,9 +2110,20 @@ class TradingBot:
         
         compra_total = f"${sale_details['cost_basis']:,.2f} ARS"
         venta_total = f"${sale_details['sale_value']:,.2f} ARS"
-        diff_total = f"${sale_details['pnl']:,.2f} ({sale_details['pnl_pct']:+.2f}%)"
-        diff_total_color = f"{'📈' if sale_details['pnl'] >= 0 else '📉'} {diff_total}"
+        
+        # Mostrar P&L neto si está disponible
+        final_pnl = sale_details.get('net_pnl', sale_details.get('pnl', 0))
+        final_pnl_pct = sale_details.get('net_pnl_pct', sale_details.get('pnl_pct', 0))
+        
+        diff_total = f"${final_pnl:,.2f} ({final_pnl_pct:+.2f}%)"
+        diff_total_color = f"{'📈' if final_pnl >= 0 else '📉'} {diff_total}"
         print(f"{'Valor total':<30} {compra_total:<20} {venta_total:<20} {diff_total_color:<20}")
+        
+        # Mostrar comisiones si están disponibles
+        if commission > 0:
+            print(f"{'Comisiones (IOL)':<30} {'-':<20} {'-':<20} ${commission:>17,.2f}")
+            print(f"{'P&L Bruto':<30} {'-':<20} {'-':<20} ${gross_pnl:>17,.2f}")
+            print(f"{'P&L Neto (después com.)':<30} {'-':<20} {'-':<20} {diff_total_color:<20}")
         
         print("="*70)
         
@@ -2230,7 +2276,9 @@ class TradingBot:
             'take_profit': take_profit,
             'status': 'PENDING',  # PENDING hasta confirmar ejecución
             'mode': 'PAPER' if self.paper_trading else 'LIVE',
-            'order_id': 'N/A'
+            'order_id': 'N/A',
+            'commission': 0,  # Se calculará cuando se confirme la ejecución
+            'commission_rate': 0
         }
         
         # 🧠 APRENDIZAJE: Registrar trade para aprendizaje
@@ -2442,6 +2490,20 @@ class TradingBot:
                     print(f"✅ Orden ejecutada en IOL: ID {order_id}")
                     trade_record['order_id'] = order_id
                     trade_record['status'] = 'FILLED'
+                    
+                    # Calcular y registrar comisión
+                    if hasattr(self, 'commission_calculator') and self.commission_calculator:
+                        try:
+                            commission_info = self.commission_calculator.calculate_commission(
+                                symbol, price, quantity, signal
+                            )
+                            trade_record['commission'] = commission_info['commission']
+                            trade_record['commission_rate'] = commission_info['commission_rate']
+                            trade_record['total_with_commission'] = commission_info['total_with_commission']
+                            print(f"   💸 Comisión IOL: ${commission_info['commission']:,.2f} ({commission_info['commission_rate']*100:.2f}%)")
+                        except Exception as e:
+                            print(f"   ⚠️  Error calculando comisión: {e}")
+                            trade_record['commission'] = 0
                 else:
                     # Respuesta sin error pero sin numeroOperacion (raro)
                     print(f"⚠️  Respuesta inesperada de IOL (sin numeroOperacion): {response}")
@@ -2455,8 +2517,12 @@ class TradingBot:
                         sale_pnl = self._calculate_sale_pnl_with_history(symbol, price, quantity)
                         if sale_pnl and isinstance(sale_pnl, dict):
                             trade_record['buy_price'] = sale_pnl['buy_price']
-                            trade_record['pnl'] = sale_pnl['pnl']
-                            trade_record['pnl_pct'] = sale_pnl['pnl_pct']
+                            trade_record['gross_pnl'] = sale_pnl.get('gross_pnl', sale_pnl.get('pnl', 0))
+                            trade_record['commission'] = sale_pnl.get('commission', 0)
+                            trade_record['net_pnl'] = sale_pnl.get('net_pnl', sale_pnl.get('pnl', 0))
+                            trade_record['net_pnl_pct'] = sale_pnl.get('net_pnl_pct', sale_pnl.get('pnl_pct', 0))
+                            trade_record['pnl'] = sale_pnl.get('net_pnl', sale_pnl.get('pnl', 0))  # Usar neto
+                            trade_record['pnl_pct'] = sale_pnl.get('net_pnl_pct', sale_pnl.get('pnl_pct', 0))  # Usar neto
                             trade_record['cost_basis'] = sale_pnl['cost_basis']
                             trade_record['sale_value'] = sale_pnl['sale_value']
                             
@@ -4291,6 +4357,226 @@ O desde PowerShell:
                 except:
                     pass
 
+    def monitor_open_positions(self):
+        """
+        Monitorea posiciones abiertas y ejecuta ventas automáticas cuando se alcanzan
+        take profit o stop loss.
+        """
+        if self.paper_trading:
+            return []  # No monitorear en modo paper trading
+        
+        try:
+            from src.services.portfolio_persistence import load_portfolio
+            portfolio = load_portfolio()
+            
+            if not portfolio:
+                return []
+            
+            print(f"\n{'='*60}")
+            print(f"🔍 Monitoreando {len(portfolio)} posiciones abiertas...")
+            print(f"{'='*60}")
+            
+            closed_positions = []
+            
+            for position in portfolio:
+                symbol = position.get('symbol', '').strip()
+                if not symbol:
+                    continue
+                
+                quantity = position.get('quantity', 0)
+                avg_price = position.get('avg_price') or position.get('average_price', 0)
+                
+                if quantity <= 0 or avg_price <= 0:
+                    continue
+                
+                # Obtener precio actual
+                try:
+                    if hasattr(self, 'iol_client') and self.iol_client:
+                        quote = self.iol_client.get_quote(symbol)
+                        current_price = quote.get('ultimoPrecio') or quote.get('precio', 0)
+                    else:
+                        current_price = position.get('last_price') or position.get('current_price', 0)
+                    
+                    if current_price <= 0:
+                        continue
+                    
+                    # Buscar trades relacionados para obtener stop_loss y take_profit
+                    stop_loss = None
+                    take_profit = None
+                    
+                    try:
+                        import json
+                        if os.path.exists(self.trades_file):
+                            with open(self.trades_file, 'r', encoding='utf-8') as f:
+                                trades = json.load(f)
+                            
+                            # Buscar el trade más reciente de compra para este símbolo
+                            buy_trades = [t for t in trades 
+                                        if t.get('symbol') == symbol 
+                                        and t.get('signal') == 'BUY' 
+                                        and t.get('status') == 'FILLED']
+                            
+                            if buy_trades:
+                                # Ordenar por timestamp y tomar el más reciente
+                                buy_trades.sort(key=lambda x: x.get('timestamp', ''), reverse=True)
+                                latest_trade = buy_trades[0]
+                                stop_loss = latest_trade.get('stop_loss')
+                                take_profit = latest_trade.get('take_profit')
+                    except Exception as e:
+                        print(f"⚠️  Error obteniendo stop_loss/take_profit para {symbol}: {e}")
+                    
+                    # Calcular P&L actual (BRUTO primero)
+                    gross_pnl = (current_price - avg_price) * quantity
+                    gross_pnl_pct = ((current_price / avg_price) - 1) * 100 if avg_price > 0 else 0
+                    
+                    # Calcular comisiones y P&L NETO
+                    commission_cost = 0.0
+                    net_pnl = gross_pnl
+                    net_pnl_pct = gross_pnl_pct
+                    
+                    if hasattr(self, 'commission_calculator') and self.commission_calculator:
+                        try:
+                            # Calcular comisiones de compra y venta (round trip)
+                            round_trip = self.commission_calculator.calculate_round_trip_cost(
+                                symbol, avg_price, current_price, int(quantity)
+                            )
+                            commission_cost = round_trip['total_commissions']
+                            net_pnl = round_trip['net_pnl']
+                            net_pnl_pct = (net_pnl / (avg_price * quantity)) * 100 if avg_price > 0 else 0
+                        except Exception as e:
+                            print(f"   ⚠️  Error calculando comisiones para {symbol}: {e}")
+                            # Si falla, usar P&L bruto
+                            net_pnl = gross_pnl
+                            net_pnl_pct = gross_pnl_pct
+                    
+                    # Usar P&L neto para decisiones
+                    pnl = net_pnl
+                    pnl_pct = net_pnl_pct
+                    
+                    # Verificar condiciones de cierre
+                    should_close = False
+                    close_reason = ""
+                    
+                    # 1. Verificar Take Profit
+                    if take_profit and current_price >= take_profit:
+                        should_close = True
+                        close_reason = f"Take Profit alcanzado (${current_price:.2f} >= ${take_profit:.2f})"
+                        print(f"\n✅ {symbol}: {close_reason}")
+                        print(f"   💰 P&L Bruto: ${gross_pnl:,.2f} ({gross_pnl_pct:+.2f}%)")
+                        if commission_cost > 0:
+                            print(f"   💸 Comisiones: ${commission_cost:,.2f}")
+                        print(f"   💰 P&L Neto: ${net_pnl:,.2f} ({net_pnl_pct:+.2f}%)")
+                    
+                    # 2. Verificar Stop Loss
+                    elif stop_loss and current_price <= stop_loss:
+                        should_close = True
+                        close_reason = f"Stop Loss alcanzado (${current_price:.2f} <= ${stop_loss:.2f})"
+                        print(f"\n🛑 {symbol}: {close_reason}")
+                        print(f"   💰 P&L Bruto: ${gross_pnl:,.2f} ({gross_pnl_pct:+.2f}%)")
+                        if commission_cost > 0:
+                            print(f"   💸 Comisiones: ${commission_cost:,.2f}")
+                        print(f"   💰 P&L Neto: ${net_pnl:,.2f} ({net_pnl_pct:+.2f}%)")
+                    
+                    # 3. Si no hay stop_loss/take_profit configurados, usar umbrales por defecto
+                    elif not stop_loss and not take_profit:
+                        # Calcular stop loss y take profit basados en ATR si está disponible
+                        try:
+                            df = self.data_service.get_historical_data(symbol, period='1mo')
+                            if df is not None and len(df) > 14:
+                                tech_analysis = self.technical_service.get_full_analysis(symbol, config=self.strategy_config)
+                                atr = tech_analysis.get('volatility', {}).get('atr', 0)
+                                
+                                if atr > 0:
+                                    # Obtener multiplicadores de configuración
+                                    import json
+                                    config_file = Path("professional_config.json")
+                                    if config_file.exists():
+                                        with open(config_file, 'r', encoding='utf-8') as f:
+                                            config = json.load(f)
+                                    else:
+                                        config = {}
+                                    stop_loss_mult = config.get('stop_loss_atr_multiplier', 1.5)
+                                    take_profit_mult = config.get('take_profit_atr_multiplier', 4.0)
+                                    
+                                    stop_loss = avg_price - (atr * stop_loss_mult)
+                                    take_profit = avg_price + (atr * take_profit_mult)
+                                    
+                                    # Verificar con estos valores calculados
+                                    if current_price >= take_profit:
+                                        should_close = True
+                                        close_reason = f"Take Profit calculado alcanzado (${current_price:.2f} >= ${take_profit:.2f})"
+                                        print(f"\n✅ {symbol}: {close_reason}")
+                                        print(f"   💰 P&L: ${pnl:,.2f} ({pnl_pct:+.2f}%)")
+                                    elif current_price <= stop_loss:
+                                        should_close = True
+                                        close_reason = f"Stop Loss calculado alcanzado (${current_price:.2f} <= ${stop_loss:.2f})"
+                                        print(f"\n🛑 {symbol}: {close_reason}")
+                                        print(f"   💰 P&L: ${pnl:,.2f} ({pnl_pct:+.2f}%)")
+                        except Exception as e:
+                            # Si no se puede calcular, no cerrar automáticamente
+                            pass
+                    
+                    # Ejecutar venta si corresponde
+                    if should_close:
+                        try:
+                            print(f"   🚀 Ejecutando venta automática de {quantity} {symbol} a ${current_price:.2f}...")
+                            
+                            # Ejecutar trade de venta
+                            self.execute_trade(
+                                symbol=symbol,
+                                signal='SELL',
+                                price=current_price,
+                                quantity=int(quantity),
+                                stop_loss=None,  # No aplica en venta
+                                take_profit=None  # No aplica en venta
+                            )
+                            
+                            closed_positions.append({
+                                'symbol': symbol,
+                                'quantity': quantity,
+                                'entry_price': avg_price,
+                                'exit_price': current_price,
+                                'gross_pnl': gross_pnl,
+                                'gross_pnl_pct': gross_pnl_pct,
+                                'commission': commission_cost,
+                                'net_pnl': net_pnl,
+                                'net_pnl_pct': net_pnl_pct,
+                                'pnl': net_pnl,  # Mantener para compatibilidad
+                                'pnl_pct': net_pnl_pct,  # Mantener para compatibilidad
+                                'reason': close_reason
+                            })
+                            
+                            print(f"   ✅ Venta ejecutada exitosamente")
+                            
+                        except Exception as e:
+                            print(f"   ❌ Error ejecutando venta: {e}")
+                            import traceback
+                            traceback.print_exc()
+                    else:
+                        # Mostrar estado de la posición
+                        status_emoji = "🟢" if net_pnl > 0 else "🔴" if net_pnl < 0 else "⚪"
+                        pnl_display = f"P&L Neto: ${net_pnl:,.2f} ({net_pnl_pct:+.2f}%)"
+                        if commission_cost > 0:
+                            pnl_display += f" [Comisiones: ${commission_cost:,.2f}]"
+                        print(f"   {status_emoji} {symbol}: ${current_price:.2f} | {pnl_display} | SL: ${stop_loss:.2f if stop_loss else 'N/A'} | TP: ${take_profit:.2f if take_profit else 'N/A'}")
+                
+                except Exception as e:
+                    print(f"⚠️  Error monitoreando {symbol}: {e}")
+                    continue
+            
+            if closed_positions:
+                print(f"\n✅ {len(closed_positions)} posición(es) cerrada(s) automáticamente")
+            else:
+                print(f"\nℹ️  No se cerraron posiciones en este ciclo")
+            
+            return closed_positions
+            
+        except Exception as e:
+            print(f"❌ Error en monitoreo de posiciones: {e}")
+            import traceback
+            traceback.print_exc()
+            return []
+    
     def run_analysis_cycle(self):
         """
         Run one complete analysis cycle for all symbols.
@@ -4320,11 +4606,27 @@ O desde PowerShell:
             print(f"🔄 Starting Analysis Cycle - {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
             print(f"{'#'*60}")
             
+            # Actualizar P&L de trades abiertos antes de cada ciclo de análisis
+            if not self.paper_trading:
+                try:
+                    self.update_open_trades_pnl()
+                except Exception as e:
+                    safe_warning(logger, f"Error actualizando P&L antes del análisis: {e}")
+            
             # Verificar que symbols esté inicializado ANTES de cualquier operación
             if not hasattr(self, 'symbols') or not self.symbols:
                 print("⚠️  Error: self.symbols no está inicializado. Inicializando con valores por defecto...")
                 self.symbols = ['GGAL', 'YPFD', 'PAMP']
                 print(f"📌 Usando símbolos por defecto: {', '.join(self.symbols)}")
+            
+            # 🔍 MONITOREAR POSICIONES ABIERTAS PRIMERO (antes de analizar nuevos símbolos)
+            if not self.paper_trading and hasattr(self, 'iol_client') and self.iol_client:
+                try:
+                    closed = self.monitor_open_positions()
+                    if closed:
+                        print(f"\n✅ {len(closed)} posición(es) cerrada(s) automáticamente")
+                except Exception as e:
+                    print(f"⚠️  Error en monitoreo de posiciones: {e}")
             
             # 📈 TRAILING STOP LOSS: Actualizar antes del análisis
             try:
@@ -4531,6 +4833,188 @@ O desde PowerShell:
             self._analysis_running = False
             self._analysis_lock.release()
     
+
+    def update_open_trades_pnl(self):
+        """
+        Actualiza el P&L de trades abiertos en tiempo real
+        """
+        try:
+            from src.connectors.iol_client import IOLClient
+            from pathlib import Path
+            import json
+            from datetime import datetime
+            
+            # Cargar trades
+            trades_file = Path("trades.json")
+            if not trades_file.exists():
+                return
+            
+            with open(trades_file, 'r', encoding='utf-8') as f:
+                trades = json.load(f)
+            
+            # Obtener cliente IOL
+            client = IOLClient()
+            
+            # Actualizar P&L de trades abiertos
+            updated = False
+            for trade in trades:
+                if trade.get('status') == 'FILLED' and trade.get('pnl') is None:
+                    symbol = trade.get('symbol')
+                    entry_price = trade.get('price')
+                    quantity = trade.get('quantity')
+                    
+                    if symbol and entry_price and quantity:
+                        try:
+                            # Obtener precio actual usando get_quote
+                            quote = client.get_quote(symbol)
+                            if quote and 'error' not in quote:
+                                # Extraer precio de la cotización
+                                current_price = quote.get('ultimoPrecio') or quote.get('price') or quote.get('lastPrice')
+                                if not current_price and 'ultimaCotizacion' in quote:
+                                    current_price = quote['ultimaCotizacion'].get('precio', 0) if isinstance(quote['ultimaCotizacion'], dict) else 0
+                            else:
+                                current_price = None
+                            
+                            if current_price:
+                                # Calcular P&L
+                                if trade.get('signal') == 'BUY':
+                                    pnl = (current_price - entry_price) * quantity
+                                else:  # SELL
+                                    pnl = (entry_price - current_price) * quantity
+                                
+                                # Actualizar trade
+                                trade['current_price'] = current_price
+                                trade['unrealized_pnl'] = pnl
+                                trade['pnl_updated'] = datetime.now().isoformat()
+                                updated = True
+                        except Exception as e:
+                            print(f"Error actualizando P&L para {symbol}: {e}")
+            
+            # Guardar trades actualizados
+            if updated:
+                with open(trades_file, 'w', encoding='utf-8') as f:
+                    json.dump(trades, f, indent=2, default=str)
+                print(f"✅ P&L actualizado para {sum(1 for t in trades if t.get('unrealized_pnl') is not None)} trades abiertos")
+            
+        except Exception as e:
+            print(f"Error en update_open_trades_pnl: {e}")
+
+
+    def update_open_trades_pnl(self):
+        """
+        Actualiza el P&L de trades abiertos en tiempo real
+        """
+        try:
+            from src.connectors.iol_client import IOLClient
+            from pathlib import Path
+            import json
+            from datetime import datetime
+            
+            # Cargar trades
+            trades_file = Path("trades.json")
+            if not trades_file.exists():
+                return
+            
+            with open(trades_file, 'r', encoding='utf-8') as f:
+                trades = json.load(f)
+            
+            # Obtener cliente IOL
+            client = IOLClient()
+            
+            # Actualizar P&L de trades abiertos
+            updated = False
+            for trade in trades:
+                if trade.get('status') == 'FILLED' and trade.get('pnl') is None:
+                    symbol = trade.get('symbol')
+                    entry_price = trade.get('price')
+                    quantity = trade.get('quantity')
+                    
+                    if symbol and entry_price and quantity:
+                        try:
+                            # Obtener precio actual
+                            current_price = client.get_current_price(symbol)
+                            if current_price:
+                                # Calcular P&L
+                                if trade.get('signal') == 'BUY':
+                                    pnl = (current_price - entry_price) * quantity
+                                else:  # SELL
+                                    pnl = (entry_price - current_price) * quantity
+                                
+                                # Actualizar trade
+                                trade['current_price'] = current_price
+                                trade['unrealized_pnl'] = pnl
+                                trade['pnl_updated'] = datetime.now().isoformat()
+                                updated = True
+                        except Exception as e:
+                            print(f"Error actualizando P&L para {symbol}: {e}")
+            
+            # Guardar trades actualizados
+            if updated:
+                with open(trades_file, 'w', encoding='utf-8') as f:
+                    json.dump(trades, f, indent=2, default=str)
+                print(f"✅ P&L actualizado para {sum(1 for t in trades if t.get('unrealized_pnl') is not None)} trades abiertos")
+            
+        except Exception as e:
+            print(f"Error en update_open_trades_pnl: {e}")
+
+
+    def update_open_trades_pnl(self):
+        """
+        Actualiza el P&L de trades abiertos en tiempo real
+        """
+        try:
+            from src.connectors.iol_client import IOLClient
+            from pathlib import Path
+            import json
+            from datetime import datetime
+            
+            # Cargar trades
+            trades_file = Path("trades.json")
+            if not trades_file.exists():
+                return
+            
+            with open(trades_file, 'r', encoding='utf-8') as f:
+                trades = json.load(f)
+            
+            # Obtener cliente IOL
+            client = IOLClient()
+            
+            # Actualizar P&L de trades abiertos
+            updated = False
+            for trade in trades:
+                if trade.get('status') == 'FILLED' and trade.get('pnl') is None:
+                    symbol = trade.get('symbol')
+                    entry_price = trade.get('price')
+                    quantity = trade.get('quantity')
+                    
+                    if symbol and entry_price and quantity:
+                        try:
+                            # Obtener precio actual
+                            current_price = client.get_current_price(symbol)
+                            if current_price:
+                                # Calcular P&L
+                                if trade.get('signal') == 'BUY':
+                                    pnl = (current_price - entry_price) * quantity
+                                else:  # SELL
+                                    pnl = (entry_price - current_price) * quantity
+                                
+                                # Actualizar trade
+                                trade['current_price'] = current_price
+                                trade['unrealized_pnl'] = pnl
+                                trade['pnl_updated'] = datetime.now().isoformat()
+                                updated = True
+                        except Exception as e:
+                            print(f"Error actualizando P&L para {symbol}: {e}")
+            
+            # Guardar trades actualizados
+            if updated:
+                with open(trades_file, 'w', encoding='utf-8') as f:
+                    json.dump(trades, f, indent=2, default=str)
+                print(f"✅ P&L actualizado para {sum(1 for t in trades if t.get('unrealized_pnl') is not None)} trades abiertos")
+            
+        except Exception as e:
+            print(f"Error en update_open_trades_pnl: {e}")
+
     def run_continuous(self, interval_minutes=60):
         """
         Run bot continuously.
@@ -4578,6 +5062,10 @@ O desde PowerShell:
         # Contador para generación de insights (cada 24 horas)
         last_insights_generation = datetime.now()
         insights_interval = timedelta(hours=24)
+        
+        # Contador para actualización de P&L de trades abiertos (cada 30 minutos)
+        last_pnl_update = datetime.now()
+        pnl_update_interval = timedelta(minutes=30)
         
         # Contador para reportes diarios (una vez al día, a las 23:00)
         last_daily_report = datetime.now()
@@ -4698,6 +5186,18 @@ O desde PowerShell:
                             last_balance_update = datetime.now()
                         except Exception as e:
                             safe_warning(logger, f"Error actualizando saldo: {e}")
+                
+                # Actualizar P&L de trades abiertos periódicamente (cada 30 minutos)
+                time_since_pnl = datetime.now() - last_pnl_update
+                if time_since_pnl >= pnl_update_interval:
+                    try:
+                        print(f"\n{'='*60}")
+                        print("💰 Actualizando P&L de trades abiertos...")
+                        print(f"{'='*60}")
+                        self.update_open_trades_pnl()
+                        last_pnl_update = datetime.now()
+                    except Exception as e:
+                        safe_warning(logger, f"Error actualizando P&L de trades abiertos: {e}")
                 
                 # Generar insights de aprendizaje periódicamente
                 if hasattr(self, 'enhanced_learning') and self.enhanced_learning:
