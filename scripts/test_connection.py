@@ -18,6 +18,8 @@ def test_iol_connection():
     print("Iniciando prueba de conexión con IOL...")
     try:
         client = IOLClient()
+        print(f"Username: {client.username}")
+        print(f"Password: {client.password}")
         status = client.get_account_status()
         
         if status and isinstance(status, dict) and "estado" in status:

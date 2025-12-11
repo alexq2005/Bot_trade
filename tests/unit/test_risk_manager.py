@@ -35,39 +35,41 @@ class TestAdaptiveRiskManager:
         """Test cálculo de stop loss"""
         rm = AdaptiveRiskManager(initial_capital=100000.0)
         entry_price = 100.0
-        risk_percent = 2.0  # 2% de riesgo
+        atr = 1.8
         
-        stop_loss = rm.calculate_stop_loss(entry_price, risk_percent)
+        stop_loss = rm.calculate_stop_loss(entry_price, atr)
         
         assert stop_loss < entry_price
-        assert abs((entry_price - stop_loss) / entry_price * 100 - risk_percent) < 0.1
+        assert stop_loss == pytest.approx(97.3)
     
     def test_take_profit_calculation(self):
         """Test cálculo de take profit"""
         rm = AdaptiveRiskManager(initial_capital=100000.0)
         entry_price = 100.0
-        reward_percent = 4.0  # 4% de ganancia
+        atr = 1.8
         
-        take_profit = rm.calculate_take_profit(entry_price, reward_percent)
+        take_profit = rm.calculate_take_profit(entry_price, atr)
         
         assert take_profit > entry_price
-        assert abs((take_profit - entry_price) / entry_price * 100 - reward_percent) < 0.1
+        assert take_profit == pytest.approx(105.4)
     
     def test_risk_limit_enforcement(self):
         """Test que se respetan los límites de riesgo"""
         rm = AdaptiveRiskManager(initial_capital=100000.0)
         # Configurar límite de riesgo diario
-        rm.config['max_daily_loss_percent'] = 5.0
+        rm.max_daily_loss_pct = 0.05
         
         # Simular pérdidas
-        rm.record_loss(3000.0)  # 3% de pérdida
+        rm.daily_pnl = -3000.0
         
         # Verificar que aún puede operar
-        assert rm.can_trade()
+        can_trade, reason = rm.can_trade()
+        assert can_trade is True
         
         # Simular más pérdidas hasta el límite
-        rm.record_loss(2000.0)  # Total 5%
+        rm.daily_pnl = -5000.0
         
         # Ahora debería estar en el límite
-        # (dependiendo de la implementación exacta)
+        can_trade, reason = rm.can_trade()
+        assert can_trade is False
 
