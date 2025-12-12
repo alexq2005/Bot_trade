@@ -31,3 +31,6 @@ uvicorn
 pyyaml
 keyring
 cryptography
+\n# Added for yfinance fix
+requests-cache
+requests-ratelimiter

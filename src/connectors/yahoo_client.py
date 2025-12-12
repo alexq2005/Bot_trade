@@ -2,6 +2,17 @@ from typing import Any, Dict, Optional
 
 import pandas as pd
 import yfinance as yf
+from requests import Session
+from requests_cache import CacheMixin, SQLiteCache
+from requests_ratelimiter import LimiterMixin, MemoryQueueBucket
+
+
+class CachedLimiterSession(CacheMixin, LimiterMixin, Session):
+    """
+    Session class with caching and rate limiting.
+    This helps to avoid hitting Yahoo Finance's rate limits and speeds up repeated requests.
+    """
+    pass
 
 
 class YahooFinanceClient:
@@ -9,6 +20,24 @@ class YahooFinanceClient:
     Client for fetching market data from Yahoo Finance.
     Acts as a fallback when IOL API is unavailable.
     """
+    _session: Optional[Session] = None
+
+    @property
+    def session(self) -> Session:
+        """
+        Initializes and returns a session for yfinance, enabling caching and impersonation.
+        This is critical to avoid the 'Impersonating chrome136 is not supported' error.
+        """
+        if self._session is None:
+            self._session = CachedLimiterSession(
+                per_second=0.9,  # Rate limit to avoid being blocked
+                cache_name='yfinance.cache',
+                backend=SQLiteCache(),
+                expire_after=pd.Timedelta(hours=1),
+                # Use a modern, supported browser profile for impersonation
+                impersonate="chrome110"
+            )
+        return self._session
 
     def _get_safe_stderr_context(self):
         """Context manager to safely handle stderr during yfinance calls"""
@@ -19,7 +48,6 @@ class YahooFinanceClient:
         @contextlib.contextmanager
         def safe_stderr():
             original_stderr = sys.stderr
-            # Check if stderr is closed or invalid
             is_closed = False
             try:
                 if hasattr(sys.stderr, 'closed') and sys.stderr.closed:
@@ -27,22 +55,16 @@ class YahooFinanceClient:
             except:
                 is_closed = True
                 
-            # If closed, replace with StringIO
             if is_closed:
                 sys.stderr = io.StringIO()
             
             try:
                 yield
             except (ValueError, IOError, OSError) as e:
-                # If we get an I/O error, it might be because stderr closed during execution
                 if "closed file" in str(e).lower() or "I/O operation" in str(e):
-                    # Try to replace stderr and continue (though the exception is already raised)
                     sys.stderr = io.StringIO()
                 raise
             finally:
-                # Only restore if we didn't start with a closed stderr
-                # If we started with closed stderr, we leave the StringIO replacement
-                # to prevent future errors
                 if not is_closed:
                     try:
                         sys.stderr = original_stderr
@@ -54,24 +76,16 @@ class YahooFinanceClient:
     def get_quote(self, symbol: str) -> Dict[str, Any]:
         """
         Retrieves real-time (delayed) quote data for a symbol.
-        Args:
-            symbol: The ticker symbol (e.g., 'GGAL.BA' for Buenos Aires).
         """
         try:
-            # Append .BA for Buenos Aires market if not present and not a US stock
-            if not symbol.endswith(".BA") and not symbol.endswith(".AR"):
-                pass
-
             with self._get_safe_stderr_context():
-                ticker = yf.Ticker(symbol)
+                ticker = yf.Ticker(symbol, session=self.session)
                 info = ticker.info
 
-            # Extract relevant fields to match IOL structure roughly
             quote = {
                 "symbol": symbol,
                 "price": info.get("currentPrice") or info.get("regularMarketPrice"),
-                "previous_close": info.get("previousClose")
-                or info.get("regularMarketPreviousClose"),
+                "previous_close": info.get("previousClose") or info.get("regularMarketPreviousClose"),
                 "open": info.get("open") or info.get("regularMarketOpen"),
                 "high": info.get("dayHigh") or info.get("regularMarketDayHigh"),
                 "low": info.get("dayLow") or info.get("regularMarketDayLow"),
@@ -80,8 +94,7 @@ class YahooFinanceClient:
                 "source": "Yahoo Finance",
             }
             return quote
-        except Exception as e:
-            # print(f"Error fetching Yahoo quote for {symbol}: {e}") # Reduce noise
+        except Exception:
             return None
 
     def get_history(self, symbol: str, period: str = "1mo", interval: str = "1d") -> pd.DataFrame:
@@ -93,12 +106,11 @@ class YahooFinanceClient:
         
         try:
             with self._get_safe_stderr_context():
-                ticker = yf.Ticker(symbol)
+                ticker = yf.Ticker(symbol, session=self.session)
                 history = ticker.history(period=period, interval=interval)
             
             return history if not history.empty else pd.DataFrame()
-        except Exception as e:
-            # print(f"Error fetching Yahoo history for {symbol}: {e}") # Reduce noise
+        except Exception:
             return pd.DataFrame()
 
 

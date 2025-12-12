@@ -38,9 +38,12 @@ class TelegramCommandHandler:
         self.polling_thread = None
         self.last_update_id = 0
         
+        # Inicializar siempre all_commands para evitar AttributeError
+        self.all_commands = {}
+
         if not self.bot_token:
             print("⚠️  TELEGRAM_BOT_TOKEN no configurado")
-            return
+            # No retornar aquí para permitir que el bot funcione sin Telegram
         
         # Comandos por defecto
         self.default_commands = {

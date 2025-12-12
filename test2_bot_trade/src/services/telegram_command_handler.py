@@ -37,6 +37,7 @@ class TelegramCommandHandler:
         self.running = False
         self.polling_thread = None
         self.last_update_id = 0
+        self.all_commands = {}
         
         if not self.bot_token:
             print("⚠️  TELEGRAM_BOT_TOKEN no configurado")

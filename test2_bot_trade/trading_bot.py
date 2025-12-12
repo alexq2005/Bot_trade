@@ -1403,7 +1403,8 @@ class TradingBot:
                 # 1. Regime Detection (detectar régimen de mercado)
                 if hasattr(self, 'regime_detector') and tech_analysis:
                     try:
-                        df = self.data_service.get_historical_data(symbol, period='3mo')
+                        result = self.data_service.get_history(symbol, period='3mo')
+                        df = result.get('data') if result else None
                         if df is not None and len(df) > 30:
                             regime, regime_info = self.regime_detector.detect_regime(df)
                             regime_score = regime_info.get('score', 0)
@@ -1437,7 +1438,8 @@ class TradingBot:
                 # 3. Seasonal Patterns
                 if hasattr(self, 'seasonal_analyzer'):
                     try:
-                        df = self.data_service.get_historical_data(symbol, period='1y')
+                        result = self.data_service.get_history(symbol, period='1y')
+                        df = result.get('data') if result else None
                         if df is not None and len(df) > 250:
                             seasonal = self.seasonal_analyzer.analyze(symbol, df)
                             seasonal_score = seasonal.get('score', 0)
@@ -1451,7 +1453,8 @@ class TradingBot:
                 # 4. Fractals (soportes/resistencias)
                 if hasattr(self, 'fractal_analyzer'):
                     try:
-                        df = self.data_service.get_historical_data(symbol, period='1mo')
+                        result = self.data_service.get_history(symbol, period='1mo')
+                        df = result.get('data') if result else None
                         if df is not None:
                             fractal = self.fractal_analyzer.analyze(df)
                             fractal_score = fractal.get('score', 0)
@@ -1465,7 +1468,8 @@ class TradingBot:
                 # 5. Anomaly Detection
                 if hasattr(self, 'anomaly_detector'):
                     try:
-                        df = self.data_service.get_historical_data(symbol, period='1mo')
+                        result = self.data_service.get_history(symbol, period='1mo')
+                        df = result.get('data') if result else None
                         if df is not None:
                             anomaly = self.anomaly_detector.detect(df)
                             anomaly_score = anomaly.get('score', 0)
@@ -1483,7 +1487,8 @@ class TradingBot:
                 # 6. Volume Profile
                 if hasattr(self, 'volume_profile'):
                     try:
-                        df = self.data_service.get_historical_data(symbol, period='2mo')
+                        result = self.data_service.get_history(symbol, period='2mo')
+                        df = result.get('data') if result else None
                         if df is not None:
                             vp = self.volume_profile.analyze(df)
                             vp_score = vp.get('score', 0)
@@ -1497,7 +1502,8 @@ class TradingBot:
                 # 7. Monte Carlo Simulation
                 if hasattr(self, 'monte_carlo') and current_price:
                     try:
-                        df = self.data_service.get_historical_data(symbol, period='3mo')
+                        result = self.data_service.get_history(symbol, period='3mo')
+                        df = result.get('data') if result else None
                         if df is not None:
                             returns = df['close'].pct_change().dropna()
                             volatility = returns.std() * np.sqrt(252)
@@ -1532,7 +1538,8 @@ class TradingBot:
                 if hasattr(self, 'neural_network'):
                     try:
                         # Usar histórico largo para la red neuronal
-                        df_long = self.data_service.get_historical_data(symbol, period='2y')
+                        result = self.data_service.get_history(symbol, period='2y')
+                        df_long = result.get('data') if result else None
                         if df_long is not None and len(df_long) > 100:
                             # Nueva interfaz: retorna tupla (predicted_price, score, confidence)
                             nn_result = self.neural_network.predict(symbol, df_long)
@@ -1563,7 +1570,8 @@ class TradingBot:
                 # 9. Smart Money Concepts
                 if hasattr(self, 'smart_money'):
                     try:
-                        df = self.data_service.get_historical_data(symbol, period='2mo')
+                        result = self.data_service.get_history(symbol, period='2mo')
+                        df = result.get('data') if result else None
                         if df is not None:
                             smc = self.smart_money.analyze(df)
                             smc_score = smc.get('score', 0)
@@ -1577,7 +1585,8 @@ class TradingBot:
                 # 10. Elliott Wave (simplificado)
                 if hasattr(self, 'elliott_wave'):
                     try:
-                        df = self.data_service.get_historical_data(symbol, period='3mo')
+                        result = self.data_service.get_history(symbol, period='3mo')
+                        df = result.get('data') if result else None
                         if df is not None:
                             wave = self.elliott_wave.detect_wave(df)
                             wave_score = wave.get('score', 0)
@@ -1591,7 +1600,8 @@ class TradingBot:
                 # 14. Candlestick Patterns (Patrones de Velas)
                 if hasattr(self, 'candlestick_analyzer'):
                     try:
-                        df = self.data_service.get_historical_data(symbol, period='1mo')
+                        result = self.data_service.get_history(symbol, period='1mo')
+                        df = result.get('data') if result else None
                         if df is not None and len(df) > 5:
                             candles = self.candlestick_analyzer.analyze(df, lookback=5)
                             candle_score = candles.get('score', 0)
@@ -5408,6 +5418,7 @@ El bot se ha mejorado a sí mismo:
             
             print(f"   🔄 Reintentando en 60 segundos... ({consecutive_errors}/{max_consecutive_errors})\n")
             # Esperar antes de continuar el loop
+            import time
             time.sleep(60)
             # Continuar el loop - reiniciar el while True
             self.run_continuous(interval_minutes=interval_minutes)
