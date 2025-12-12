@@ -41,25 +41,34 @@ def render_manual_trading_simplified():
         my_symbols = [item['symbol'] for item in portfolio] if portfolio else []
         default_symbols = sorted(list(set(my_symbols + ['GGAL.BA', 'YPFD.BA', 'AL30.BA', 'GD30.BA', 'SPY', 'AAPL', 'MSFT'])))
         
-        def on_symbol_change():
-            # Callback: se ejecuta ANTES del re-render
-            new_symbol = st.session_state.tm_symbol_select_v2
-            # Limpiar cache del nuevo símbolo para asegurar precio fresco
-            st.session_state.price_service.clear_cache(new_symbol)
-            # Limpiar input de precio limite anterior
-            if f"tm_limit_price_{new_symbol}" in st.session_state:
-                del st.session_state[f"tm_limit_price_{new_symbol}"]
+        # Inicializar el estado de la sesión para el símbolo si no existe
+        if 'tm_selected_symbol' not in st.session_state:
+            st.session_state.tm_selected_symbol = default_symbols[0]
 
-        # Selectbox con callback explícito y KEY NUEVA para resetear estado
-        selected_symbol = st.selectbox(
-            "Seleccionar Activo", 
+        # Obtener el índice del símbolo actualmente seleccionado
+        try:
+            current_index = default_symbols.index(st.session_state.tm_selected_symbol)
+        except ValueError:
+            current_index = 0 # Fallback si el símbolo ya no está en la lista
+
+        # Crear el selectbox, controlado por el session_state
+        selected_symbol_from_widget = st.selectbox(
+            "Seleccionar Activo",
             default_symbols,
-            key="tm_symbol_select_v2",
-            on_change=on_symbol_change
+            index=current_index,
+            key="symbol_selector_widget"  # Usar una clave diferente para el widget
         )
+
+        # Lógica de detección de cambios para forzar el rerun
+        # Esta es la forma canónica de manejar cambios de widgets en Streamlit
+        if selected_symbol_from_widget != st.session_state.tm_selected_symbol:
+            st.session_state.tm_selected_symbol = selected_symbol_from_widget
+            # Limpiar caché para asegurar que el nuevo precio se obtenga
+            st.session_state.price_service.clear_cache(st.session_state.tm_selected_symbol)
+            st.rerun()
         
-        # DEBUG VISUAL DIRECTO
-        st.caption(f"🔍 DEBUG INTERNO: Widget='{selected_symbol}'")
+        # La variable que usará el resto de la app será la del session_state
+        selected_symbol = st.session_state.tm_selected_symbol
 
 
 
@@ -158,4 +167,3 @@ def render_manual_trading_simplified():
                     st.rerun()
                 else:
                     st.error(f"❌ Error: {result.get('error')}")
-
