@@ -1,0 +1,25 @@
+api_port: 8000
+iol:
+  account_number: ''
+  environment: demo
+  password: ''
+  username: ''
+logging_level: INFO
+model:
+  prediction_threshold: 2.0
+  retrain_interval_days: 7
+  use_technical_fallback: true
+telegram:
+  bot_token: ''
+  chat_id: ''
+  enabled: true
+trading:
+  initial_capital: 100000.0
+  max_position_size: 10000.0
+  risk_per_trade: 2.0
+  stop_loss_percent: 3.0
+  symbols:
+  - GGAL
+  - YPFD
+  - AAPL
+  take_profit_percent: 6.0

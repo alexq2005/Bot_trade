@@ -1,0 +1,302 @@
+============================================================
+TEST_BOT - COPIA COMPLETA DEL SISTEMA IOL QUANTUM AI
+============================================================
+
+Fecha de Creacion: 2025-12-02
+Estado: COMPLETADO Y OPERATIVO
+Desarrolladores: Antigravity + Claude
+
+============================================================
+QUE ES TEST_BOT
+============================================================
+
+Una copia COMPLETA e INDEPENDIENTE del sistema IOL Quantum AI
+que puedes modificar libremente sin afectar el bot de produccion.
+
+Proposito:
+  - Desarrollar nuevas funcionalidades
+  - Probar cambios antes de aplicarlos a produccion
+  - Experimentar con configuraciones
+  - Validar en Paper Trading
+  - Validar en LIVE con capital limitado
+
+============================================================
+ARCHIVOS COPIADOS
+============================================================
+
+Total: ~195 archivos
+
+Principales:
+  - trading_bot.py (159KB, 3167 lineas)
+  - dashboard.py (247KB, 4982 lineas)
+  - run_bot.py
+  - cli.py
+
+Carpeta src/ (169 archivos):
+  - connectors/ (IOL, Yahoo, BYMA, etc.)
+  - services/ (36 servicios: Telegram, Sentiment, Risk, etc.)
+  - models/ (IA: LSTM, Random Forest, XGBoost)
+  - core/ (19 utilidades)
+  - api/ (FastAPI)
+
+Scripts:
+  - 16 scripts de utilidad copiados
+
+Configuraciones:
+  - professional_config.json
+  - testing_config.json (limites conservadores)
+  - my_portfolio.json
+  - .env (credenciales)
+
+============================================================
+MODOS DE EJECUCION
+============================================================
+
+1. PAPER TRADING (Recomendado para testing):
+   - Capital simulado
+   - No usa dinero real
+   - Sin riesgo
+   - Para probar cambios
+
+2. LIVE TRADING (Solo validacion final):
+   - Capital REAL
+   - Operaciones reales en IOL
+   - CON riesgo
+   - Requiere confirmacion doble
+   - Limites MUY conservadores
+
+============================================================
+COMO EJECUTAR TEST_BOT
+============================================================
+
+Opcion 1: Bot Interactivo (con menu)
+-----------------------------------------
+cd test_bot
+.\ejecutar_test_bot.bat
+
+Menu con 6 opciones:
+  1. Ciclo de analisis unico
+  2. Modo continuo
+  3. Analizar simbolo especifico
+  4. Ver configuracion
+  5. Probar features nuevas
+  6. Salir
+
+Opcion 2: Dashboard de Test
+-----------------------------------------
+cd test_bot
+.\ejecutar_dashboard_test.bat
+
+URL: http://localhost:8502
+(Puerto 8502 - No conflicta con produccion en 8501)
+
+Opcion 3: Bot Continuo (Paper o Live)
+-----------------------------------------
+cd test_bot
+.\ejecutar_bot_continuo_test.bat
+
+Preguntara:
+  - Modo: Paper (1) o Live (2)
+  - Simbolos: Pocos o todos
+  - Confirmacion si es Live
+
+Opcion 4: Bot LIVE Directo (avanzado)
+-----------------------------------------
+cd test_bot
+.\ejecutar_bot_live_test.bat
+
+Multiples confirmaciones de seguridad
+Solo para usuarios experimentados
+
+============================================================
+DIFERENCIAS PAPER vs LIVE
+============================================================
+
+PAPER TRADING:
+  Capital: $10,000 simulados
+  Riesgo: 1% por trade
+  Max posicion: 5%
+  Trades diarios: 3
+  Perdida maxima: 2%
+  Simbolos: 3 (AAPL, MSFT, GOOGL)
+
+LIVE TRADING (en test_bot):
+  Capital: Real de IOL
+  Riesgo: 0.5% por trade (MUY conservador)
+  Max posicion: 3%
+  Trades diarios: 2
+  Perdida maxima: 1%
+  Simbolos: 2-3 o personalizar
+
+LIVE TRADING (produccion):
+  Capital: $21,891.65 ARS
+  Riesgo: 2.4% por trade
+  Max posicion: 14%
+  Trades diarios: 8
+  Perdida maxima: 5%
+  Simbolos: 26
+
+============================================================
+PROTECCION DEL BOT DE PRODUCCION
+============================================================
+
+  Bot de PRODUCCION en: /financial_ai/
+  Test Bot en: /financial_ai/test_bot/
+  
+  Archivos separados: SI
+  PID separado: SI (test_bot_pid.txt vs bot.pid)
+  Configs separadas: SI
+  Bases de datos: Compartidas (CUIDADO en LIVE)
+  
+  Backup disponible: SI
+  Rollback posible: SI
+
+IMPORTANTE:
+  - Test bot puede operar en LIVE sin afectar produccion
+  - PERO usan la misma cuenta de IOL
+  - RECOMENDACION: Detener produccion antes de LIVE test
+  - O usar cuentas IOL diferentes
+
+============================================================
+WORKFLOW DE DESARROLLO
+============================================================
+
+1. Modificar codigo en test_bot/
+   (Ej: test_bot/trading_bot.py)
+
+2. Probar en Paper Trading
+   cd test_bot
+   .\ejecutar_test_bot.bat
+   Opcion 2: Modo continuo
+
+3. Monitorear 24-48 horas
+   - Revisar logs cada 2-4 horas
+   - Sin errores criticos
+   - Resultados coherentes
+
+4. (Opcional) Validar en LIVE
+   - Solo si es necesario
+   - Con limites MUY conservadores
+   - Monitoreo activo 100%
+   - Maximo 2-4 horas
+
+5. Si todo OK: Copiar a produccion
+   - Crear backup primero
+   - Copiar cambios validados
+   - Reiniciar bot de produccion
+   - Monitorear primeras horas
+
+============================================================
+ARCHIVOS IMPORTANTES
+============================================================
+
+Configuracion:
+  test_bot/configs/testing_config.json       (limites conservadores)
+  test_bot/configs/professional_config.json  (config principal)
+  test_bot/.env                              (credenciales)
+
+Codigo Principal:
+  test_bot/trading_bot.py      (motor del bot)
+  test_bot/dashboard.py         (interfaz web)
+  test_bot/run_bot.py           (launcher)
+
+Servicios:
+  test_bot/src/services/telegram_command_handler.py
+  test_bot/src/services/adaptive_risk_manager.py
+  test_bot/src/services/prediction_service.py
+  test_bot/src/connectors/iol_client.py
+
+Documentacion:
+  test_bot/README.md
+  test_bot/INICIO_RAPIDO.md
+  test_bot/ADVERTENCIA_LIVE.md
+  test_bot/docs/INTEGRATION_GUIDE.md
+
+Scripts:
+  test_bot/ejecutar_test_bot.bat          (interactivo)
+  test_bot/ejecutar_dashboard_test.bat    (dashboard)
+  test_bot/ejecutar_bot_continuo_test.bat (continuo paper/live)
+  test_bot/ejecutar_bot_live_test.bat     (live directo)
+
+============================================================
+COMANDOS RAPIDOS
+============================================================
+
+Ejecutar test interactivo:
+  cd test_bot
+  .\ejecutar_test_bot.bat
+
+Dashboard de test:
+  cd test_bot
+  .\ejecutar_dashboard_test.bat
+
+Bot continuo (elige modo):
+  cd test_bot
+  .\ejecutar_bot_continuo_test.bat
+
+Ver documentacion:
+  code test_bot\INICIO_RAPIDO.md
+
+Ver estructura:
+  tree /F test_bot
+
+Contar archivos:
+  (Get-ChildItem test_bot -Recurse -File).Count
+
+============================================================
+PROXIMOS PASOS
+============================================================
+
+Ahora puedes:
+
+A) Probar el test bot en Paper Trading
+   cd test_bot
+   .\ejecutar_test_bot.bat
+
+B) Modificar codigo y probar cambios
+   code test_bot\trading_bot.py
+   (Hacer cambios)
+   .\ejecutar_test_bot.bat
+
+C) Desarrollar nueva feature
+   Crear: test_bot\features\nueva_feature.py
+   Usar template: test_bot\features\_template_feature.py
+
+D) Probar en LIVE (cuando estes listo)
+   cd test_bot
+   .\ejecutar_bot_live_test.bat
+   (Multiples confirmaciones requeridas)
+
+============================================================
+ESTADO DEL SISTEMA
+============================================================
+
+Bot de PRODUCCION:
+  Estado: FUNCIONANDO
+  Ubicacion: /financial_ai/ (raiz)
+  Capital: $21,891.65 ARS
+  Simbolos: 26
+
+Test Bot:
+  Estado: LISTO PARA USAR
+  Ubicacion: /financial_ai/test_bot/
+  Capital: Configurable (paper) o real (live)
+  Simbolos: 3 por defecto, configurable
+
+Backup:
+  Estado: CREADO
+  Ubicacion: backups/stable_20251202_114451/
+  Archivos: 257
+
+============================================================
+LISTO PARA DESARROLLAR DE FORMA SEGURA
+============================================================
+
+  BACKUP COMPLETO
+  TEST_BOT INDEPENDIENTE
+  PRODUCCION PROTEGIDA
+  PAPER Y LIVE DISPONIBLES
+  DOCUMENTACION COMPLETA
+
+============================================================
+
